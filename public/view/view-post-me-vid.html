@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Postingan Stylish Desktop</title>
+
+  <link rel="stylesheet" href="./css/global.css" as="stylesheet" />
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+    }
+
+    .post {
+      max-width: 600px;
+      margin: 3rem auto;
+      margin-bottom: 5rem;
+      background-color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .post-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .post-user {
+      display: flex;
+      align-items: center;
+    }
+
+    .post-user img {
+      width: 48px;
+      height: 48px;
+      object-fit: cover;
+      margin-right: 1rem;
+      border: solid black 1px;
+    }
+
+    .post-user-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .username-row {
+      display: flex;
+      align-items: center;
+      margin: 2px;
+    }
+
+    .follow-btn {
+      margin: .1rem .3rem;
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .post-options {
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0 8px;
+      user-select: none;
+    }
+
+    .post-media img,
+    .post-media video {
+      /* background-color: rgb(17, 17, 17); */
+      background-color: black;
+      border-bottom: solid black 1px;
+      border-top: solid black 1px;
+      width: 100%;
+      display: block;
+      max-height: 500px;
+      object-fit: contain;
+    }
+
+    .post-body {
+      padding: 1rem;
+    }
+
+    .post-body .judul {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .post-body .deskripsi {
+      font-size: 0.95rem;
+      color: #444;
+      margin-bottom: 1rem;
+    }
+
+    .post-actions {
+      box-sizing: border-box;
+      margin-right: 10px;
+      margin-left: 10px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+      justify-items: center;
+      height: 3rem;
+      border-top: 1px solid #eee;
+      cursor: pointer;
+    }
+
+
+    .post-actions span.post-interactions {
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      color: #666;
+      box-shadow: inset 0px 1px 3px rgb(0, 0, 0, .3);
+
+      color: rgb(65, 65, 65);
+      font-weight: 900;
+    }
+
+    @media (width < 768px) {
+      .post-actions span.post-interactions {
+        font-size: .7rem;
+      }
+    }
+
+
+    .post-actions span.post-interactions:hover {
+      filter: brightness(.7);
+      background-color: rgba(0, 0, 0, .1);
+    }
+
+    .post-actions span.post-interactions:active {
+      filter: brightness(1);
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    .post-actions span.post-interactions-forbidden {
+      cursor: not-allowed;
+    }
+
+    .post-actions span.post-interactions-done {
+      color: #007bff;
+    }
+
+
+
+    .post-footer {
+      margin: 1rem;
+      font-size: 0.8rem;
+      color: #aaa;
+      text-align: right;
+      padding: 1rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .icon {
+      margin-right: 5px;
+    }
+
+
+
+
+    /* muenu 3 */
+    .post-options-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .post-options {
+      font-size: 1.5rem;
+      cursor: pointer;
+      user-select: none;
+      font-weight: 700;
+    }
+
+    .post-menu {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 1.8rem;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      z-index: 10;
+      min-width: 140px;
+    }
+
+    .post-menu-item {
+      padding: 10px 14px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .post-menu-item:hover {
+      background-color: #7a7a7a;
+    }
+  </style>
+  <style>
+    #toast {
+      position: fixed;
+      z-index: 999999;
+      bottom: 20vh;
+      right: 50%;
+      translate: 50%;
+      padding: .6rem 1rem;
+      font-size: .8rem;
+      border-radius: 8px;
+      border: solid black 2px;
+      background-color: white;
+    }
+
+    @media (width < 746px) {
+      #toast {
+        scale: .9;
+      }
+    }
+  </style>
+
+  <style>
+    .comments-container {
+      box-sizing: border-box;
+      margin-right: 10px;
+      margin-left: 10px;
+      margin-top: 20px;
+      display: none;
+      flex-direction: column;
+      gap: 12px;
+      border: solid gray 1px;
+      border-radius: 8px;
+
+    }
+
+    .comments-container small {
+      display: flex;
+      justify-self: center;
+      align-self: center;
+      font-size: 10px;
+      margin: 0px 0px 1rem 0px;
+    }
+
+    .comments-container p {
+      font-size: 1rem;
+      padding: 1rem;
+      border-bottom: gray solid 1px;
+      font-weight: 800;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      margin: 0;
+    }
+
+    .comment-box {
+      display: flex;
+      gap: 12px;
+      padding: 12px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      margin: 0;
+    }
+
+    .comment-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-left: 5px;
+    }
+
+    .comment-content {
+      flex: 1;
+    }
+
+    .comment-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+
+    .comment-username {
+      font-weight: 600;
+      color: #333;
+    }
+
+    .comment-date {
+      color: #999;
+      font-size: 0.6rem;
+    }
+
+    .comment-text {
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    /*  */
+    .comment-form {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #fff;
+      margin-bottom: 16px;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .form-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+    }
+
+    .comment-input {
+      width: 100%;
+      min-height: 60px;
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      resize: vertical;
+      font-size: 0.95rem;
+      box-sizing: border-box;
+      overflow-wrap: break-word;
+    }
+
+    .send-comment-btn {
+      align-self: flex-end;
+      background-color: #0084ff;
+      color: #fff;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .send-comment-btn:hover {
+      background-color: #006fd3;
+    }
+
+    .char-counter {
+      font-size: 0.8rem;
+      color: #666;
+      text-align: right;
+    }
+
+    /* me */
+    .comment-box.my-comment {
+      background-color: #e6f4ff;
+      /* biru muda */
+      border: 1px solid #80caff;
+    }
+
+    .delete-comment-btn {
+      margin-top: 6px;
+      background-color: #ff4d4f;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .delete-comment-btn:hover {
+      background-color: #d9363e;
+    }
+  </style>
+
+  <style>
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 17vh;
+      right: 50%;
+      translate: 50%;
+      z-index: 999;
+      background-color: #0084ff;
+      border: none;
+      padding: 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, background-color 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .scroll-top-btn svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .scroll-top-btn.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .scroll-top-btn:hover {
+      background-color: #006fd3;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- Header -->
+  <header class="header" style="position: relative;">
+    <div class="container header-flex">
+      <h1 class="logo"><a href="/">Stylish Desktop</a></h1>
+      <div class="header-buttons">
+        <a href="/register" class="button ">Daftar</a>
+        <a href="/login" class="button display-none">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="post" data-fileuid="<| fileuid |>" id="post">
+    <div class="post-header">
+      <div class="post-user">
+        <img src="<| pp |>" alt="Profil">
+        <div class="post-user-info">
+          <div class="username-row">
+            <strong>
+              <a href="/profile/pub/<| username |>">
+                <| username |>
+              </a>
+            </strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- menu tiga -->
+      <div class="post-options-container">
+        <div class="post-options" onclick="toggleMenu(this)">⋯</div>
+        <div class="post-menu">
+          <div class="post-menu-item" action="hapus" onclick="action(this)">Hapus</div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+    <div class="post-media">
+      <video controls autoplay loop src="/upload/images/<| filebase |>" alt="Postingan">
+    </div>
+
+    <div class="post-body">
+      <div class="judul">
+        <| judul |>
+      </div>
+      <div class="deskripsi">
+        <| deskripsi |>
+      </div>
+    </div>
+
+    <div class="post-actions">
+      <span class="post-interactions" action="suka" onclick="action(this)">
+        <span class="icon">❤️</span>
+        <span class="post-interactions-name">
+          <span class="interaction-total">
+            <| suka |>
+          </span><span>Suka</span>
+        </span>
+      </span>
+      <span class="post-interactions" action="komentar" komentar="buka" onclick="action(this)">
+        <span class="icon">💬</span>
+        <span class="post-interactions-name">
+          <span class="interaction-total">
+            <| komentar |>
+          </span><span>Komentar</span>
+        </span>
+      </span>
+      <span class="post-interactions" action="simpan" onclick="action(this)">
+        <span class="icon">🔖</span>
+        <span class="post-interactions-name">
+          <span class="interaction-total">
+            <| simpan |>
+          </span><span>Simpan</span>
+        </span>
+      </span>
+      <span class="post-interactions" action="bagi" onclick="action(this)">
+        <span class="icon">📤</span>
+        <span class="post-interactions-name">
+          <span class="interaction-total">
+            <| bagi |>
+          </span><span>Bagi</span>
+        </span>
+      </span>
+    </div>
+
+
+    <!-- komen -->
+    <div id="comments-container" class="comments-container interactions-container">
+      <p>komentar</p>
+      <| comments |>
+        <small>sudah sampai ujung komentar!</small>
+    </div>
+
+    <!-- suka -->
+    <div id="likes-container" class="comments-container interactions-container">
+      <p>suka</p>
+      <| likes |>
+        <small>sudah sampai ujung suka!</small>
+    </div>
+    <!-- bagi -->
+    <div id="shares-container" class="comments-container interactions-container">
+      <p>bagi</p>
+      <| shares |>
+        <small>sudah sampai ujung bagi!</small>
+    </div>
+    <!-- simpan -->
+    <div id="saves-container" class="comments-container interactions-container">
+      <p>simpan</p>
+      <| saves |>
+        <small>sudah sampai ujung simpan!</small>
+    </div>
+
+    <div class="post-footer">
+      Diposting pada: <| tanggal |>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Stylish Desktop | Semua hak dilindungi</p>
+    <nav>
+      <a href="/about.html">Tentang Kami</a>
+      <a href="/privacy.html">Kebijakan Privasi</a>
+      <a href="/contact.html">Hubungi Kami</a>
+    </nav>
+  </footer>
+
+  <textarea name="fileinfo" id="fileinfo" style="display: none;">
+  <| fileinfo |>
+</textarea>
+
+
+  <script src="js/view-post-me.js"></script>
+</body>
+
+</html>

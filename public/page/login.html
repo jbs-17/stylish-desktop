@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+
+
+<head>
+  <!-- Dasar -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO -->
+  <meta name="description" content="Stylish Desktop - Platform inspirasi setup komputer, laptop, dan desktop." />
+  <meta name="keywords" content="setup komputer, desktop aesthetic, laptop stylish, workspace inspiration" />
+  <meta name="author" content="Stylish Desktop Team - Jati Bangun S." />
+  <meta name="theme-color" content="#4f46e5" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Stylish Desktop - Inspirasi Setup Komputer & Laptop" />
+  <meta property="og:description" content="Lihat gambar dan video terbaik untuk inspirasi setup komputer dan ruang kerja kamu." />
+  <meta property="og:image" content="https://stylishdesktop.com/assets/img/preview.jpg" />
+  <meta property="og:url" content="https://stylishdesktop.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Stylish Desktop" />
+  <meta name="twitter:description" content="Inspirasi terbaik untuk setup komputer, laptop, dan ruang kerja kamu." />
+  <meta name="twitter:image" content="https://stylishdesktop.com/assets/img/preview.jpg" />
+
+  <!-- Stylesheet & Favicon -->
+  <link rel="stylesheet" href="./css/global.css" as="stylesheet" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" as="stylesheet" />
+
+  <title>Stylish Desktop - Setup Komputer & Laptop</title>
+
+  <style>
+    @media (min-height: 789px) {
+      .login-section{
+        min-height: 85vh;
+        
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-flex">
+      <h1 class="logo"><a href="/">Stylish Desktop</a></h1>
+      <div class="header-buttons">
+        <a href="/register" class="button ">Daftar</a>
+        <a href="/login" class="button display-none">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Login Section -->
+  <section class="register-login-section login-section">
+    <div class="register-login-form-container">
+      <h2>Masuk Akun</h2>
+      <form id="register-login-form" class="register-login-form" action="/login" method="POST">
+        <label for="username">Username</label>
+        <input value="user" type="text" id="username" name="username" required />
+
+        <label for="password">Password</label>
+        <input value="passworda" type="text" id="password" name="password" required />
+
+        <div id="message" class="message"></div>
+
+        <button id="submit" type="button">Login</button>
+
+        <p>Belum punya akun? <a href="/register">Daftar di sini</a></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Stylish Desktop | Semua hak dilindungi</p>
+    <nav>
+      <a href="/about.html">Tentang Kami</a>
+      <a href="/privacy.html">Kebijakan Privasi</a>
+      <a href="/contact.html">Hubungi Kami</a>
+    </nav>
+  </footer>
+  <script src="./js/login.js"></script>
+</body>
+
+</html>

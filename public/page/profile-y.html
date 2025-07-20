@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil - Stylish Desktop</title>
+  <link rel="stylesheet" href="./css/global.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header header-x">
+    <div class="container header-flex">
+      <h1 class="logo"><a href="/">Stylish Desktop</a></h1>
+      <div class="header-buttons">
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- === SECTION: PROFILE === -->
+    <section id="profile-section">
+      <div class="profile-avatar">
+        <img id="pp" src="../upload/pp/default.png" />
+        <p id="username">not found</p>
+        <small><span>uuid: </span><span id="uuid"></span></small>
+      </div>
+      <div class="profile-info">
+        <p id="bio">-</p>
+      </div>
+      <div class="profile-stats">
+        <p class="stat-data" title="total like"><span id="suka">-</span><span> like</span></p>
+        <p class="stat-data" title="total follow"><span id="ikuti">-</span><span> follow</span></p>
+        <p class="stat-data" title="total followed"><span id="diikuti">-</span><span> following</span></p>
+      </div>
+    </section>
+
+
+
+
+    <!-- === SECTION: GALLERY === -->
+
+    <section class="gallery" id="gallery-section">
+
+
+      <div tab="upload" class="gallery-tab gallery-uploads">
+        <h1 id="alert">USER TIDAK DITEMUKAN</h1>
+      </div>
+    </section>
+    <!-- === SECTION: GALLERY END === -->
+
+
+  </main>
+
+  <style>
+    #gallery-section{
+
+    }
+    div[tab]{
+      min-height: 30vh;
+      height: 30vh;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+    #alert{
+      margin: 1rem;
+      font-size: 1.2rem;
+      color: black;
+      text-align: center;
+    }
+    main {
+      position: relative;
+      filter: blur(.1);
+    }
+
+    .sticky-bottom {
+      position: sticky;
+      bottom: 0;
+      z-index: 9999999999;
+    }
+  </style>
+  <footer class="sticky-bottom">
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <a href="/home" class="nav-link">HOME</a>
+      <a href="/search" class="nav-link">SEARCH</a>
+      <a href="/upload" class="nav-link">UPLOAD</a>
+      <a href="/profile/me" class="nav-link nav-link-on button-on">PROFILE</a>
+    </nav>
+  </footer>
+
+
+
+</body>
+
+</html>

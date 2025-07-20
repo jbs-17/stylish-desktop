@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Halaman Tidak Ditemukan | Stylish Desktop</title>
+  <!-- Stylesheet & Favicon -->
+  <link rel="stylesheet" href="./css/global.css" as="stylesheet" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" as="stylesheet" />
+
+  <title>Stylish Desktop - Setup Komputer & Laptop</title>
+  <style>
+    :root {
+      --black03: rgba(0,0,0,.3);
+    }
+    body{
+      background-color: var(--black03);
+    }
+
+    .not-found {
+      /* background: url('./../assets/img/darksimple.jpg') center center / cover no-repeat; */
+      min-height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      color: white;
+    }
+    
+    @media (min-height: 768px) {
+
+    }
+    .not-found-content {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 2.5rem;
+      border-radius: 16px;
+      max-width: 600px;
+      margin: 2rem;
+    }
+
+    .not-found h1 {
+      font-size: 5rem;
+      margin-bottom: 1rem;
+      color: #ff1b1b;
+      font-weight: 800;
+      
+    }
+
+    .not-found h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .not-found p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .not-found a.button {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .not-found a.button:hover {
+      background-color: #4338ca;
+    }
+  </style>
+</head>
+
+<body>
+
+   <!-- Header -->
+  <header class="header">
+    <div class="container header-flex">
+      <h1 class="logo"><a href="/">Stylish Desktop</a></h1>
+      <div class="header-buttons">
+        <a href="/register" class="button ">Daftar</a>
+        <a href="/login" class="button display-none">Login</a>
+      </div>
+    </div>
+  </header>
+
+ 
+ 
+ 
+  <section class="not-found">
+    <div class="not-found-content">
+      <h1>404</h1>
+      <h2>Oops! Halaman tidak ditemukan.</h2>
+      <p>Maaf, halaman yang kamu cari tidak tersedia atau sudah dipindahkan.</p>
+      <a onclick="document.referrer.length ?  location.replace(document.referrer.includes('profile') ? '/home': document.referrer) : (this.href = '/home', this.innerHTML = 'Beranda')" class="button">Kembali</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Stylish Desktop | Semua hak dilindungi</p>
+      <nav>
+        <a href="/about.html">Tentang Kami</a>
+        <a href="/privacy.html">Kebijakan Privasi</a>
+        <a href="/contact.html">Hubungi Kami</a>
+      </nav>
+    </div>
+  </footer>
+  
+  <script>
+    const back = document.getElementById('back');
+    const history = window.history.length; 
+  </script>
+</body>
+</html>

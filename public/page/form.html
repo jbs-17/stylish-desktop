@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPLOUD</title>
+
+</head>
+
+<body>
+    <h1>uploud foto</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="text" name="judul" id="" placeholder="judul">
+        <input type="text" name="deskripsi" id="" placeholder="deskripsi">
+        <input type="file" name="uploudedfile">
+        <input type="submit" value="UPLOUD">
+    </form>
+</body>
+<script>
+
+    window.onload = () => {
+        setTimeout(() => {
+            const f = document.querySelector('input[type="file"]');
+            // f.value = ''
+        }, 100)
+    };
+    (async () => {
+        const username = 'alok';
+        const password = 'alokgaming';
+        async function sha256(str) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(str);
+            const hashBuffer = await window.crypto.subtle.digest('SHA-256', data);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+        const usernameH = await sha256(username)
+        const passwordH = await sha256(password)
+        const f = document.querySelector('form');
+        f.setAttribute('action', `/form/uploud?uh=${usernameH}&ph=${passwordH}`)
+    }
+    )()
+</script>
+
+</html>

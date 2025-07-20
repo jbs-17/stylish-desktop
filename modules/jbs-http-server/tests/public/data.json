@@ -1,0 +1,463 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "informasi_pribadi": {
+        "nama": {
+          "depan": "Muhammad",
+          "tengah": "Rizal",
+          "belakang": "Aziz",
+          "panggilan": "Aziz",
+          "gelar": ["dr.", "Sp.JP"]
+        },
+        "tanggal_lahir": "1990-05-15",
+        "jenis_kelamin": "Laki-laki",
+        "status_perkawinan": "Menikah",
+        "data_fisik": {
+          "tinggi_badan_cm": 175,
+          "berat_badan_kg": 70,
+          "golongan_darah": "A+"
+        },
+        "hobi": [
+          {"nama": "Membaca", "frekuensi": "Harian", "favorit": "Buku Medis"},
+          {"nama": "Bersepeda", "frekuensi": "Mingguan", "favorit": "Sepeda Gunung"},
+          {"nama": "Fotografi", "frekuensi": "Bulanan", "favorit": "Pemandangan Alam"}
+        ],
+        "tujuan_hidup": {
+          "jangka_pendek": "Meningkatkan keahlian medis",
+          "jangka_panjang": "Mendirikan klinik gratis untuk masyarakat"
+        }
+      },
+      "riwayat_pendidikan": [
+        {
+          "jenjang": "S1",
+          "institusi": "Universitas Indonesia",
+          "fakultas": "Kedokteran",
+          "jurusan": "Kedokteran Umum",
+          "periode": {"mulai": "2008-08-01", "lulus": "2014-06-30"},
+          "prestasi": [
+            {"nama": "Cum Laude", "tahun": "2014"},
+            {"nama": "Peneliti Terbaik", "tahun": "2013"}
+          ],
+          "ekstrakurikuler": [
+            {"nama": "Himpunan Mahasiswa Kedokteran", "peran": "Ketua", "tahun": "2012-2013"}
+          ],
+          "mata_kuliah_favorit": [
+            {"nama": "Anatomi", "nilai": "A"},
+            {"nama": "Kardiologi", "nilai": "A+"}
+          ]
+        },
+        {
+          "jenjang": "Spesialis",
+          "institusi": "Universitas Indonesia",
+          "fakultas": "Kedokteran",
+          "jurusan": "Spesialis Jantung dan Pembuluh Darah",
+          "periode": {"mulai": "2015-01-01", "lulus": "2018-12-31"},
+          "prestasi": [
+            {"nama": "Dokter Spesialis Terbaik", "tahun": "2018"}
+          ],
+          "ekstrakurikuler": [],
+          "mata_kuliah_favorit": [
+            {"nama": "Bedah Jantung", "nilai": "A"}
+          ]
+        }
+      ],
+      "pengalaman_kerja": [
+        {
+          "perusahaan": "RS Cipto Mangunkusumo",
+          "jabatan": "Dokter Umum",
+          "periode": {"mulai": "2015-01-01", "selesai": "2018-12-31"},
+          "tanggung_jawab": ["Pemeriksaan pasien", "Diagnosa", "Resep obat"],
+          "proyek": [
+            {
+              "nama": "Program Vaksinasi Massal",
+              "deskripsi": "Mengkoordinasikan vaksinasi untuk 5000 pasien",
+              "tim": [
+                {"nama": "Dr. Budi", "peran": "Koordinator"},
+                {"nama": "Suster Ani", "peran": "Pelaksana"}
+              ],
+              "anggaran": 50000000,
+              "hasil": "Tingkat vaksinasi meningkat 20%"
+            }
+          ],
+          "penghargaan": [
+            {"nama": "Dokter Teladan", "tahun": "2017"}
+          ]
+        }
+      ],
+      "pekerjaan_saat_ini": {
+        "jabatan": "Dokter Spesialis Jantung",
+        "perusahaan": "RS Harapan Kita",
+        "gaji_bulanan": 25000000,
+        "jam_kerja": {
+          "hari": ["Senin", "Rabu", "Jumat"],
+          "jam": {"mulai": "08:00", "selesai": "16:00"}
+        },
+        "tunjangan": {
+          "kesehatan": {"nominal": 5000000, "provider": "BPJS Kesehatan"},
+          "transportasi": {"nominal": 2000000, "catatan": "Mobil dinas"},
+          "makan": {"nominal": 1000000, "catatan": "Kupon makan"}
+        },
+        "target_kinerja": {
+          "bulanan": "Menangani 50 pasien",
+          "tahunan": "Publikasi 1 penelitian"
+        }
+      },
+      "aset": {
+        "kendaraan": [
+          {
+            "tipe": "Mobil",
+            "merek": "Toyota",
+            "model": "Avanza",
+            "tahun": 2018,
+            "nomor_plat": "B 1234 XYZ",
+            "asuransi": {
+              "provider": "Asuransi Astra",
+              "jenis": "All Risk",
+              "masa_berlaku": "2025-12-31"
+            },
+            "riwayat_servis": [
+              {"tanggal": "2023-01-10", "tempat": "Bengkel Resmi Toyota", "biaya": 1500000}
+            ]
+          }
+        ],
+        "properti": [
+          {
+            "tipe": "Rumah",
+            "lokasi": "Jakarta Selatan",
+            "luas_m2": 120,
+            "nilai": 1500000000,
+            "status_kepemilikan": "Milik Pribadi",
+            "sertifikat": {"nomor": "12345", "tanggal_terbit": "2015-01-01"},
+            "pajak": {"tahunan": 5000000, "status": "Lunas"}
+          }
+        ]
+      },
+      "media_sosial": {
+        "instagram": {
+          "username": "@muhammadaziz90",
+          "pengikut": 1200,
+          "postingan_terbaru": {
+            "tanggal": "2023-05-01",
+            "deskripsi": "Liburan keluarga di Bali",
+            "like": 300
+          },
+          "statistik": {"total_posting": 150, "rata_rata_like": 250}
+        },
+        "linkedin": {
+          "username": "muhammad-aziz-md",
+          "koneksi": 500,
+          "postingan_terbaru": {
+            "tanggal": "2023-04-15",
+            "deskripsi": "Berbagi pengalaman operasi jantung",
+            "komentar": 20
+          }
+        }
+      },
+      "kesehatan": {
+        "status_saat_ini": "Sehat",
+        "riwayat_medis": [
+          {
+            "penyakit": "Hipertensi",
+            "tahun": "2022",
+            "status": "Dalam Pengawasan",
+            "pengobatan": {
+              "obat": ["Amlodipine", "Losartan"],
+              "dokter": "Dr. Hadi",
+              "rs": "RS Harapan Kita"
+            }
+          }
+        ],
+        "alergi": ["Debu", "Seafood"],
+        "kebiasaan_hidup": {
+          "olahraga": "Bersepeda 2x/minggu",
+          "diet": "Rendah garam"
+        }
+      },
+      "keluarga": [
+        {
+          "nama": {
+            "depan": "Siti",
+            "tengah": "Nur",
+            "belakang": "Aisyah",
+            "panggilan": "Aisyah"
+          },
+          "hubungan": "Istri",
+          "tanggal_lahir": "1992-08-20",
+          "pekerjaan": "Guru",
+          "kontak": {"telepon": "08123456781", "email": "sitiaisyah@example.com"},
+          "riwayat_pendidikan": [
+            {
+              "jenjang": "S1",
+              "institusi": "Universitas Pendidikan Indonesia",
+              "jurusan": "Pendidikan Matematika",
+              "periode": {"mulai": "2010-08-01", "lulus": "2014-06-30"}
+            }
+          ],
+          "hobi": [
+            {"nama": "Memasak", "favorit": "Masakan Sunda"}
+          ]
+        }
+      ],
+      "alamat": {
+        "rumah": {
+          "jalan": "Jl. Contoh No. 1",
+          "kelurahan": "Cikini",
+          "kota": "Jakarta",
+          "kode_pos": "10110",
+          "koordinat": {"latitude": -6.2000, "longitude": 106.8167},
+          "fasilitas": ["Kolam renang", "Garasi"]
+        },
+        "kantor": {
+          "jalan": "Jl. Kantor No. 1",
+          "kelurahan": "Senen",
+          "kota": "Jakarta",
+          "kode_pos": "10220",
+          "koordinat": {"latitude": -6.1800, "longitude": 106.8450}
+        }
+      },
+      "kontak": {
+        "telepon": {
+          "rumah": "0211234567",
+          "kantor": "0217654321",
+          "seluler": [
+            {"nomor": "08123456780", "provider": "Telkomsel", "status": "Aktif"}
+          ]
+        },
+        "email": {
+          "pribadi": "muhammadaziz@example.com",
+          "kerja": "maziz@harapankita.co.id"
+        }
+      },
+      "keuangan": {
+        "rekening_bank": [
+          {
+            "bank": "BRI",
+            "nomor_rekening": "1234-5678-9012",
+            "saldo": 75000000,
+            "transaksi_terakhir": {
+              "tanggal": "2023-05-10",
+              "jenis": "Transfer",
+              "nominal": 5000000
+            }
+          }
+        ],
+        "investasi": [
+          {
+            "jenis": "Saham",
+            "nama": "Telkom Indonesia",
+            "nilai": 20000000,
+            "tanggal_mulai": "2022-01-01"
+          }
+        ]
+      },
+      "aktivitas_komunitas": [
+        {
+          "nama": "Komunitas Dokter Peduli",
+          "peran": "Anggota",
+          "kegiatan": [
+            {"nama": "Bakti Sosial", "tanggal": "2023-03-15", "lokasi": "Bogor"}
+          ],
+          "kontribusi": "Donasi dan tenaga medis"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "informasi_pribadi": {
+        "nama": {
+          "depan": "Siti",
+          "tengah": "Nur",
+          "belakang": "Aisyah",
+          "panggilan": "Aisyah",
+          "gelar": ["S.Pd."]
+        },
+        "tanggal_lahir": "1992-08-20",
+        "jenis_kelamin": "Perempuan",
+        "status_perkawinan": "Menikah",
+        "data_fisik": {
+          "tinggi_badan_cm": 160,
+          "berat_badan_kg": 55,
+          "golongan_darah": "O+"
+        },
+        "hobi": [
+          {"nama": "Memasak", "frekuensi": "Harian", "favorit": "Masakan Tradisional"},
+          {"nama": "Berkebun", "frekuensi": "Mingguan", "favorit": "Tanaman Hias"}
+        ],
+        "tujuan_hidup": {
+          "jangka_pendek": "Meningkatkan kualitas mengajar",
+          "jangka_panjang": "Membangun sekolah inklusi"
+        }
+      },
+      "riwayat_pendidikan": [
+        {
+          "jenjang": "S1",
+          "institusi": "Universitas Pendidikan Indonesia",
+          "fakultas": "Pendidikan",
+          "jurusan": "Pendidikan Matematika",
+          "periode": {"mulai": "2010-08-01", "lulus": "2014-06-30"},
+          "prestasi": [
+            {"nama": "Magna Cum Laude", "tahun": "2014"}
+          ],
+          "ekstrakurikuler": [
+            {"nama": "Himpunan Mahasiswa", "peran": "Sekretaris", "tahun": "2012-2013"}
+          ],
+          "mata_kuliah_favorit": [
+            {"nama": "Aljabar", "nilai": "A"}
+          ]
+        }
+      ],
+      "pengalaman_kerja": [
+        {
+          "perusahaan": "SDN 5 Bandung",
+          "jabatan": "Guru Kelas",
+          "periode": {"mulai": "2015-01-01", "selesai": null},
+          "tanggung_jawab": ["Mengajar", "Evaluasi siswa"],
+          "proyek": [
+            {
+              "nama": "Program Literasi",
+              "deskripsi": "Meningkatkan minat baca siswa",
+              "tim": [
+                {"nama": "Ibu Rina", "peran": "Guru Pendamping"}
+              ],
+              "anggaran": 10000000,
+              "hasil": "Peningkatan 30% kemampuan membaca"
+            }
+          ]
+        }
+      ],
+      "pekerjaan_saat_ini": {
+        "jabatan": "Guru Kelas",
+        "perusahaan": "SDN 5 Bandung",
+        "gaji_bulanan": 8000000,
+        "jam_kerja": {
+          "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+          "jam": {"mulai": "07:00", "selesai": "13:00"}
+        },
+        "tunjangan": {
+          "kesehatan": {"nominal": 2000000, "provider": "BPJS Kesehatan"},
+          "transportasi": {"nominal": 1000000, "catatan": "Subsidi bensin"}
+        }
+      },
+      "aset": {
+        "kendaraan": [
+          {
+            "tipe": "Mobil",
+            "merek": "Daihatsu",
+            "model": "Xenia",
+            "tahun": 2017,
+            "nomor_plat": "D 5678 XYZ",
+            "asuransi": {
+              "provider": "Asuransi Astra",
+              "jenis": "All Risk",
+              "masa_berlaku": "2024-12-31"
+            },
+            "riwayat_servis": [
+              {"tanggal": "2023-02-20", "tempat": "Bengkel Daihatsu", "biaya": 1200000}
+            ]
+          }
+        ],
+        "properti": [
+          {
+            "tipe": "Rumah",
+            "lokasi": "Bandung",
+            "luas_m2": 90,
+            "nilai": 900000000,
+            "status_kepemilikan": "Milik Pribadi",
+            "sertifikat": {"nomor": "67890", "tanggal_terbit": "2016-05-01"},
+            "pajak": {"tahunan": 3000000, "status": "Lunas"}
+          }
+        ]
+      },
+      "media_sosial": {
+        "instagram": {
+          "username": "@sitiaisyah92",
+          "pengikut": 800,
+          "postingan_terbaru": {
+            "tanggal": "2023-04-20",
+            "deskripsi": "Resep masakan baru",
+            "like": 150
+          }
+        }
+      },
+      "kesehatan": {
+        "status_saat_ini": "Sehat",
+        "riwayat_medis": [],
+        "alergi": [],
+        "kebiasaan_hidup": {
+          "olahraga": "Jalan kaki 3x/minggu",
+          "diet": "Vegetarian ringan"
+        }
+      },
+      "keluarga": [
+        {
+          "nama": {
+            "depan": "Muhammad",
+            "tengah": "Rizal",
+            "belakang": "Aziz",
+            "panggilan": "Aziz"
+          },
+          "hubungan": "Suami",
+          "tanggal_lahir": "1990-05-15",
+          "pekerjaan": "Dokter",
+          "kontak": {"telepon": "08123456780", "email": "muhammadaziz@example.com"},
+          "riwayat_pendidikan": [
+            {
+              "jenjang": "S1",
+              "institusi": "Universitas Indonesia",
+              "jurusan": "Kedokteran Umum",
+              "periode": {"mulai": "2008-08-01", "lulus": "2014-06-30"}
+            }
+          ]
+        }
+      ],
+      "alamat": {
+        "rumah": {
+          "jalan": "Jl. Contoh No. 2",
+          "kelurahan": "Cibaduyut",
+          "kota": "Bandung",
+          "kode_pos": "40111",
+          "koordinat": {"latitude": -6.9147, "longitude": 107.5944},
+          "fasilitas": ["Taman", "Carport"]
+        }
+      },
+      "kontak": {
+        "telepon": {
+          "rumah": "0221234567",
+          "seluler": [
+            {"nomor": "08123456781", "provider": "Indosat", "status": "Aktif"}
+          ]
+        },
+        "email": {
+          "pribadi": "sitiaisyah@example.com",
+          "kerja": "saisyah@sdn5bdg.sch.id"
+        }
+      },
+      "keuangan": {
+        "rekening_bank": [
+          {
+            "bank": "Mandiri",
+            "nomor_rekening": "9876-5432-1098",
+            "saldo": 30000000,
+            "transaksi_terakhir": {
+              "tanggal": "2023-05-05",
+              "jenis": "Setoran",
+              "nominal": 2000000
+            }
+          }
+        ],
+        "investasi": []
+      },
+      "aktivitas_komunitas": [
+        {
+          "nama": "Komunitas Guru Kreatif",
+          "peran": "Anggota",
+          "kegiatan": [
+            {"nama": "Workshop Mengajar", "tanggal": "2023-02-10", "lokasi": "Bandung"}
+          ],
+          "kontribusi": "Membuat modul pembelajaran"
+        }
+      ]
+    }
+  ]
+}

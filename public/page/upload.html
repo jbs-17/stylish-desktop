@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!-- Dasar -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO -->
+  <meta name="description" content="Stylish Desktop - Platform inspirasi setup komputer, laptop, dan desktop." />
+  <meta name="keywords" content="setup komputer, desktop aesthetic, laptop stylish, workspace inspiration" />
+  <meta name="author" content="Stylish Desktop Team - Jati Bangun S." />
+  <meta name="theme-color" content="#4f46e5" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Stylish Desktop - Inspirasi Setup Komputer & Laptop" />
+  <meta property="og:description" content="Lihat gambar dan video terbaik untuk inspirasi setup komputer dan ruang kerja kamu." />
+  <meta property="og:image" content="https://stylishdesktop.com/assets/img/preview.jpg" />
+  <meta property="og:url" content="https://stylishdesktop.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Stylish Desktop" />
+  <meta name="twitter:description" content="Inspirasi terbaik untuk setup komputer, laptop, dan ruang kerja kamu." />
+  <meta name="twitter:image" content="https://stylishdesktop.com/assets/img/preview.jpg" />
+
+  <!-- Stylesheet & Favicon -->
+  <link rel="stylesheet" href="./css/global.css" as="stylesheet" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" as="stylesheet" />
+
+  <title>Stylish Desktop - Setup Komputer & Laptop</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-flex">
+      <h1 class="logo"><a href="/">Stylish Desktop</a></h1>
+      <div class="header-buttons">
+        <a href="/register" class="button ">Daftar</a>
+        <a href="/login" class="button display-none">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Upload Section -->
+  <div class="upload-section">
+    <div class="upload-wrapper">
+      <!-- Preview (desktop only) -->
+      <div id="preview-container" class="preview-container desktop-preview">
+        <p class="preview-placeholder">Preview akan muncul di sini</p>
+      </div>
+
+      <!-- Upload Form -->
+      <form id="form" class="upload-form" action="/upload-submit" method="POST" enctype="multipart/form-data">
+        <h2 id="upload-title">Unggah Foto atau Video Anda</h2>
+
+        <div class="upload-input-group">
+          <label for="file-upload" class="upload-label">Pilih Foto/Video</label>
+          <input type="file" id="file-upload" name="file" accept="image/*,video/*" required onchange="previewFile()">
+        </div>
+
+        <!-- Preview for mobile only -->
+        <div id="preview-container-mobile" class="preview-container mobile-preview"></div>
+
+        <div class="input-group">
+          <label for="title" class="input-label">Judul</label>
+          <input type="text" id="title" name="title" placeholder="Masukkan Judul" required />
+        </div>
+
+        <div class="input-group">
+          <label for="description" class="input-label">Deskripsi</label>
+          <textarea id="description" name="description" placeholder="Masukkan Deskripsi" rows="4"></textarea>
+        </div>
+
+        <div class="container">
+          <button type="submit" class="button-a">Unggah</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="/home" class="nav-link">HOME</a>
+    <a href="/search" class="nav-link">SEARCH</a>
+    <a href="/upload" class="nav-link  nav-link-on button-on">UPLOAD</a>
+    <a href="/profile/me" class="nav-link">PROFILE</a>
+  </nav>
+
+  <script src="js/upload.js"></script>
+</body>
+</html>

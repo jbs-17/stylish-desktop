@@ -1,0 +1,11 @@
+{
+  "watch": ["apps/", "modules/", "server.js", "variabelkontrol.js", "admin/", "routers/", "config.js", ".env", "pages/"],
+  "ignore": [
+    "node_modules/",
+    ".git/",
+    "pages/"
+  ],
+  "ext": "js, mjs",
+  "exec": "node server.js",
+  "delay": "500"
+}

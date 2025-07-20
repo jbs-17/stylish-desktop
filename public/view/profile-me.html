@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil - Stylish Desktop</title>
+  <link rel="stylesheet" href="./css/global.css" />
+
+  <style>
+    .post {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      width: min(40rem, 90vw);
+      margin: 1rem auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    .post-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .76rem;
+    }
+
+    .post-user {
+      display: flex;
+      align-items: center;
+    }
+
+    .post-user img {
+      width: 3rem;
+      height: 3rem;
+      object-fit: cover;
+      margin-right: 1rem;
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+
+    .username-row {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .post-options-container {
+      display: none;
+    }
+
+    .post-media img,
+    .post-media video {
+      width: 100%;
+      object-fit: contain;
+      max-height: 20rem;
+      background-color: black;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+    }
+
+    .post-body {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      flex-grow: 1;
+    }
+
+    .post-body .judul {
+      font-weight: bold;
+      font-size: 1.15rem;
+      line-height: 1.4rem;
+      margin-bottom: 0.5rem;
+      word-break: break-word;
+    }
+
+    .post-body .deskripsi {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.4rem;
+      word-break: break-word;
+      margin-bottom: auto;
+      /* push berikutnya ke bawah jika pendek */
+    }
+
+    .post-actions {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+      justify-items: center;
+      height: 3rem;
+      border-top: 1px solid #eee;
+      background-color: white;
+      box-sizing: border-box;
+      padding: 0px 5px;
+
+    }
+
+    .post-actions span.post-interactions {
+      font-size: 0.85rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      color: #666;
+      box-shadow: inset 0px 1px 3px rgb(0, 0, 0, .5);
+
+      color: rgb(65, 65, 65);
+      font-weight: 900;
+    }
+
+    .post-footer {
+      padding: 0.75rem 1rem;
+      font-size: 0.75rem;
+      color: #999;
+      text-align: center;
+      border-top: 1px solid #ddd;
+    }
+
+    @media (max-width: 668px) {
+      .post {
+        width: 95vw;
+      }
+
+      .post-actions span.post-interactions {
+        font-size: 0.75rem;
+      }
+    }
+  </style>
+
+  <style>
+    #settings-btn {
+      position: absolute;
+      right: 0;
+      cursor: pointer;
+      padding: 0.5rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: end;
+      border-radius: 50%;
+      transition: background-color 0.2s;
+    }
+
+    #settings-btn:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  </style>
+
+  <style>
+    .stat-data {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+
+
+<body>
+  <!-- Header -->
+  <header class="header header-x">
+    <div class="container header-flex">
+      <h1 class="logo"><a href="/">Stylish Desktop</a></h1>
+      <div class="header-buttons">
+      </div>
+    </div>
+  </header>
+
+  <!-- === SECTION: PROFILE === -->
+  <section id="profile-section">
+    <div id="settings-btn" title="Pengaturan">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M19.43 12.98c.04-.32.07-.66.07-1s-.03-.68-.07-1l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46a.5.5 0 0 0-.61-.22l-2.49 1a7.028 7.028 0 0 0-1.73-1l-.38-2.65a.5.5 0 0 0-.5-.42h-4a.5.5 0 0 0-.5.42l-.38 2.65a6.96 6.96 0 0 0-1.73 1l-2.49-1a.5.5 0 0 0-.61.22l-2 3.46a.5.5 0 0 0 .12.64L4.57 11c-.04.32-.07.66-.07 1s.03.68.07 1L2.46 14.65a.5.5 0 0 0-.12.64l2 3.46c.14.23.43.3.66.22l2.49-1c.54.42 1.12.77 1.73 1l.38 2.65a.5.5 0 0 0 .5.42h4c.25 0 .46-.18.5-.42l.38-2.65c.61-.23 1.19-.58 1.73-1l2.49 1c.23.09.52 0 .66-.22l2-3.46a.5.5 0 0 0-.12-.64l-2.11-1.67zM12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z" />
+      </svg>
+    </div>
+
+    <div class="profile-avatar">
+      <img id="pp" src="../upload/pp/default.png" />
+      <p id="username">
+        <| username |>
+      </p>
+      <small><span>uuid: <| uuid |></span><span id="uuid"></span></small>
+    </div>
+    <div class="profile-info">
+      <p id="bio">
+        <| bio |>
+      </p>
+    </div>
+    <div class="profile-stats">
+      <p class="stat-data" title="total follow" onclick="viewFolow(this)" id="diikuti"><span>
+          <| totaldiikuti |>
+        </span><span>followers</span></p>
+      <p class="stat-data" title="total followed" onclick="viewFolow(this)" id="ikuti"><span>
+          <| totalikuti |>
+        </span><span> </span>followings</p>
+      <p class="stat-data" title="total like"><span id="suka">
+          <| totalsuka |>
+        </span><span> likes</span></p>
+    </div>
+  </section>
+
+  <!-- Viewer Iframe Overlay -->
+  <div id="iframe-overlay" class="iframe-overlay iframe-overlay-hidden">
+    <div class="iframe-wrapper">
+      <button class="iframe-close-btn" onclick="closeViewer()" title="Kembali">
+        <svg viewBox="0 0 24 24" class="icon-arrow">
+          <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+      <iframe id="post-viewer" src="" frameborder="0"></iframe>
+    </div>
+  </div>
+
+
+
+
+  <!-- === SECTION: GALLERY === -->
+
+  <section class="gallery" id="gallery-section">
+    <div id="gallery-menu">
+      <button tab="upload" class="button-on">UPLOAD</button>
+      <button tab="pending" class="">PENDING</button>
+      <button tab="like" class="">LIKE</button>
+      <button tab="save" class="">SAVE</button>
+    </div>
+    <div tab="upload" class="gallery-tab gallery-uploads">
+
+
+      <!-- card start -->
+      <!--
+      <div class="post" data-fileuid="fileUID-7c17ece3f846817e" id="post">
+        <div class="post-header">
+          <div class="post-user">
+            <img src="../public/upload/pp/default.png" alt="Profil">
+            <div class="post-user-info">
+              <div class="username-row">
+                <strong>
+                  <a href="/profile/pub/makan">
+                    makan
+                  </a>
+                </strong>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="post-options-container">
+            <div fileuid="" class="post-options" onclick="toggleMenu(this)">⋯</div>
+            <div class="post-menu">
+              <div class="post-menu-item" action="hapus" onclick="action(this)">Hapus</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-media">
+          <img
+            src="/upload/images/image__fileUID-7c17ece3f846817e__44cc5fe5-adcc-4a1d-91ab-560155089446__11-07-2025_11-12-24__.jpeg"
+            alt="Postingan">
+        </div>
+
+        <div class="post-body">
+          <div class="judul">
+            FOTO
+          </div>
+          <div class="deskripsi">
+            perang
+          </div>
+        </div>
+
+        <div class="post-actions">
+          <span class="post-interactions" action="suka" onclick="action(this)">
+            <span class="icon">❤️</span>
+            <span class="post-interactions-name">
+              <span class="interaction-total">
+                0
+              </span><span>Suka</span>
+            </span>
+          </span>
+          <span class="post-interactions" action="komentar" komentar="buka" onclick="action(this)">
+            <span class="icon">💬</span>
+            <span class="post-interactions-name">
+              <span class="interaction-total">
+                0
+              </span><span>Komentar</span>
+            </span>
+          </span>
+          <span class="post-interactions" action="simpan" onclick="action(this)">
+            <span class="icon">🔖</span>
+            <span class="post-interactions-name">
+              <span class="interaction-total">
+                0
+              </span><span>Simpan</span>
+            </span>
+          </span>
+          <span class="post-interactions" action="bagi" onclick="action(this)">
+            <span class="icon">📤</span>
+            <span class="post-interactions-name">
+              <span class="interaction-total">
+                0
+              </span><span>Bagi</span>
+            </span>
+          </span>
+        </div>
+
+        <div class="post-footer">
+          Diposting pada: 11:12:24 11-07-2025
+        </div>
+      </div>
+
+    -->
+
+      <!-- card end -->
+
+
+      <| uploads |>
+
+
+
+    </div>
+
+
+    <div tab="pending" class="gallery-tab gallery-pendings gallery-hide">
+
+      <| pendings |>
+    </div>
+
+    <div tab="like" class="gallery-tab gallery-likes gallery-hide">
+
+
+      <| likes |>
+    </div>
+
+    <div tab="save" class="gallery-tab gallery-saves gallery-hide">
+
+      <| saves |>
+    </div>
+
+  </section>
+  <!-- === SECTION: GALLERY END === -->
+
+
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="/home" class="nav-link">HOME</a>
+    <a href="/search" class="nav-link">SEARCH</a>
+    <a href="/upload" class="nav-link">UPLOAD</a>
+    <a href="/profile/me" class="nav-link nav-link-on button-on">PROFILE</a>
+  </nav>
+
+  <script>
+    const tabsBtn = document.querySelectorAll("button[tab]");
+    const tabs = document.querySelectorAll('.gallery-tab');
+    tabsBtn.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        tabsBtn.forEach(btn => btn.classList.remove('button-on'));
+        e.target.classList.add('button-on')
+        const x = e.target.getAttribute('tab');
+        tabs.forEach(tab => {
+          if (tab.getAttribute('tab') === x) {
+            tab.classList.remove('gallery-hide');
+          } else {
+            tab.classList.add('gallery-hide')
+          }
+        })
+      })
+    });
+  </script>
+
+  <script src="js/profile-me.js"></script>
+</body>
+
+</html>

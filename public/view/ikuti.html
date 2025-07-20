@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Postingan Stylish Desktop</title>
+
+  <link rel="stylesheet" href="./css/global.css" as="stylesheet" />
+
+  <style>
+    #toast {
+      position: fixed;
+      z-index: 999999;
+      bottom: 20vh;
+      right: 50%;
+      translate: 50%;
+      padding: .6rem 1rem;
+      font-size: .8rem;
+      border-radius: 8px;
+      border: solid black 2px;
+      background-color: white;
+    }
+
+    @media (width < 746px) {
+      #toast {
+        scale: .9;
+      }
+    }
+  </style>
+
+  <style>
+    .followers-container {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 400px;
+      margin: auto;
+      padding: 16px;
+    }
+
+    .follower-card {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .profile-pic {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 12px;
+      border: solid rgba(0, 0, 0, .5) 1px;
+    }
+
+    .user-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex: 1;
+    }
+
+    .username {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .follow-btn {
+      background-color: #0095f6;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .follow-btn:hover {
+      background-color: #007acc;
+    }
+    .followers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: auto;
+  padding: 16px;
+}
+
+.follower-card {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.profile-pic {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.username {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+}
+
+.follow-btn {
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.follow-btn:hover {
+  background-color: #007acc;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+  </style>
+</head>
+
+<body>
+
+
+  <!-- Header -->
+  <header class="header" style="position: relative;">
+    <div class="container header-flex">
+      <h1 class="logo"><a href="/">Stylish Desktop</a></h1>
+      <div class="header-buttons">
+        <a href="/register" class="button ">Daftar</a>
+        <a href="/login" class="button display-none">Login</a>
+      </div>
+    </div>
+  </header>
+
+
+
+
+<div class="followers-container">
+  <div class="follower-card" style="display: flex; justify-content: center;">
+    <a href="">user yang kamu ikuti</a>
+  </div>
+
+  <| data |>
+
+
+
+  <!-- <div class="follower-card">
+    <img src="profile2.jpg" alt="Foto Profil" class="profile-pic" />
+    <div class="user-info">
+      <div class="username">namapengguna_2</div>
+      <div class="button-group">
+        <button class="follow-btn">Ikuti</button>
+        <button class="delete-btn">Hapus</button>
+      </div>
+    </div>
+  </div> -->
+
+</div>
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Stylish Desktop | Semua hak dilindungi</p>
+    <nav>
+      <a href="/about.html">Tentang Kami</a>
+      <a href="/privacy.html">Kebijakan Privasi</a>
+      <a href="/contact.html">Hubungi Kami</a>
+    </nav>
+  </footer>
+
+
+
+
+  <script src="js/ikuti.js"></script>
+  <script>
+    {
+      const header = document.querySelector('header');
+      const footer = document.querySelector('footer');
+      const iframe = { self: window.self, top: window.top };
+      // console.log({ self: iframe.self.location.href , top: iframe.top.location.href}); //beda
+      if (iframe.top !== iframe.self) {
+        header.remove();
+        footer.remove();
+        window.addEventListener('click', (e) => {
+          const href = e.target.href;
+          if (href) {
+            e.preventDefault();
+            window.top.location = href;
+          }
+        })
+      }
+    }
+  </script>
+</body>
+
+</html>

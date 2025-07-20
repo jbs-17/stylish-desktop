@@ -1,0 +1,5 @@
+{
+  "watch": [".env","index.js", "routes/", "config/", "jbs-web-server.js", "*.js", "*.mjs"],
+  "ignore": ["node_modules/", "public/"],
+  "exec": "node ./tests/index.js"
+}

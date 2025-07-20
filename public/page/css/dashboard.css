@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primary-color: #4f46e5;
+    --background: #f3f4f6;
+    --text-color: #111827;
+    --card-bg: #ffffff;
+    --border-color: #e5e7eb;
+    --decline-color: #dc2626;
+    --accept-color: #16a34a;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--background);
+    color: var(--text-color);
+  }
+  
+  .header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card img,
+  .card video {
+    height: 300px;
+    min-height: 100px;
+    object-fit: contain;
+    display: block;
+    background-color: #ccc;
+  }
+  
+  .card-info {
+    padding: 1rem;
+  }
+  
+  .card-info h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .card-info p {
+    font-size: 0.95rem;
+    color: #4b5563;
+  }
+  
+  .card-actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+    background-color: #f9fafb;
+  }
+  
+  .card-actions button {
+    flex: 1;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s ease;
+  }
+  
+  .accept {
+    background-color: var(--accept-color);
+    color: white;
+  }
+  
+  .accept:hover {
+    background-color: #15803d;
+  }
+  
+  .decline {
+    background-color: var(--decline-color);
+    color: white;
+  }
+  
+  .decline:hover {
+    background-color: #b91c1c;
+  }
+  
+  :root {
+    --primary-color: #4f46e5;
+    --background: #f3f4f6;
+    --text-color: #111827;
+    --card-bg: #ffffff;
+    --border-color: #e5e7eb;
+    --decline-color: #dc2626;
+    --accept-color: #16a34a;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .button {
+    background-color: white;
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #e0e7ff;
+  }
+  
+  .login-button {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .login-button:hover {
+    background-color: #4338ca;
+  }
+  

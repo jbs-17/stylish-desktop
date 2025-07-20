@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pengaturan Akun | Stylish Desktop</title>
+
+  <link rel="stylesheet" href="../page/css/global.css" as="stylesheet" />
+
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+    }
+
+
+
+
+
+    .settings-container {
+      max-width: 500px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 0 1rem;
+    }
+
+    .setting-card {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .setting-label-text {
+      font-weight: 600;
+      font-size: 14px;
+      min-width: 120px;
+      flex: 1;
+    }
+
+    .setting-actions {
+      flex: 2;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .setting-card input[type="text"],
+    .setting-card select {
+      padding: 6px 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      flex: 1;
+      min-width: 140px;
+    }
+
+    .view-btn {
+      background-color: #0095f6;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.1s ease;
+    }
+
+    .view-btn:hover {
+      background-color: #007acc;
+    }
+
+    .profile-pic {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(0, 0, 0, 0.4);
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 22px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .3s;
+      border-radius: 22px;
+    }
+
+    .slider::before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .3s;
+      border-radius: 50%;
+    }
+
+    .switch input:checked+.slider {
+      background-color: #0095f6;
+    }
+
+    .switch input:checked+.slider::before {
+      transform: translateX(18px);
+    }
+
+
+    .profile-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      /* Label & button center */
+      gap: 12px;
+      /* Jarak vertikal antar elemen */
+      padding: 24px 16px;
+      /* Sedikit lebih tinggi padding */
+    }
+
+    .profile-card .setting-label-text {
+      flex: none;
+      min-width: auto;
+      /* Reset agar tidak memaksakan lebar */
+    }
+
+    .profile-card .setting-actions {
+      justify-content: center;
+      /* Foto di tengah */
+      width: 100%;
+    }
+
+    .profile-card .view-btn {
+      align-self: center;
+      /* Tombol di tengah */
+      margin-top: 8px;
+    }
+  </style>
+
+  <!-- 3) CSS -->
+  <style>
+    /* Overlay */
+    #popup-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* Modal */
+    #popup-modal {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    #popup-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Form & fields */
+    #popup-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .field-group label {
+      font-size: .9rem;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .field-group input {
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    #popup-submit {
+      align-self: flex-end;
+      background-color: #0095f6;
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color .1s ease;
+    }
+
+    #popup-submit:hover {
+      background-color: #007acc;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1 class="logo"><a href="/">Stylish Desktop</a></h1>
+  </header>
+
+  <!-- Konten Pengaturan -->
+  <div class="settings-container">
+
+    <div class="setting-card profile-card">
+      <span class="setting-label-text">Foto Profil</span>
+      <div class="setting-actions">
+        <img src="profile.jpg" alt="Foto Profil" class="profile-pic" />
+      </div>
+      <button class="view-btn">Ganti</button>
+    </div>
+
+
+    <div class="setting-card">
+      <span class="setting-label-text">Bio</span>
+      <div class="setting-actions">
+        <input type="text" readonly value="Halo saya pengguna Stylish" />
+        <button class="view-btn" onclick="action('bio')">Ganti</button>
+      </div>
+    </div>
+
+
+
+    <div class="setting-card">
+      <span class="setting-label-text">Password</span>
+      <div class="setting-actions">
+        <input type="text" readonly value="********" />
+        <button class="view-btn">Ganti</button>
+      </div>
+    </div>
+
+    <div class="setting-card">
+      <span class="setting-label-text">Nomor Telepon</span>
+      <div class="setting-actions">
+        <input type="text" readonly value="0812xxxxxxx" />
+        <button class="view-btn">Ganti</button>
+      </div>
+    </div>
+
+    <div class="setting-card">
+      <span class="setting-label-text">Email</span>
+      <div class="setting-actions">
+        <input type="text" readonly value="user@example.com" />
+        <button class="view-btn">Ganti</button>
+      </div>
+    </div>
+
+    <div class="setting-card">
+      <span class="setting-label-text">Gender</span>
+      <select>
+        <option value="L">Laki-laki</option>
+        <option value="P">Perempuan</option>
+      </select>
+    </div>
+
+    <div class="setting-card">
+      <span class="setting-label-text">Sembunyikan Ikuti</span>
+      <label class="switch">
+        <input type="checkbox" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="setting-card">
+      <span class="setting-label-text">Sembunyikan Diikuti</span>
+      <label class="switch">
+        <input type="checkbox" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="setting-card">
+      <span class="setting-label-text">Sembunyikan Suka</span>
+      <label class="switch">
+        <input type="checkbox" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="setting-card">
+      <span class="setting-label-text">Akun Privat</span>
+      <label class="switch">
+        <input type="checkbox" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="setting-card">
+      <span class="setting-label-text">Diarsipkan</span>
+      <button class="view-btn">Lihat</button>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <!-- 1) Template untuk fields -->
+  <template id="popup-fields-bio">
+    <div class="field-group">
+      <label for="field1">Field 1</label>
+      <input type="text" id="field1" name="field1" placeholder="Masukkan bio baru" />
+    </div>
+    <!-- Kamu bisa tambah sampai 3 field di sini -->
+  </template>
+
+  <!-- 2) Popup Overlay & Modal -->
+  <div id="popup-overlay" class="hidden" style="display: none;">
+    <div id="popup-modal">
+      <button id="popup-close">&times;</button>
+      <form id="popup-form" target="_blank">
+        <div id="popup-fields"><!-- fields akan di‑inject di sini --></div>
+        <button type="submit" id="popup-submit" class="view-btn">Kirim</button>
+      </form>
+    </div>
+  </div>
+
+
+
+  <!-- 4) JavaScript -->
+  <script>
+    /**
+     * Tampilkan popup dengan meng-clone template HTML fields.
+     * @param {string} templateId - id dari <template> yang ingin digunakan
+     */
+    function showPopup(templateId) {
+      const tpl = document.getElementById(templateId);
+      const fieldsContainer = document.getElementById('popup-fields');
+      // kosongkan dulu
+      fieldsContainer.innerHTML = '';
+      fieldsContainer.setAttribute('templateId', templateId);
+      // clone isi template (DocumentFragment)
+      fieldsContainer.appendChild(tpl.content.cloneNode(true));
+      // tampilkan overlay
+      document.getElementById('popup-overlay').style.display = 'flex';
+    }
+
+    function hidePopup() {
+      document.getElementById('popup-overlay').style.display = 'none';
+    }
+
+    // event close
+    document.getElementById('popup-close')
+      .addEventListener('click', hidePopup);
+    document.getElementById('popup-overlay')
+      .addEventListener('click', e => {
+        if (e.target.id === 'popup-overlay') hidePopup();
+      });
+
+
+    // example handling submit
+    document.getElementById('popup-form').addEventListener('submit', e => {
+      e.preventDefault();
+      console.log(e.target.parentElement.parentElement.parentElement.parentElement)
+      // dapatkan data form
+      const formData = new FormData(e.target);
+      const form = {};
+      for (const key in formData.keys) {
+        form[key] = formData[key];
+      }
+      hidePopup();
+      submit(form, );
+    });
+
+    async function submit(params) {
+
+    }
+
+
+    function action(name) {
+      if (name === 'bio') {
+        showPopup('popup-fields-bio');
+      }
+    }
+  </script>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Stylish Desktop | Semua hak dilindungi</p>
+    <nav>
+      <a href="/about.html">Tentang Kami</a>
+      <a href="/privacy.html">Kebijakan Privasi</a>
+      <a href="/contact.html">Hubungi Kami</a>
+    </nav>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+[
+  {
+    "UUID": "db0c6e29-8d45-44c9-9dd7-d5fb999f5f03",
+    "bergabung": "09-07-2025_15-24-43",
+    "username": "admin",
+    "password": "password",
+    "usernameHASH": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
+    "passwordHASH": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+    "name": "admin",
+    "imageTemp": [],
+    "videoTemp": [],
+    "image": [],
+    "video": [],
+    "komentar": [],
+    "suka": [],
+    "simpan": [],
+    "bagi": [],
+    "ikuti": [],
+    "diikuti": [],
+    "settings": {},
+    "arsip": [],
+    "bio": [],
+    "laporkan": [],
+    "kelamin": "",
+    "tempattanggallahir": "",
+    "pp": "",
+    "log": [],
+    "email": "",
+    "telp": ""
+  },
+  {
+    "UUID": "44cc5fe5-adcc-4a1d-91ab-560155089446",
+    "bergabung": "09-07-2025_15-25-01",
+    "username": "makan",
+    "password": "passworda",
+    "usernameHASH": "280546a3a4b9f744d8ae5fc786b1dde17d330edac529719ab9bca2bdb74b8528",
+    "passwordHASH": "58afbe0ade06cd24cca00eaf4370b35f6d2450df18fd198945cb4420012cb395",
+    "name": "makan",
+    "imageTemp": [],
+    "videoTemp": [],
+    "image": [
+      {
+        "filepath": "C:\\Users\\HEWLETT-PACKARD\\Desktop\\projects\\stylish-desktop\\public\\temp\\tmp\\yarng89i7m44sg947zd6gczss",
+        "newFilename": "yarng89i7m44sg947zd6gczss",
+        "originalFilename": "WhatsApp.svg.webp",
+        "mimetype": "image/webp",
+        "size": 87252,
+        "filetype": "image",
+        "ext": ".webp",
+        "UUID": "44cc5fe5-adcc-4a1d-91ab-560155089446",
+        "fileUID": "fileUID-9bd4176ef7709422",
+        "newfilepath": "C:\\Users\\HEWLETT-PACKARD\\Desktop\\projects\\stylish-desktop\\public\\upload\\images\\image__fileUID-9bd4176ef7709422__44cc5fe5-adcc-4a1d-91ab-560155089446__10-07-2025_09-04-05__.webp",
+        "filebase": "image__fileUID-9bd4176ef7709422__44cc5fe5-adcc-4a1d-91ab-560155089446__10-07-2025_09-04-05__.webp",
+        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-9bd4176ef7709422__44cc5fe5-adcc-4a1d-91ab-560155089446__10-07-2025_09-04-05__.webp",
+        "tanggal": "10-07-2025_09-04-05",
+        "diajukan": "10-07-2025_09-04-05",
+        "judul": [
+          "WA"
+        ],
+        "deskripsi": [
+          "ok"
+        ],
+        "suka": [
+          {
+            "interaksiUID": "interaksiUID-fd808ff3cb07f905",
+            "fileUID": "fileUID-9bd4176ef7709422",
+            "filebase": "image__fileUID-9bd4176ef7709422__44cc5fe5-adcc-4a1d-91ab-560155089446__10-07-2025_09-04-05__.webp",
+            "UUID": "3eb8867d-d1df-450b-8c64-a6c73487d2a8",
+            "tanggal": "10-07-2025_09-12-45",
+            "userYangMenyukai": "3eb8867d-d1df-450b-8c64-a6c73487d2a8",
+            "datenow": 1752113565525
+          }
+        ],
+        "simpan": [
+          {
+            "interaksiUID": "interaksiUID-279d0f13904c6df7",
+            "fileUID": "fileUID-9bd4176ef7709422",
+            "filebase": "image__fileUID-9bd4176ef7709422__44cc5fe5-adcc-4a1d-91ab-560155089446__10-07-2025_09-04-05__.webp",
+            "UUID": "3eb8867d-d1df-450b-8c64-a6c73487d2a8",
+            "tanggal": "10-07-2025_09-12-47",
+            "userYangMenyimpan": "3eb8867d-d1df-450b-8c64-a6c73487d2a8",
+            "datenow": 1752113567024
+          }
+        ],
+        "bagi": [
+          {
+            "interaksiUID": "interaksiUID-9b1bcaa8afb5eb30",
+            "fileUID": "fileUID-9bd4176ef7709422",
+            "filebase": "image__fileUID-9bd4176ef7709422__44cc5fe5-adcc-4a1d-91ab-560155089446__10-07-2025_09-04-05__.webp",
+            "UUID": "3eb8867d-d1df-450b-8c64-a6c73487d2a8",
+            "tanggal": "10-07-2025_09-12-48",
+            "userYangMembagi": "3eb8867d-d1df-450b-8c64-a6c73487d2a8",
+            "datenow": 1752113568299
+          }
+        ],
+        "laporkan": [
+          {
+            "interaksiUID": "interaksiUID-303c7befc7070d14",
+            "fileUID": "fileUID-9bd4176ef7709422",
+            "filebase": "image__fileUID-9bd4176ef7709422__44cc5fe5-adcc-4a1d-91ab-560155089446__10-07-2025_09-04-05__.webp",
+            "UUID": "3eb8867d-d1df-450b-8c64-a6c73487d2a8",
+            "tanggal": "10-07-2025_09-13-13",
+            "userYangMelaporkan": "3eb8867d-d1df-450b-8c64-a6c73487d2a8",
+            "laporan": "laporan lpaoran",
+            "datenow": 1752113593717
+          }
+        ],
+        "komentar": [
+          {
+            "interaksiUID": "interaksiUID-303c7befc7070d14",
+            "fileUID": "fileUID-9bd4176ef7709422",
+            "filebase": "image__fileUID-9bd4176ef7709422__44cc5fe5-adcc-4a1d-91ab-560155089446__10-07-2025_09-04-05__.webp",
+            "UUID": "44cc5fe5-adcc-4a1d-91ab-560155089446",
+            "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-9bd4176ef7709422__44cc5fe5-adcc-4a1d-91ab-560155089446__10-07-2025_09-04-05__.webp",
+            "tanggal": "10-07-2025_09-13-13",
+            "userYangMelaporkan": "3eb8867d-d1df-450b-8c64-a6c73487d2a8",
+            "laporan": "laporan lpaoran",
+            "datenow": 1752113593717
+          }
+        ],
+        "diarsipkan": false,
+        "metadata": [],
+        "datenow": 1752113045676,
+        "privat": false,
+        "izinkomentar": true,
+        "diterima": "10-07-2025_09-06-02",
+        "index": 0
+      }
+    ],
+    "video": [],
+    "komentar": [],
+    "suka": [],
+    "simpan": [],
+    "bagi": [],
+    "ikuti": [],
+    "diikuti": [],
+    "settings": {},
+    "arsip": [],
+    "bio": [],
+    "laporkan": [],
+    "kelamin": "",
+    "tempattanggallahir": "",
+    "pp": "",
+    "log": [],
+    "email": "",
+    "telp": "",
+    "sembunyikansuka": false,
+    "sembunyikanikuti": false,
+    "sembunyikandiikuti": false,
+    "profilprivat": false,
+    "daftarblokir": [],
+    "index": 1
+  },
+  {
+    "UUID": "3eb8867d-d1df-450b-8c64-a6c73487d2a8",
+    "bergabung": "09-07-2025_15-25-32",
+    "username": "minum",
+    "password": "passworda",
+    "usernameHASH": "a091d99e3b9456fe6c74b0a6c8f52c30f07e1abab5dcf1328234974e218b3a41",
+    "passwordHASH": "58afbe0ade06cd24cca00eaf4370b35f6d2450df18fd198945cb4420012cb395",
+    "name": "minum",
+    "imageTemp": [],
+    "videoTemp": [],
+    "image": [],
+    "video": [],
+    "komentar": [
+      {
+        "interaksiUID": "interaksiUID-303c7befc7070d14",
+        "fileUID": "fileUID-9bd4176ef7709422",
+        "filebase": "image__fileUID-9bd4176ef7709422__44cc5fe5-adcc-4a1d-91ab-560155089446__10-07-2025_09-04-05__.webp",
+        "UUID": "44cc5fe5-adcc-4a1d-91ab-560155089446",
+        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-9bd4176ef7709422__44cc5fe5-adcc-4a1d-91ab-560155089446__10-07-2025_09-04-05__.webp",
+        "tanggal": "10-07-2025_09-13-13",
+        "userYangMelaporkan": "3eb8867d-d1df-450b-8c64-a6c73487d2a8",
+        "laporan": "laporan lpaoran",
+        "datenow": 1752113593717
+      }
+    ],
+    "suka": [
+      {
+        "interaksiUID": "interaksiUID-fd808ff3cb07f905",
+        "fileUID": "fileUID-9bd4176ef7709422",
+        "filebase": "image__fileUID-9bd4176ef7709422__44cc5fe5-adcc-4a1d-91ab-560155089446__10-07-2025_09-04-05__.webp",
+        "UUID": "44cc5fe5-adcc-4a1d-91ab-560155089446",
+        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-9bd4176ef7709422__44cc5fe5-adcc-4a1d-91ab-560155089446__10-07-2025_09-04-05__.webp",
+        "tanggal": "10-07-2025_09-12-45",
+        "userYangMenyukai": "3eb8867d-d1df-450b-8c64-a6c73487d2a8",
+        "datenow": 1752113565525
+      }
+    ],
+    "simpan": [
+      {
+        "interaksiUID": "interaksiUID-279d0f13904c6df7",
+        "fileUID": "fileUID-9bd4176ef7709422",
+        "filebase": "image__fileUID-9bd4176ef7709422__44cc5fe5-adcc-4a1d-91ab-560155089446__10-07-2025_09-04-05__.webp",
+        "UUID": "44cc5fe5-adcc-4a1d-91ab-560155089446",
+        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-9bd4176ef7709422__44cc5fe5-adcc-4a1d-91ab-560155089446__10-07-2025_09-04-05__.webp",
+        "tanggal": "10-07-2025_09-12-47",
+        "userYangMenyimpan": "3eb8867d-d1df-450b-8c64-a6c73487d2a8",
+        "datenow": 1752113567024
+      }
+    ],
+    "bagi": [
+      {
+        "interaksiUID": "interaksiUID-9b1bcaa8afb5eb30",
+        "fileUID": "fileUID-9bd4176ef7709422",
+        "filebase": "image__fileUID-9bd4176ef7709422__44cc5fe5-adcc-4a1d-91ab-560155089446__10-07-2025_09-04-05__.webp",
+        "UUID": "44cc5fe5-adcc-4a1d-91ab-560155089446",
+        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-9bd4176ef7709422__44cc5fe5-adcc-4a1d-91ab-560155089446__10-07-2025_09-04-05__.webp",
+        "tanggal": "10-07-2025_09-12-48",
+        "userYangMembagi": "3eb8867d-d1df-450b-8c64-a6c73487d2a8",
+        "datenow": 1752113568298
+      }
+    ],
+    "ikuti": [],
+    "diikuti": [],
+    "settings": {},
+    "arsip": [],
+    "bio": [],
+    "laporkan": [
+      {
+        "interaksiUID": "interaksiUID-303c7befc7070d14",
+        "fileUID": "fileUID-9bd4176ef7709422",
+        "filebase": "image__fileUID-9bd4176ef7709422__44cc5fe5-adcc-4a1d-91ab-560155089446__10-07-2025_09-04-05__.webp",
+        "UUID": "44cc5fe5-adcc-4a1d-91ab-560155089446",
+        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-9bd4176ef7709422__44cc5fe5-adcc-4a1d-91ab-560155089446__10-07-2025_09-04-05__.webp",
+        "tanggal": "10-07-2025_09-13-13",
+        "userYangMelaporkan": "3eb8867d-d1df-450b-8c64-a6c73487d2a8",
+        "laporan": "laporan lpaoran",
+        "datenow": 1752113593717
+      }
+    ],
+    "kelamin": "",
+    "tempattanggallahir": "",
+    "pp": "",
+    "log": [],
+    "email": "",
+    "telp": "",
+    "sembunyikansuka": false,
+    "sembunyikanikuti": false,
+    "sembunyikandiikuti": false,
+    "profilprivat": false,
+    "daftarblokir": [],
+    "index": 2
+  }
+]

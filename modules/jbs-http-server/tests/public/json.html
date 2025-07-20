@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form id="loginForm">
+    <fieldset>
+      <legend>LOGIN</legend>
+      <input type="email" name="email" id="email" value="myemail@gmail.com">
+      <input type="password" name="password" id="password" value="passwordcoy">
+      <input type="submit" value="kirim">
+    </fieldset>
+  </form>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = {
+        email: form.email.value,
+        password: form.password.value
+      };
+      // const response = await fetch('http://localhost:3000/json', {
+      const response = await fetch('/json', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+          // 'Content-Type': 'text/plain'
+        },
+        body: JSON.stringify(data)
+      });
+      const result = await response.json();
+      console.log(result);
+    });
+  </script>
+
+</body>
+
+</html>
