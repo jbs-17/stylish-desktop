@@ -37,7 +37,7 @@ if (!isiuserdatabase.startsWith("[") && !isiuserdatabase.endsWith("]")) {
 }
 
 // eslint-disable-next-line no-undef
-const port = Number(process.env.SERVER_PORT);
+const port = Number(process.env.SERVER_PORT) || 3000;
 const useCache = process.env.CACHE === '0' ? false : true;
 // console.log({useCache});
 
