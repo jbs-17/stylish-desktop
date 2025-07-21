@@ -41,7 +41,40 @@
     "usernameHASH": "0a041b9462caa4a31bac3567e0b6e6fd9100787db2ab433d96f6d178cabfce90",
     "passwordHASH": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
     "name": "user1",
-    "imageTemp": [],
+    "imageTemp": [
+      {
+        "filepath": "D:\\code\\projects\\stylish-desktop\\public\\temp\\tmp\\eaxglg4pzterkq23m7wqyszwf",
+        "newFilename": "eaxglg4pzterkq23m7wqyszwf",
+        "originalFilename": "WhatsApp Image 2024-01-26 at 17.24.50_ce1d9e22.jpg",
+        "mimetype": "image/jpeg",
+        "size": 67729,
+        "filetype": "image",
+        "ext": ".jpg",
+        "UUID": "7838a342-05b1-447a-8c5d-5ec109461067",
+        "fileUID": "fileUID-af00240c3231dbd1",
+        "newfilepath": "D:\\code\\projects\\stylish-desktop\\public\\temp\\images\\image__fileUID-af00240c3231dbd1__7838a342-05b1-447a-8c5d-5ec109461067__21-07-2025_19-27-59__.jpg",
+        "filebase": "image__fileUID-af00240c3231dbd1__7838a342-05b1-447a-8c5d-5ec109461067__21-07-2025_19-27-59__.jpg",
+        "relativeFilePath": "..\\public\\temp\\images\\image__fileUID-af00240c3231dbd1__7838a342-05b1-447a-8c5d-5ec109461067__21-07-2025_19-27-59__.jpg",
+        "tanggal": "21-07-2025_19-27-59",
+        "diajukan": "21-07-2025_19-27-59",
+        "judul": [
+          "aplas"
+        ],
+        "deskripsi": [
+          "asahs"
+        ],
+        "suka": [],
+        "simpan": [],
+        "bagi": [],
+        "laporkan": [],
+        "komentar": [],
+        "diarsipkan": false,
+        "metadata": [],
+        "datenow": 1753100879379,
+        "privat": false,
+        "izinkomentar": true
+      }
+    ],
     "videoTemp": [],
     "image": [],
     "video": [],
@@ -178,6 +211,72 @@
         "privat": false,
         "izinkomentar": true,
         "diterima": "16-07-2025_19-07-12"
+      },
+      {
+        "filepath": "D:\\code\\projects\\stylish-desktop\\public\\temp\\tmp\\pr8avhd0zv2msp5dysi2d6mfm",
+        "newFilename": "pr8avhd0zv2msp5dysi2d6mfm",
+        "originalFilename": "Screenshot 2023-08-28 203523.png",
+        "mimetype": "image/png",
+        "size": 109983,
+        "filetype": "image",
+        "ext": ".png",
+        "UUID": "2cea6187-cff2-43e3-a8d4-100d2177db10",
+        "fileUID": "fileUID-1ba4083f01ea962d",
+        "newfilepath": "D:\\code\\projects\\stylish-desktop\\public\\upload\\images\\image__fileUID-1ba4083f01ea962d__2cea6187-cff2-43e3-a8d4-100d2177db10__21-07-2025_18-44-54__.png",
+        "filebase": "image__fileUID-1ba4083f01ea962d__2cea6187-cff2-43e3-a8d4-100d2177db10__21-07-2025_18-44-54__.png",
+        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-1ba4083f01ea962d__2cea6187-cff2-43e3-a8d4-100d2177db10__21-07-2025_18-44-54__.png",
+        "tanggal": "21-07-2025_18-44-54",
+        "diajukan": "21-07-2025_18-44-54",
+        "judul": [
+          "imam bonjol"
+        ],
+        "deskripsi": [
+          "apalah"
+        ],
+        "suka": [],
+        "simpan": [],
+        "bagi": [],
+        "laporkan": [],
+        "komentar": [],
+        "diarsipkan": false,
+        "metadata": [],
+        "datenow": 1753098294655,
+        "privat": false,
+        "izinkomentar": true,
+        "diterima": "21-07-2025_18-56-11"
+      },
+      {
+        "filepath": "D:\\code\\projects\\stylish-desktop\\public\\temp\\tmp\\ztbdmvdtlp4o2ak96jp39ehl3",
+        "newFilename": "ztbdmvdtlp4o2ak96jp39ehl3",
+        "originalFilename": "Screenshot 2023-08-28 203629.png",
+        "mimetype": "image/png",
+        "size": 137536,
+        "filetype": "image",
+        "ext": ".png",
+        "UUID": "2cea6187-cff2-43e3-a8d4-100d2177db10",
+        "fileUID": "fileUID-963e1ee113d2fdf1",
+        "newfilepath": "D:\\code\\projects\\stylish-desktop\\public\\upload\\images\\image__fileUID-963e1ee113d2fdf1__2cea6187-cff2-43e3-a8d4-100d2177db10__21-07-2025_19-10-20__.png",
+        "filebase": "image__fileUID-963e1ee113d2fdf1__2cea6187-cff2-43e3-a8d4-100d2177db10__21-07-2025_19-10-20__.png",
+        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-963e1ee113d2fdf1__2cea6187-cff2-43e3-a8d4-100d2177db10__21-07-2025_19-10-20__.png",
+        "tanggal": "21-07-2025_19-10-20",
+        "diajukan": "21-07-2025_19-10-20",
+        "judul": [
+          "bawak deawak"
+        ],
+        "deskripsi": [
+          "apalah"
+        ],
+        "suka": [],
+        "simpan": [],
+        "bagi": [],
+        "laporkan": [],
+        "komentar": [],
+        "diarsipkan": false,
+        "metadata": [],
+        "datenow": 1753099820264,
+        "privat": false,
+        "izinkomentar": true,
+        "diterima": "21-07-2025_19-10-42"
       }
     ],
     "video": [
@@ -238,9 +337,42 @@
       }
     ],
     "komentar": [],
-    "suka": [],
-    "simpan": [],
-    "bagi": [],
+    "suka": [
+      {
+        "interaksiUID": "interaksiUID-9343b683c9543527",
+        "fileUID": "fileUID-500aaab1df13bd75",
+        "filebase": "image__fileUID-500aaab1df13bd75__60f67cc9-5f1b-4342-bc3d-38700cd00cd7__12-07-2025_20-36-50__.webp",
+        "UUID": "60f67cc9-5f1b-4342-bc3d-38700cd00cd7",
+        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-500aaab1df13bd75__60f67cc9-5f1b-4342-bc3d-38700cd00cd7__12-07-2025_20-36-50__.webp",
+        "tanggal": "21-07-2025_18-43-35",
+        "userYangMenyukai": "2cea6187-cff2-43e3-a8d4-100d2177db10",
+        "datenow": 1753098215107
+      }
+    ],
+    "simpan": [
+      {
+        "interaksiUID": "interaksiUID-80668099a8372ddd",
+        "fileUID": "fileUID-500aaab1df13bd75",
+        "filebase": "image__fileUID-500aaab1df13bd75__60f67cc9-5f1b-4342-bc3d-38700cd00cd7__12-07-2025_20-36-50__.webp",
+        "UUID": "60f67cc9-5f1b-4342-bc3d-38700cd00cd7",
+        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-500aaab1df13bd75__60f67cc9-5f1b-4342-bc3d-38700cd00cd7__12-07-2025_20-36-50__.webp",
+        "tanggal": "21-07-2025_18-42-57",
+        "userYangMenyimpan": "2cea6187-cff2-43e3-a8d4-100d2177db10",
+        "datenow": 1753098177051
+      }
+    ],
+    "bagi": [
+      {
+        "interaksiUID": "interaksiUID-181c94e7105c9b21",
+        "fileUID": "fileUID-500aaab1df13bd75",
+        "filebase": "image__fileUID-500aaab1df13bd75__60f67cc9-5f1b-4342-bc3d-38700cd00cd7__12-07-2025_20-36-50__.webp",
+        "UUID": "60f67cc9-5f1b-4342-bc3d-38700cd00cd7",
+        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-500aaab1df13bd75__60f67cc9-5f1b-4342-bc3d-38700cd00cd7__12-07-2025_20-36-50__.webp",
+        "tanggal": "21-07-2025_18-44-10",
+        "userYangMembagi": "2cea6187-cff2-43e3-a8d4-100d2177db10",
+        "datenow": 1753098250879
+      }
+    ],
     "ikuti": [],
     "diikuti": [],
     "settings": {},
@@ -292,9 +424,39 @@
         "deskripsi": [
           ""
         ],
-        "suka": [],
-        "simpan": [],
-        "bagi": [],
+        "suka": [
+          {
+            "interaksiUID": "interaksiUID-9343b683c9543527",
+            "fileUID": "fileUID-500aaab1df13bd75",
+            "filebase": "image__fileUID-500aaab1df13bd75__60f67cc9-5f1b-4342-bc3d-38700cd00cd7__12-07-2025_20-36-50__.webp",
+            "UUID": "2cea6187-cff2-43e3-a8d4-100d2177db10",
+            "tanggal": "21-07-2025_18-43-35",
+            "userYangMenyukai": "2cea6187-cff2-43e3-a8d4-100d2177db10",
+            "datenow": 1753098215107
+          }
+        ],
+        "simpan": [
+          {
+            "interaksiUID": "interaksiUID-80668099a8372ddd",
+            "fileUID": "fileUID-500aaab1df13bd75",
+            "filebase": "image__fileUID-500aaab1df13bd75__60f67cc9-5f1b-4342-bc3d-38700cd00cd7__12-07-2025_20-36-50__.webp",
+            "UUID": "2cea6187-cff2-43e3-a8d4-100d2177db10",
+            "tanggal": "21-07-2025_18-42-57",
+            "userYangMenyimpan": "2cea6187-cff2-43e3-a8d4-100d2177db10",
+            "datenow": 1753098177051
+          }
+        ],
+        "bagi": [
+          {
+            "interaksiUID": "interaksiUID-181c94e7105c9b21",
+            "fileUID": "fileUID-500aaab1df13bd75",
+            "filebase": "image__fileUID-500aaab1df13bd75__60f67cc9-5f1b-4342-bc3d-38700cd00cd7__12-07-2025_20-36-50__.webp",
+            "UUID": "2cea6187-cff2-43e3-a8d4-100d2177db10",
+            "tanggal": "21-07-2025_18-44-10",
+            "userYangMembagi": "2cea6187-cff2-43e3-a8d4-100d2177db10",
+            "datenow": 1753098250879
+          }
+        ],
         "laporkan": [],
         "komentar": [],
         "diarsipkan": false,
@@ -302,7 +464,8 @@
         "datenow": 1752327410161,
         "privat": false,
         "izinkomentar": true,
-        "diterima": "12-07-2025_20-37-10"
+        "diterima": "12-07-2025_20-37-10",
+        "index": 0
       }
     ],
     "video": [],

@@ -76,7 +76,6 @@ async function json(req = Request.prototype, res = Response.prototype, next) {
 
 
 
-
 // eslint-disable-next-line no-unused-vars
 async function text(req = Request.prototype, res = Response.prototype, next) {
   if (req.body != null) {
@@ -293,7 +292,11 @@ sss.readStreamFileCache = new Cache(128, 1, (5 / 60));
 
 
 
-
+json.JBSmiddlewares = true
+urlencoded.JBSmiddlewares = true;
+text.JBSmiddlewares = true;
+raw.JBSmiddlewares = true;
+sss.JBSmiddlewares = true;
 
 
 

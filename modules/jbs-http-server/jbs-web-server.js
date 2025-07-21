@@ -14,6 +14,7 @@ import { json, raw, sss, text, urlencoded } from './jbs-middlewares.js'; //midde
 import { createRouter } from './jbs-router.js'; //Router
 import errorMessage from './jbs-error-message.js';
 import { readdirTemplates, readTemplatesAndServe } from './jbs-html-template-engine-x-gpt.js'
+import { randomUUID } from 'node:crypto';
 
 
 //timpa prototipe req res denagn yang sudah di extends
@@ -362,6 +363,9 @@ function app() {
   }
   //. UNTUK PASANG MIDDLEWARE DAN ROUTER 
   function use(path = anonymousCallbackMd, handler = anonymousCallbackMd) {
+    if (handler.JBSmiddlewares === true) {
+      handler.JBSmiddlewaresID = randomUUID()
+    }
     if (handler?.isRouter) {
       const prefix = path;
       const chains = handler?.chains;
@@ -440,21 +444,27 @@ function app() {
       handler.uuid = uuid;
       switch (method) {
         case 'GET':
+          handler.handler = true;
           get(path, handler);
           continue;
         case 'POST':
+          handler.handler = true;
           post(path, handler);
           continue;
         case 'PUT':
+          handler.handler = true;
           put(path, handler);
           continue;
         case 'PATCH':
+          handler.handler = true;
           patch(path, handler)
           continue;
         case 'DELETE':
+          handler.handler = true;
           delet(path, handler)
           continue;
         case 'OPTIONS':
+          handler.handler = true;
           options(path, handler)
           continue;
         case 'MIDDLEWARE':
@@ -612,10 +622,24 @@ function app() {
 
 
           //global middleware (definisi rute setelah pemanggil middlewre nya sih);
-          const routerGlobalMid2 = Ecallback.uuid === Mcallback.uuid;
+          const routerGlobalMid2 = Ecallback.uuid === Mcallback.uuid && Mindex < i;
           if (routerGlobalMid2 && !EchainCallbacksUID.includes(Muid)) {
-            chains[i][6].push(Muid);
-            chains[i][7].push(Mcallback);
+
+            //cek kalau itu middleware bawaan
+            const isJBSmiddlewaresID = Mcallback.JBSmiddlewaresID;
+            if (isJBSmiddlewaresID !== undefined) {
+              if (!EchainCallbacksUID.includes(isJBSmiddlewaresID)) {
+                console.log({ isJBSmiddlewaresID, x: EchainCallbacksUID });
+                chains[i][6].push(isJBSmiddlewaresID);
+                chains[i][7].push(Mcallback);
+              }
+            }
+            //kalau bukan mid baaan
+            if (isJBSmiddlewaresID === undefined) {
+              console.log({ isJBSmiddlewaresID, x: EchainCallbacksUID });
+              chains[i][6].push(Muid);
+              chains[i][7].push(Mcallback);
+            }
           }
           if (Mindex < i && Mtype === 'global-middleware' && !EchainCallbacksUID.includes(Muid)) {
             const isRouterGlobalMiddleware = Mcallback?.Router;
@@ -821,16 +845,19 @@ function app() {
       const endpoint = x[0];
       const middlewares = x.slice(1);
       let entries = [...middlewares, endpoint];
-
+      // console.log({ entries1: entries });
       ///aneh
-      // console.log({ entries });
+      console.log({ entries });
       // const routerM = entries.filter(m => m.Router !== undefined && m.uuid);
       // const globalM = entries.filter(m => m.Router === undefined && !m.uuid);
-      const routerM = entries.filter(m => m.Router !== undefined);
-      const globalM = entries.filter(m => m.Router === undefined);
+
+      //nuat apa saya lupa
+      const routerM = entries.filter(m => m.Router !== undefined || m.JBSmiddlewares);
+      const globalM = entries.filter(m => m.Router === undefined && m.uuid === undefined);
       if (routerM.length && globalM.length) {
         entries = [...globalM, ...routerM, endpoint];
       }
+      console.log({ entries2: entries });
 
       myEmitter.on('next', async (error) => {
         try {

@@ -28,7 +28,7 @@ loggingEmit.on('selesai', async (infoRequest = {}) => {
 const app = JBS();
 app.setTemplates('./public/view')
 
-app.use(async function log(req, res, next) {
+app.use(function log(req, res, next) {
   next();
   const mulai = Date.now();
   const infoRequest = {
@@ -93,11 +93,10 @@ app.use('/post', routers.post);
 
 app.use(JBS.static('./public/page/'));
 app.use(JBS.static('./public/temp'));
-app.use(JBS.static('./public/page'));
 app.use(JBS.static('./public/upload'));
 app.use('/post', JBS.static('./public/upload'));
 
-
+app.use(JBS.static('./public/page'));
 app.response404((req, res) => {
   res.sendStatus(404);
   
@@ -122,6 +121,7 @@ app.response404((req, res) => {
 
 
 
+console.log(app.chains);
 
 
 
