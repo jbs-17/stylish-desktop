@@ -18,8 +18,8 @@ import { cariUserDariUUID } from './apis/user/verifikasiUsenameDanPassword.js';
 
 const loggingEmit = new EventEmitter();
 loggingEmit.on('selesai', async (infoRequest = {}) => {
-  console.log((`${chalk.bgRgb(255, 0, 0).rgb(0,0,0).bold(' ' + new Date().toLocaleString()+' ')}${chalk.bgWhiteBright.rgb(0,0,0).bold(` ${infoRequest.durasi}ms `)} ${infoRequest.url} `));
-  console.log(chalk.bgRgb(0,0,0)(' '));
+  console.log((`${chalk.bgRgb(255, 0, 0).rgb(0, 0, 0).bold(' ' + new Date().toLocaleString() + ' ')}${chalk.bgWhiteBright.rgb(0, 0, 0).bold(` ${infoRequest.durasi}ms `)} ${infoRequest.url} `));
+  console.log(chalk.bgRgb(0, 0, 0)(' '));
   logging(infoRequest);
 });
 
@@ -99,18 +99,18 @@ app.use('/post', JBS.static('./public/upload'));
 app.use(JBS.static('./public/page'));
 app.response404((req, res) => {
   res.sendStatus(404);
-  
-  if(req.accept.startsWith('text/html')){
+
+  if (req.accept.startsWith('text/html')) {
     res.html('./public/page/404.html');
     return
   }
-  if (req.accept.includes('image')){
+  if (req.accept.includes('image')) {
     res.set('Content-Type', 'image/png');
-    res.sendFile('404.png', {root: './public'});
+    res.sendFile('404.png', { root: './public' });
     return
   }
-  if(req.accept.includes('json')){
-    res.json({status: false, message: `${req.method} - ${req.url} - 404 - NOT FOUND`});
+  if (req.accept.includes('json')) {
+    res.json({ status: false, message: `${req.method} - ${req.url} - 404 - NOT FOUND` });
     return
   }
   res.text('404')

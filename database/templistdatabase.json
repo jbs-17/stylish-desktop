@@ -1,37 +1,4 @@
 {
-  "imageTemp": [
-    {
-      "filepath": "D:\\code\\projects\\stylish-desktop\\public\\temp\\tmp\\eaxglg4pzterkq23m7wqyszwf",
-      "newFilename": "eaxglg4pzterkq23m7wqyszwf",
-      "originalFilename": "WhatsApp Image 2024-01-26 at 17.24.50_ce1d9e22.jpg",
-      "mimetype": "image/jpeg",
-      "size": 67729,
-      "filetype": "image",
-      "ext": ".jpg",
-      "UUID": "7838a342-05b1-447a-8c5d-5ec109461067",
-      "fileUID": "fileUID-af00240c3231dbd1",
-      "newfilepath": "D:\\code\\projects\\stylish-desktop\\public\\temp\\images\\image__fileUID-af00240c3231dbd1__7838a342-05b1-447a-8c5d-5ec109461067__21-07-2025_19-27-59__.jpg",
-      "filebase": "image__fileUID-af00240c3231dbd1__7838a342-05b1-447a-8c5d-5ec109461067__21-07-2025_19-27-59__.jpg",
-      "relativeFilePath": "..\\public\\temp\\images\\image__fileUID-af00240c3231dbd1__7838a342-05b1-447a-8c5d-5ec109461067__21-07-2025_19-27-59__.jpg",
-      "tanggal": "21-07-2025_19-27-59",
-      "diajukan": "21-07-2025_19-27-59",
-      "judul": [
-        "aplas"
-      ],
-      "deskripsi": [
-        "asahs"
-      ],
-      "suka": [],
-      "simpan": [],
-      "bagi": [],
-      "laporkan": [],
-      "komentar": [],
-      "diarsipkan": false,
-      "metadata": [],
-      "datenow": 1753100879379,
-      "privat": false,
-      "izinkomentar": true
-    }
-  ],
+  "imageTemp": [],
   "videoTemp": []
 }

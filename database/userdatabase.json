@@ -41,40 +41,7 @@
     "usernameHASH": "0a041b9462caa4a31bac3567e0b6e6fd9100787db2ab433d96f6d178cabfce90",
     "passwordHASH": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
     "name": "user1",
-    "imageTemp": [
-      {
-        "filepath": "D:\\code\\projects\\stylish-desktop\\public\\temp\\tmp\\eaxglg4pzterkq23m7wqyszwf",
-        "newFilename": "eaxglg4pzterkq23m7wqyszwf",
-        "originalFilename": "WhatsApp Image 2024-01-26 at 17.24.50_ce1d9e22.jpg",
-        "mimetype": "image/jpeg",
-        "size": 67729,
-        "filetype": "image",
-        "ext": ".jpg",
-        "UUID": "7838a342-05b1-447a-8c5d-5ec109461067",
-        "fileUID": "fileUID-af00240c3231dbd1",
-        "newfilepath": "D:\\code\\projects\\stylish-desktop\\public\\temp\\images\\image__fileUID-af00240c3231dbd1__7838a342-05b1-447a-8c5d-5ec109461067__21-07-2025_19-27-59__.jpg",
-        "filebase": "image__fileUID-af00240c3231dbd1__7838a342-05b1-447a-8c5d-5ec109461067__21-07-2025_19-27-59__.jpg",
-        "relativeFilePath": "..\\public\\temp\\images\\image__fileUID-af00240c3231dbd1__7838a342-05b1-447a-8c5d-5ec109461067__21-07-2025_19-27-59__.jpg",
-        "tanggal": "21-07-2025_19-27-59",
-        "diajukan": "21-07-2025_19-27-59",
-        "judul": [
-          "aplas"
-        ],
-        "deskripsi": [
-          "asahs"
-        ],
-        "suka": [],
-        "simpan": [],
-        "bagi": [],
-        "laporkan": [],
-        "komentar": [],
-        "diarsipkan": false,
-        "metadata": [],
-        "datenow": 1753100879379,
-        "privat": false,
-        "izinkomentar": true
-      }
-    ],
+    "imageTemp": [],
     "videoTemp": [],
     "image": [],
     "video": [],
@@ -537,5 +504,74 @@
     "profilprivat": false,
     "daftarblokir": [],
     "index": 4
+  },
+  {
+    "UUID": "54cb24a8-9f0c-43ac-8d33-7066bf411860",
+    "bergabung": "25-07-2025_16-25-11",
+    "username": "ilham",
+    "password": "passworda",
+    "usernameHASH": "e467a85cdae98a0cb4edb5570aad4bd093dc2b652b6677a5949bd4ae36922bb4",
+    "passwordHASH": "58afbe0ade06cd24cca00eaf4370b35f6d2450df18fd198945cb4420012cb395",
+    "name": "ilham",
+    "imageTemp": [],
+    "videoTemp": [],
+    "image": [
+      {
+        "filepath": "D:\\code\\projects\\stylish-desktop\\public\\temp\\tmp\\zdwyc8rttg0lh2zl9do6luuem",
+        "newFilename": "zdwyc8rttg0lh2zl9do6luuem",
+        "originalFilename": "photo.jpg",
+        "mimetype": "image/jpeg",
+        "size": 88867,
+        "filetype": "image",
+        "ext": ".jpg",
+        "UUID": "54cb24a8-9f0c-43ac-8d33-7066bf411860",
+        "fileUID": "fileUID-03555aed6899b672",
+        "newfilepath": "D:\\code\\projects\\stylish-desktop\\public\\upload\\images\\image__fileUID-03555aed6899b672__54cb24a8-9f0c-43ac-8d33-7066bf411860__25-07-2025_16-30-57__.jpg",
+        "filebase": "image__fileUID-03555aed6899b672__54cb24a8-9f0c-43ac-8d33-7066bf411860__25-07-2025_16-30-57__.jpg",
+        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-03555aed6899b672__54cb24a8-9f0c-43ac-8d33-7066bf411860__25-07-2025_16-30-57__.jpg",
+        "tanggal": "25-07-2025_16-30-57",
+        "diajukan": "25-07-2025_16-30-57",
+        "judul": [
+          "keren"
+        ],
+        "deskripsi": [
+          "wk"
+        ],
+        "suka": [],
+        "simpan": [],
+        "bagi": [],
+        "laporkan": [],
+        "komentar": [],
+        "diarsipkan": false,
+        "metadata": [],
+        "datenow": 1753435857488,
+        "privat": false,
+        "izinkomentar": true,
+        "diterima": "25-07-2025_16-31-07"
+      }
+    ],
+    "video": [],
+    "komentar": [],
+    "suka": [],
+    "simpan": [],
+    "bagi": [],
+    "ikuti": [],
+    "diikuti": [],
+    "settings": {},
+    "arsip": [],
+    "bio": "",
+    "laporkan": [],
+    "kelamin": "",
+    "tempattanggallahir": "",
+    "pp": "",
+    "log": [],
+    "email": "",
+    "telp": "",
+    "sembunyikansuka": false,
+    "sembunyikanikuti": false,
+    "sembunyikandiikuti": false,
+    "profilprivat": false,
+    "daftarblokir": [],
+    "index": 5
   }
 ]

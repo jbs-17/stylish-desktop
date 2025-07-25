@@ -845,7 +845,7 @@ function app() {
       const endpoint = x[0];
       const middlewares = x.slice(1);
       let entries = [...middlewares, endpoint];
-      // console.log({ entries1: entries });
+
       ///aneh
       console.log({ entries });
       // const routerM = entries.filter(m => m.Router !== undefined && m.uuid);
