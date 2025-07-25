@@ -15,6 +15,8 @@ profileme.get('/profile/me', async (req, res) => {
 
   // const uploadsxxx = uploads.sort((a, b) => a.datenow - b.datenow); //lama terbaru
   const data = {
+    bio: user.bio || ' ',
+    pp: user.pp || '../upload/pp/default.png',
     uploads: await serveuploads(uploads, username),
     pendings: await servependings(pendings, username),
     likes: await servelikes(suka),

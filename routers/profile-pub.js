@@ -62,6 +62,7 @@ profilepub.get('/profile/pub/:userpubidentity', async (req, res) => {
   const uploads = [...userpub.image, ...userpub.video];
   const ikutiBtn = await sudahIkuti(user.UUID, userpub.UUID);
   const data = {
+    pp: userpub.pp || '../upload/pp/default.png',
     username: userpub.username,
     uuid: userpub.UUID,
     totalsuka: await hitungTotalSuka(uploads),
