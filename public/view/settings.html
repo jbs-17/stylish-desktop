@@ -249,10 +249,7 @@
   <textarea style="display: none; opacity: 0;" name="data" id="data">
     <| data |>
   </textarea>
-  <script>
-    const datadata = document.getElementById('data').innerHTML;
-    const data = JSON.stringify
-  </script>
+
   <!-- Header -->
   <header class="header">
     <h1 class="logo"><a href="/">Stylish Desktop</a></h1>
@@ -284,7 +281,7 @@
       <span class="setting-label-text">Password</span>
       <div class="setting-actions">
         <input type="text" readonly value="<| password |>" />
-        <button class="view-btn">Ganti</button>
+        <button class="view-btn" onclick="action('password')">Ganti</button>
       </div>
     </div>
 
@@ -292,7 +289,7 @@
       <span class="setting-label-text">Nomor Telepon</span>
       <div class="setting-actions">
         <input type="text" readonly value="<| telp |>" />
-        <button class="view-btn">Ganti</button>
+        <button class="view-btn" onclick="action('telp')">Ganti</button>
       </div>
     </div>
 
@@ -300,13 +297,13 @@
       <span class="setting-label-text">Email</span>
       <div class="setting-actions">
         <input type="text" readonly value="<| email |>" />
-        <button class="view-btn">Ganti</button>
+        <button class="view-btn" onclick="action('email')">Ganti</button>
       </div>
     </div>
 
     <div class="setting-card">
       <span class="setting-label-text">Gender</span>
-      <select>
+      <select onchange="action('gender', this);">
         <| kelamin |>
       </select>
     </div>
@@ -360,10 +357,30 @@
   <!-- 1) Template untuk fields -->
   <template id="popup-fields-bio">
     <div class="field-group">
-      <label for="field1">Field 1</label>
-      <input type="text" id="field1" name="field1" placeholder="Masukkan bio baru" />
+      <label for="bio">Bio Baru</label>
+      <input type="text" id="bio" name="field-a" placeholder="Masukkan bio baru" />
     </div>
-    <!-- Kamu bisa tambah sampai 3 field di sini -->
+  </template>
+
+  <template id="popup-fields-telp">
+    <div class="field-group">
+      <label for="telp">Nomor Telepon</label>
+      <input type="text" id="telp" name="field-a" placeholder="Masukkan no. Telepon" />
+    </div>
+  </template>
+
+  <template id="popup-fields-email">
+    <div class="field-group">
+      <label for="email">Email</label>
+      <input type="text" id="email" name="field-a" placeholder="Email" />
+    </div>
+  </template>
+
+  <template id="popup-fields-pp">
+    <div class="field-group">
+      <label for="telp">Photo profile baru</label>
+      <input type="text" id="telp" name="field-a" placeholder="Masukkan bio baru" />
+    </div>
   </template>
 
   <!-- 2) Popup Overlay & Modal -->
@@ -372,7 +389,7 @@
       <button id="popup-close">&times;</button>
       <form id="popup-form" target="_blank">
         <div id="popup-fields"><!-- fields akan di‑inject di sini --></div>
-        <button type="submit" id="popup-submit" class="view-btn">Kirim</button>
+        <button type="submit" id="popup-submit" class="view-btn">SIMPAN</button>
       </form>
     </div>
   </div>
@@ -381,10 +398,7 @@
 
   <!-- 4) JavaScript -->
   <script>
-    /**
-     * Tampilkan popup dengan meng-clone template HTML fields.
-     * @param {string} templateId - id dari <template> yang ingin digunakan
-     */
+
     function showPopup(templateId) {
       const tpl = document.getElementById(templateId);
       const fieldsContainer = document.getElementById('popup-fields');
@@ -413,25 +427,40 @@
     // example handling submit
     document.getElementById('popup-form').addEventListener('submit', e => {
       e.preventDefault();
-      console.log(e.target.parentElement.parentElement.parentElement.parentElement)
+      const name = e.target.querySelector('label[for]')?.getAttribute('for');
+      if (!name) { return location.reload(); }
       // dapatkan data form
       const formData = new FormData(e.target);
-      const form = {};
-      for (const key in formData.keys) {
-        form[key] = formData[key];
-      }
-      hidePopup();
-      submit(form,);
+      submit(formData, name);
     });
 
-    async function submit(params) {
-
+    async function submit(formData, name) {
+      const response = await fetch(location.pathname + '/change/' + name, {
+        method: 'PUT',
+        body: formData
+      });
+      const data = await response.json();
+      console.log({ data });
+      alert(data.message);
+      location.reload();
     }
 
 
-    function action(name) {
+    function action(name, dom) {
       if (name === 'bio') {
         showPopup('popup-fields-bio');
+      }
+      if (name === 'telp') {
+        showPopup('popup-fields-telp');
+      }
+      if (name === 'email') {
+        showPopup('popup-fields-email');
+      }
+      if (name === 'gender') {
+        const x = dom.value;
+        const formData = new FormData();
+        formData.append('field-a', x);
+        submit(formData, 'gender')
       }
     }
   </script>

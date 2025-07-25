@@ -11,6 +11,7 @@ const sesidatabase = path.resolve(`${rootpath}/database/sesidatabase.json`);
 const imagesdatabase = path.resolve(`${rootpath}/public/upload/images`);
 const videosdatabase = path.resolve(`${rootpath}/public/upload/videos`);
 const uploadsdatabase = path.resolve(`${rootpath}/public/upload`);
+const uploadsppdatabase = path.resolve(`${rootpath}/public/upload/pp`);
 const tempimagesdatabase = path.resolve(`${rootpath}/public/temp/images`);
 const tempvideosdatabase = path.resolve(`${rootpath}/public/temp/videos`);
 const tempdatabase = path.resolve(`${rootpath}/public/temp/tmp`);
@@ -23,6 +24,7 @@ const exceptPath = ["route"]
 
 const logpath = path.resolve(`${rootpath}/log.txt`);
 const maxFileSize = 1024 * 1024 * 20; //mb
+const maxFileSizePP = 1024 * 1024 * 10; //mb
 const intervalCheckSesiLogin = 60 * 60; //detik
 const lamaSesiLogin = 29 * 60; //detik
 const admins = ["admin"];
@@ -61,7 +63,9 @@ export {
   maxFileSize,
   exceptPath,
   useCache,
-  uploadsdatabase
+  uploadsdatabase,
+  maxFileSizePP,
+  uploadsppdatabase
 };
 export default {
   port,
@@ -85,6 +89,8 @@ export default {
 
   logpath,
   maxFileSize,
+  maxFileSizePP,
+  uploadsppdatabase
 };
 // console.dir(config);
 // console.log(module.exports)

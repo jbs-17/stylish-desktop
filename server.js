@@ -18,7 +18,7 @@ import { cariUserDariUUID } from './apis/user/verifikasiUsenameDanPassword.js';
 
 const loggingEmit = new EventEmitter();
 loggingEmit.on('selesai', async (infoRequest = {}) => {
-  console.log((`${chalk.bgRgb(255, 0, 0).rgb(0, 0, 0).bold(' ' + new Date().toLocaleString() + ' ')}${chalk.bgWhiteBright.rgb(0, 0, 0).bold(` ${infoRequest.durasi}ms `)} ${infoRequest.url} `));
+  console.log((`${chalk.bgRgb(255, 0, 0).rgb(0, 0, 0).bold(' ' + new Date().toLocaleString() + ' ')}${chalk.bgWhiteBright.rgb(0, 0, 0).bold(` ${infoRequest.durasi}ms `)}${chalk.bgRgb(25,25,25).rgb(255,255,255)(' '+infoRequest.method+' ')} ${infoRequest.url} `));
   console.log(chalk.bgRgb(0, 0, 0)(' '));
   logging(infoRequest);
 });
@@ -76,15 +76,15 @@ app.use(async function cookie(req, res, next) {
 app.get('/', (req, res) => {
   res.redirect('/landing');
 });
-app.use('/', routers.settings);
-app.use('/', routers.ikuti);
-app.use('/', routers.register);
 app.get('/profile', req => req.res.redirect('/profile/me', 302));
 app.get('/profile/', req => req.res.redirect('/profile/me', 302));
+app.use('/', routers.register);
+app.use('/', routers.ikuti);
 app.use('/', routers.login);
 app.use('/', routers.root);
 app.use('/', routers.profileme);
 app.use('/', routers.profilepub);
+app.use('/', routers.settings);
 
 app.use("/", routers.upload);
 app.use('/media', routers.media);

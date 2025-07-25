@@ -32,6 +32,7 @@ import { hash } from "../../modules/hash.js";
 
 
 export default { renameUserWithVerification }
+export  { renameUserWithVerification }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //rename user verifikasi
 async function renameUserWithVerification(

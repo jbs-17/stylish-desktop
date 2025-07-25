@@ -38,8 +38,8 @@ const { isMobilePhone } = pkg2;
 
 
 
-export default { changeTelp }
 export { changeTelp }
+export default { changeTelp }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //rename user verifikasi
 // console.log(gantiNamaUserVerifikasi('admin', 'adminxxx', 'admin1234'))
