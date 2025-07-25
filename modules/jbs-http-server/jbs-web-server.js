@@ -34,9 +34,7 @@ function JBS(req, res) {
   instance.app = instance;
   const isReq = req instanceof http.ClientRequest;
   const isRes = res instanceof http.ServerResponse;
-  if (isReq || isRes) {
-    console.log('wow');
-  }
+
   if (req || res) {
     instance.handler(req, res);
   }
@@ -90,7 +88,6 @@ Object.defineProperty(JBS, 'raw', {
       if (options?.type?.length) { raw.options.type = options.type };
       if (options?.limit !== 0) { raw.options.limit = options.limit };
     }
-    console.log(raw.options);
     return raw
   }
 });
@@ -629,14 +626,14 @@ function app() {
             const isJBSmiddlewaresID = Mcallback.JBSmiddlewaresID;
             if (isJBSmiddlewaresID !== undefined) {
               if (!EchainCallbacksUID.includes(isJBSmiddlewaresID)) {
-                console.log({ isJBSmiddlewaresID, x: EchainCallbacksUID });
+                // cxonsole.log({ isJBSmiddlewaresID, x: EchainCallbacksUID });
                 chains[i][6].push(isJBSmiddlewaresID);
                 chains[i][7].push(Mcallback);
               }
             }
             //kalau bukan mid baaan
             if (isJBSmiddlewaresID === undefined) {
-              console.log({ isJBSmiddlewaresID, x: EchainCallbacksUID });
+              // cxonsole.log({ isJBSmiddlewaresID, x: EchainCallbacksUID });
               chains[i][6].push(Muid);
               chains[i][7].push(Mcallback);
             }
@@ -847,7 +844,7 @@ function app() {
       let entries = [...middlewares, endpoint];
 
       ///aneh
-      console.log({ entries });
+      // console.log({ entries });
       // const routerM = entries.filter(m => m.Router !== undefined && m.uuid);
       // const globalM = entries.filter(m => m.Router === undefined && !m.uuid);
 
@@ -857,7 +854,7 @@ function app() {
       if (routerM.length && globalM.length) {
         entries = [...globalM, ...routerM, endpoint];
       }
-      console.log({ entries2: entries });
+      // console.log({ entries2: entries });
 
       myEmitter.on('next', async (error) => {
         try {

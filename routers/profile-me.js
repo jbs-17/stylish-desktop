@@ -245,7 +245,7 @@ async function servelikes(likes = [], pub = false, usernameLihat) {
         <div class="username-row">
           <strong>
           <a href="${usernameLihat === username ? '/profile/me' : `/profile/pub/${username}`}">
-          ${username}${!pub ? '(saya)' : ''}${usernameLihat === username ? '(saya)' : ''}
+          ${username}${usernameLihat === username ? '(saya)' : ''}
         </a>
           </strong>
         </div>

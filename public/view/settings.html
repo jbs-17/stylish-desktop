@@ -246,6 +246,13 @@
 </head>
 
 <body>
+  <textarea style="display: none; opacity: 0;" name="data" id="data">
+    <| data |>
+  </textarea>
+  <script>
+    const datadata = document.getElementById('data').innerHTML;
+    const data = JSON.stringify
+  </script>
   <!-- Header -->
   <header class="header">
     <h1 class="logo"><a href="/">Stylish Desktop</a></h1>
@@ -257,7 +264,7 @@
     <div class="setting-card profile-card">
       <span class="setting-label-text">Foto Profil</span>
       <div class="setting-actions">
-        <img src="profile.jpg" alt="Foto Profil" class="profile-pic" />
+        <img src="<| pp |>" alt="Foto Profil" class="profile-pic" />
       </div>
       <button class="view-btn">Ganti</button>
     </div>
@@ -266,7 +273,7 @@
     <div class="setting-card">
       <span class="setting-label-text">Bio</span>
       <div class="setting-actions">
-        <input type="text" readonly value="Halo saya pengguna Stylish" />
+        <input type="text" readonly value="<| bio |>" />
         <button class="view-btn" onclick="action('bio')">Ganti</button>
       </div>
     </div>
@@ -276,7 +283,7 @@
     <div class="setting-card">
       <span class="setting-label-text">Password</span>
       <div class="setting-actions">
-        <input type="text" readonly value="********" />
+        <input type="text" readonly value="<| password |>" />
         <button class="view-btn">Ganti</button>
       </div>
     </div>
@@ -284,7 +291,7 @@
     <div class="setting-card">
       <span class="setting-label-text">Nomor Telepon</span>
       <div class="setting-actions">
-        <input type="text" readonly value="0812xxxxxxx" />
+        <input type="text" readonly value="<| telp |>" />
         <button class="view-btn">Ganti</button>
       </div>
     </div>
@@ -292,7 +299,7 @@
     <div class="setting-card">
       <span class="setting-label-text">Email</span>
       <div class="setting-actions">
-        <input type="text" readonly value="user@example.com" />
+        <input type="text" readonly value="<| email |>" />
         <button class="view-btn">Ganti</button>
       </div>
     </div>
@@ -300,15 +307,14 @@
     <div class="setting-card">
       <span class="setting-label-text">Gender</span>
       <select>
-        <option value="L">Laki-laki</option>
-        <option value="P">Perempuan</option>
+        <| kelamin |>
       </select>
     </div>
 
     <div class="setting-card">
       <span class="setting-label-text">Sembunyikan Ikuti</span>
       <label class="switch">
-        <input type="checkbox" checked>
+        <input type="checkbox" <| sembunyikanikuti |> >
         <span class="slider"></span>
       </label>
     </div>
@@ -316,7 +322,7 @@
     <div class="setting-card">
       <span class="setting-label-text">Sembunyikan Diikuti</span>
       <label class="switch">
-        <input type="checkbox" checked>
+        <input type="checkbox" <| sembunyikandiikuti |>>
         <span class="slider"></span>
       </label>
     </div>
@@ -324,7 +330,7 @@
     <div class="setting-card">
       <span class="setting-label-text">Sembunyikan Suka</span>
       <label class="switch">
-        <input type="checkbox" checked>
+        <input type="checkbox" <| sembunyikansuka |> >
         <span class="slider"></span>
       </label>
     </div>
@@ -332,7 +338,7 @@
     <div class="setting-card">
       <span class="setting-label-text">Akun Privat</span>
       <label class="switch">
-        <input type="checkbox" checked>
+        <input type="checkbox" <| profilprivat |> >
         <span class="slider"></span>
       </label>
     </div>
@@ -415,7 +421,7 @@
         form[key] = formData[key];
       }
       hidePopup();
-      submit(form, );
+      submit(form,);
     });
 
     async function submit(params) {

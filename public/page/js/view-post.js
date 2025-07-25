@@ -329,7 +329,7 @@ async function komentar(dom) {
       mycomment.classList.add('comment-box', 'my-comment');
       mycomment.id = 'my-comment';
       mycomment.innerHTML = /*html*/`
-      <img src="${userview.pp || '../public/upload/pp/default.png'}" alt="Foto Saya" class="comment-avatar" />
+      <img src="${userview.pp || '../public/upload/pp/default.png'}" alt="Foto Saya" class="comment-avatar" onerror="this.src = '../public/upload/pp/default.png'" />
       <div class="comment-content">
         <div class="comment-header">
           <span class="comment-username"><a href="/profile/me">${userview.username}(saya)</a></span>

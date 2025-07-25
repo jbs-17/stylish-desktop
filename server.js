@@ -76,6 +76,7 @@ app.use(async function cookie(req, res, next) {
 app.get('/', (req, res) => {
   res.redirect('/landing');
 });
+app.use('/', routers.settings);
 app.use('/', routers.ikuti);
 app.use('/', routers.register);
 app.get('/profile', req => req.res.redirect('/profile/me', 302));
@@ -121,7 +122,7 @@ app.response404((req, res) => {
 
 
 
-console.log(app.chains);
+// console.log(app.chains);
 
 
 

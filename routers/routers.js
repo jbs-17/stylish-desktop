@@ -8,7 +8,9 @@ import upload from "./upload.js";
 import post from "./post.js";
 import profilepub from "./profile-pub.js";
 import ikuti from "./ikuti.js";
+import settings from "./settings.js";
 const routers = {
+  settings,
   admin,
   root,
   register,
