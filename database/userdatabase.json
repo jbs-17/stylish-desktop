@@ -41,40 +41,7 @@
     "usernameHASH": "0a041b9462caa4a31bac3567e0b6e6fd9100787db2ab433d96f6d178cabfce90",
     "passwordHASH": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
     "name": "user1",
-    "imageTemp": [
-      {
-        "filepath": "/data/data/com.termux/files/home/projects/stylish-desktop/public/temp/tmp/w65sabl7gazxv8t6km4l52oik",
-        "newFilename": "w65sabl7gazxv8t6km4l52oik",
-        "originalFilename": "1000341570.jpg",
-        "mimetype": "image/jpeg",
-        "size": 16227,
-        "filetype": "image",
-        "ext": ".jpg",
-        "UUID": "7838a342-05b1-447a-8c5d-5ec109461067",
-        "fileUID": "fileUID-db4550c2c5ab0b88",
-        "newfilepath": "/data/data/com.termux/files/home/projects/stylish-desktop/public/temp/images/image__fileUID-db4550c2c5ab0b88__7838a342-05b1-447a-8c5d-5ec109461067__25-07-2025_20-39-14__.jpg",
-        "filebase": "image__fileUID-db4550c2c5ab0b88__7838a342-05b1-447a-8c5d-5ec109461067__25-07-2025_20-39-14__.jpg",
-        "relativeFilePath": "../public/temp/images/image__fileUID-db4550c2c5ab0b88__7838a342-05b1-447a-8c5d-5ec109461067__25-07-2025_20-39-14__.jpg",
-        "tanggal": "25-07-2025_20-39-14",
-        "diajukan": "25-07-2025_20-39-14",
-        "judul": [
-          "Kucing konyol"
-        ],
-        "deskripsi": [
-          "Oon"
-        ],
-        "suka": [],
-        "simpan": [],
-        "bagi": [],
-        "laporkan": [],
-        "komentar": [],
-        "diarsipkan": false,
-        "metadata": [],
-        "datenow": 1753450754895,
-        "privat": false,
-        "izinkomentar": true
-      }
-    ],
+    "imageTemp": [],
     "videoTemp": [],
     "image": [],
     "video": [],
@@ -116,14 +83,14 @@
     ],
     "simpan": [
       {
-        "interaksiUID": "interaksiUID-3d892a17a6bf8ef0",
+        "interaksiUID": "interaksiUID-206fdbae07b2c732",
         "fileUID": "fileUID-03555aed6899b672",
         "filebase": "image__fileUID-03555aed6899b672__54cb24a8-9f0c-43ac-8d33-7066bf411860__25-07-2025_16-30-57__.jpg",
         "UUID": "54cb24a8-9f0c-43ac-8d33-7066bf411860",
         "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-03555aed6899b672__54cb24a8-9f0c-43ac-8d33-7066bf411860__25-07-2025_16-30-57__.jpg",
-        "tanggal": "25-07-2025_22-15-27",
+        "tanggal": "26-07-2025_13-37-38",
         "userYangMenyimpan": "7838a342-05b1-447a-8c5d-5ec109461067",
-        "datenow": 1753456527886
+        "datenow": 1753511858874
       }
     ],
     "bagi": [
@@ -643,13 +610,13 @@
         ],
         "simpan": [
           {
-            "interaksiUID": "interaksiUID-3d892a17a6bf8ef0",
+            "interaksiUID": "interaksiUID-206fdbae07b2c732",
             "fileUID": "fileUID-03555aed6899b672",
             "filebase": "image__fileUID-03555aed6899b672__54cb24a8-9f0c-43ac-8d33-7066bf411860__25-07-2025_16-30-57__.jpg",
             "UUID": "7838a342-05b1-447a-8c5d-5ec109461067",
-            "tanggal": "25-07-2025_22-15-27",
+            "tanggal": "26-07-2025_13-37-38",
             "userYangMenyimpan": "7838a342-05b1-447a-8c5d-5ec109461067",
-            "datenow": 1753456527886
+            "datenow": 1753511858874
           }
         ],
         "bagi": [

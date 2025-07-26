@@ -8,6 +8,7 @@ const database = path.resolve(`${rootpath}/database`);
 const userdatabase = path.resolve(`${rootpath}/database/userdatabase.json`); //done
 const pagesdatabase = path.resolve(`${rootpath}/public/page`); //done
 const sesidatabase = path.resolve(`${rootpath}/database/sesidatabase.json`);
+const publicdb = path.resolve(`${rootpath}/public`);
 const imagesdatabase = path.resolve(`${rootpath}/public/upload/images`);
 const videosdatabase = path.resolve(`${rootpath}/public/upload/videos`);
 const uploadsdatabase = path.resolve(`${rootpath}/public/upload`);
@@ -65,7 +66,8 @@ export {
   useCache,
   uploadsdatabase,
   maxFileSizePP,
-  uploadsppdatabase
+  uploadsppdatabase,
+  publicdb
 };
 export default {
   port,
@@ -86,7 +88,7 @@ export default {
   lamaSesiLogin,
 
   admins,
-
+  publicdb,
   logpath,
   maxFileSize,
   maxFileSizePP,

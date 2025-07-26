@@ -1,7 +1,7 @@
 import { promisify } from "node:util";
 import { promises as fs } from "node:fs";
 
-import {
+import config, {
   templistdatabase,
   imagesdatabase,
   database,
@@ -12,8 +12,8 @@ import {
 } from "../apis/user/temp-file/add-image-video-temp.js";
 import { deleteImageTemp, deleteVideoTemp }
   from '../apis/user/temp-file/delete-image-video-temp.js';
-import {addImageUser, addVideoUser}
-from '../apis/user/upload-file/add-image-video.js';
+import { addImageUser, addVideoUser }
+  from '../apis/user/upload-file/add-image-video.js';
 
 
 import { normalize, relative } from "node:path";
@@ -21,6 +21,7 @@ import tanggalString from "../modules/date-string.mjs";
 import fsx from "fs-extra";
 
 import pkg from 'jsonfile';
+import searchFiles from "jbs-http-server/jbs-search-file-async.js";
 const { readFile, writeFile } = pkg;
 const readFileJSON = promisify(readFile);
 const writeFileJSON = promisify(writeFile);
@@ -91,7 +92,8 @@ async function tambahVideoTempListAndUser(informasiFile) {
 //file
 async function tolakImageTempListAndUserAndFile(informasiFile) {
   try {
-    const hapusFileStatus = await hapusFile(informasiFile.newfilepath);
+    const sumber = (await searchFiles(config.publicdb, informasiFile.filebase))[0];
+    const hapusFileStatus = await hapusFile(sumber);
     if (!(hapusFileStatus === true)) {
       throw hapusFileStatus;
     }
@@ -124,7 +126,8 @@ async function tolakImageTempListAndUserAndFile(informasiFile) {
 }
 async function tolakVideoTempListAndUserAndFile(informasiFile) {
   try {
-    const hapusFileStatus = await hapusFile(informasiFile.newfilepath);
+    const sumber = (await searchFiles(config.publicdb, informasiFile.filebase))[0];
+    const hapusFileStatus = await hapusFile(sumber);
     if (!(hapusFileStatus === true)) {
       throw hapusFileStatus;
     }
@@ -160,7 +163,7 @@ async function terimaImageTempListAndUserAndFile(informasiFile) {
   try {
     const tujuan = normalize(`${imagesdatabase}/${informasiFile.filebase}`);
     const tujuanRelatif = relative(database, tujuan);
-    const sumber = normalize(informasiFile.newfilepath);
+    const sumber = (await searchFiles(config.publicdb, informasiFile.filebase))[0];
     informasiFile.newfilepath = tujuan;
     informasiFile.relativeFilePath = tujuanRelatif;
     informasiFile.diterima = tanggalString();
@@ -210,7 +213,7 @@ async function terimaVideoTempListAndUserAndFile(informasiFile) {
   try {
     const tujuan = normalize(`${videosdatabase}/${informasiFile.filebase}`);
     const tujuanRelatif = relative(database, tujuan);
-    const sumber = normalize(informasiFile.newfilepath);
+    const sumber = (await searchFiles(config.publicdb, informasiFile.filebase))[0];
     informasiFile.newfilepath = tujuan;
     informasiFile.relativeFilePath = tujuanRelatif;
     informasiFile.diterima = tanggalString();

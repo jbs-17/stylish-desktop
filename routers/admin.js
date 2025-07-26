@@ -49,7 +49,7 @@ admin.use(async function admin(req, res, next) {
     return
   }
   const isAdmin = admins.includes(user?.user?.username);
-  console.log({ isAdmin });
+  // console.log({ isAdmin });
   if (!isAdmin) {
     res.html('./public/page/404.html');
     return
