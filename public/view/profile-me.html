@@ -185,6 +185,18 @@
     </div>
   </header>
 
+<script type="text/javascript" charset="utf-8">
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    // Tab tidak aktif
+  } else {
+    // Tab aktif kembali
+    location.reload();
+  }
+});
+</script>
+
+
   <!-- === SECTION: PROFILE === -->
   <section id="profile-section">
     <div id="settings-btn" title="Pengaturan">

@@ -30,25 +30,14 @@
     "ikuti": [
       {
         "UUID": "54cb24a8-9f0c-43ac-8d33-7066bf411860",
-        "tanggal": "26-07-2025_15-15-51",
-        "datenow": 1753517751792
-      },
-      {
-        "UUID": "7838a342-05b1-447a-8c5d-5ec109461067",
-        "tanggal": "26-07-2025_15-34-53",
-        "datenow": 1753518893013
+        "tanggal": "26-07-2025_17-19-29",
+        "datenow": 1753525169519
       }
     ],
-    "diikuti": [
-      {
-        "UUID": "3454d870-bfd8-4ac5-973c-3d3164c8843d",
-        "tanggal": "26-07-2025_15-35-31",
-        "datenow": 1753518931732
-      }
-    ],
+    "diikuti": [],
     "settings": {},
     "arsip": [],
-    "bio": [],
+    "bio": "aku admin",
     "laporkan": [],
     "kelamin": "",
     "tempattanggallahir": "",
@@ -164,19 +153,14 @@
         "datenow": 1753451562603
       },
       {
-        "UUID": "8a59ace6-506f-49f8-963b-05701e8f7ab6",
-        "tanggal": "26-07-2025_15-34-53",
-        "datenow": 1753518893013
-      },
-      {
         "UUID": "3454d870-bfd8-4ac5-973c-3d3164c8843d",
-        "tanggal": "26-07-2025_16-58-46",
-        "datenow": 1753523926699
+        "tanggal": "26-07-2025_17-12-21",
+        "datenow": 1753524741915
       }
     ],
     "settings": {},
     "arsip": [],
-    "bio": "Hahaha aku raja f3sbuk",
+    "bio": "Raja pesbuk ",
     "laporkan": [],
     "kelamin": "L",
     "tempattanggallahir": "",
@@ -186,8 +170,8 @@
     "telp": "081229439547",
     "sembunyikansuka": false,
     "sembunyikanikuti": false,
-    "sembunyikandiikuti": false,
-    "profilprivat": false,
+    "sembunyikandiikuti": true,
+    "profilprivat": true,
     "daftarblokir": [],
     "index": 1
   },
@@ -805,8 +789,8 @@
       },
       {
         "UUID": "8a59ace6-506f-49f8-963b-05701e8f7ab6",
-        "tanggal": "26-07-2025_15-15-51",
-        "datenow": 1753517751792
+        "tanggal": "26-07-2025_17-19-29",
+        "datenow": 1753525169519
       }
     ],
     "settings": {},
@@ -858,7 +842,7 @@
     ],
     "settings": {},
     "arsip": [],
-    "bio": "Bio baru anjay ",
+    "bio": "Apa coba",
     "laporkan": [],
     "kelamin": "L",
     "tempattanggallahir": "",
@@ -977,11 +961,6 @@
     ],
     "ikuti": [
       {
-        "UUID": "8a59ace6-506f-49f8-963b-05701e8f7ab6",
-        "tanggal": "26-07-2025_15-35-31",
-        "datenow": 1753518931732
-      },
-      {
         "UUID": "b753c4b0-6f6d-4f28-8d8a-750892dc25c8",
         "tanggal": "26-07-2025_15-35-32",
         "datenow": 1753518932874
@@ -993,8 +972,8 @@
       },
       {
         "UUID": "7838a342-05b1-447a-8c5d-5ec109461067",
-        "tanggal": "26-07-2025_16-58-46",
-        "datenow": 1753523926699
+        "tanggal": "26-07-2025_17-12-21",
+        "datenow": 1753524741915
       }
     ],
     "diikuti": [],
