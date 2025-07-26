@@ -35,8 +35,8 @@ import { hash } from "../../modules/hash.js";
 
 
 
-export default {changePP}
-export {changePP}
+export default { changePP }
+export { changePP }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //rename user verifikasi
 // console.log(gantiNamaUserVerifikasi('admin', 'adminxxx', 'admin1234'))
@@ -48,14 +48,15 @@ export {changePP}
 async function changePP(UUID = "", pp = '') {
   try {
     const user = (await cariUserDariUUID(UUID)).user;
+    const old = user.pp || '';
     const database = await readFileJSON(userdatabase);
     if (!user) { throw Error('user tidak ada!') };
     user.pp = pp;
     database[user.index] = user;
     await writeFileJSON(userdatabase, database, { spaces: 2 })
-    return { status: true, message: "sukses ganti pp" }
+    return { status: true, message: "sukses ganti pp", old }
   } catch (error) {
-    return { status: false, message: "gagal ganti pp", error }
+    return { status: false, message: "gagal ganti pp", error, old: '' }
   }
 }
 

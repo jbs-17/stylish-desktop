@@ -283,7 +283,7 @@
       <div class="setting-actions">
         <img src="<| pp |>" alt="Foto Profil" class="profile-pic" />
       </div>
-      <button class="view-btn">Ganti</button>
+      <button class="view-btn" onclick="action('pp')" >Ganti</button>
     </div>
 
 
@@ -398,6 +398,13 @@
     </div>
   </template>
 
+  <template id="popup-fields-pp">
+    <div class="field-group">
+      <label for="pp">foto profile baru: </label>
+      <input type="file" id="pp" name="field-a" accept="image/*" />
+    </div>
+  </template>
+
   <template id="popup-fields-password">
     <div class="field-group">
       <label for="password">Photo profile baru</label>
@@ -421,7 +428,8 @@
 
   <!-- 4) JavaScript -->
   <script>
-
+    let perlualert = false;
+    let urlpp = '';
     function showPopup(templateId) {
       const tpl = document.getElementById(templateId);
       const fieldsContainer = document.getElementById('popup-fields');
@@ -464,10 +472,16 @@
       });
       const data = await response.json();
       console.log({ data });
-      // alert(data.message);
+      if(perlualert){
+        alert(data.message);
+        perlualert = false;
+      }
+      if(!data.status){
+        alert(data.message)
+      }
       setTimeout(() => {
         location.reload();
-      }, 0)
+      }, 100)
     }
 
     document.querySelectorAll('[type=checkbox]').forEach(c => c.addEventListener('change', (e) => {
@@ -487,8 +501,27 @@
       if (name === 'email') {
         showPopup('popup-fields-email');
       }
+      if (name === 'pp') {
+        perlualert = true;
+        showPopup('popup-fields-pp');
+        document.querySelector('#pp').addEventListener('change', (e)=>{
+          document.querySelector('#imagepp')?.remove();
+          const file = e.target.files[0];
+          URL.revokeObjectURL(urlpp);
+          urlpp = URL.createObjectURL(file);
+          const img = document.createElement('img');
+          img.id = 'imagepp';
+          img.style.width = '300px';
+          img.style.height = '300px';
+          img.src = urlpp;
+          e.target.before(img);
+          console.log(file);
+          img.after();
+        })
+      }
       if (name === 'password') {
         showPopup('popup-fields-password');
+        perlualert = true;
       }
       if (name === 'gender') {
         const x = dom.value;
@@ -497,6 +530,7 @@
         submit(formData, 'gender')
       }
     }
+
   </script>
 
   <!-- Bottom Navigation -->

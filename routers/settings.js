@@ -17,6 +17,8 @@ import JBS from 'jbs-http-server';
 import config from '../config.js';
 import formidable from 'formidable';
 
+import fs from 'node:fs/promises';
+import path from 'node:path';
 
 const settings = JBS.Router();
 
@@ -56,12 +58,31 @@ settings.put('/profile/me/settings/change/:option', async (req, res) => {
   let files;
   let fields;
   try {
-    [fields, files] = await form.parse(req);
+    [fields, files] = (await form.parse(req));
   } catch (error) {
     res.statusCode = 500;
     data = { status: false, message: 'internal server error', data: null, error };
   }
-  console.log({ fields, files });
+  const pp = files['field-a'][0];
+  const {
+    lastModifiedDate,
+    filepath,
+    newFilename,
+    originalFilename,
+    mimetype,
+    size,
+  } = pp;
+  let destination;
+  try {
+    const ext = originalFilename.split('.').pop();
+    destination = path.join(config.uploadsppdatabase, `${user.UUID}.${ext}`);
+    await fs.copyFile(filepath, destination);
+    await fs.unlink(filepath);
+  } catch (error) {
+    res.statusCode = 500;
+    return res.json({status: false, error, message: 'internal server error'});
+  }
+  destination = path.relative(config.publicdb, destination);
   switch (option) {
     case 'bio':
       data = await changeBio(user.UUID, fields['field-a'][0]);
@@ -89,6 +110,9 @@ settings.put('/profile/me/settings/change/:option', async (req, res) => {
       break;
     case 'profilprivat':
       data = await profilprivatToogle(user.UUID);
+      break;
+    case 'pp':
+      data = await changePP(user.UUID, destination);
       break;
     default:
       data = { status: false, message: 'unkown option', data: null };

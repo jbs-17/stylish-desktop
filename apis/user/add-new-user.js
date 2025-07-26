@@ -89,7 +89,7 @@ async function newUser(
         laporkan: [],
         kelamin: "",
         tempattanggallahir: "",
-        pp: "",
+        pp: "/public/upload/pp/default.png",
         log: [],
         email: "",
         telp: "",
