@@ -57,13 +57,15 @@ profilepub.use('/profile/pub/:userpubidentity', async (req, res, next) => {
   //
   next();
 });
+
+
 profilepub.get('/profile/pub/:userpubidentity', async (req, res) => {
   const { user, userpub } = req;
   const uploads = [...userpub.image, ...userpub.video];
   const ikutiBtn = await sudahIkuti(user.UUID, userpub.UUID);
   const privat = userpub.profilprivat;
   const sembunyikansuka = userpub.sembunyikansuka;
-  console.log({ sembunyikansuka });
+  
   let data = {};
   if (privat && !ikutiBtn.status) {
     data = {
@@ -120,6 +122,8 @@ profilepub.get('/profile/pub/:userpubidentity', async (req, res) => {
   res.render('profile-pub', data);
   return
 });
+
+
 profilepub.param('useridentity', async (req, res, next, useridentity) => {
   const user = isUUID(useridentity) ? await cariUserDariUUID(useridentity) : await cariUserDariUsername(useridentity);
   if (!user.status) {
