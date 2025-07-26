@@ -157,9 +157,19 @@
       cursor: pointer;
     }
   </style>
-  
+
   <style>
-    
+        .post-footerx {
+      min-width: 55vmax;
+    }
+    @media (max-width: 668px) {
+
+      .post-footerx {
+        min-width: 44vmax;
+      }
+
+    }
+
   </style>
 </head>
 
@@ -177,7 +187,7 @@
 
   <!-- === SECTION: PROFILE === -->
   <section id="profile-section">
-    <div  id="settings-btn" title="Pengaturan">
+    <div id="settings-btn" title="Pengaturan">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
         <path
           d="M19.43 12.98c.04-.32.07-.66.07-1s-.03-.68-.07-1l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46a.5.5 0 0 0-.61-.22l-2.49 1a7.028 7.028 0 0 0-1.73-1l-.38-2.65a.5.5 0 0 0-.5-.42h-4a.5.5 0 0 0-.5.42l-.38 2.65a6.96 6.96 0 0 0-1.73 1l-2.49-1a.5.5 0 0 0-.61.22l-2 3.46a.5.5 0 0 0 .12.64L4.57 11c-.04.32-.07.66-.07 1s.03.68.07 1L2.46 14.65a.5.5 0 0 0-.12.64l2 3.46c.14.23.43.3.66.22l2.49-1c.54.42 1.12.77 1.73 1l.38 2.65a.5.5 0 0 0 .5.42h4c.25 0 .46-.18.5-.42l.38-2.65c.61-.23 1.19-.58 1.73-1l2.49 1c.23.09.52 0 .66-.22l2-3.46a.5.5 0 0 0-.12-.64l-2.11-1.67zM12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z" />
@@ -221,8 +231,8 @@
       <iframe id="post-viewer" src="" frameborder="0"></iframe>
     </div>
   </div>
-  
-  
+
+
 
 
   <!-- === SECTION: GALLERY === -->
@@ -237,24 +247,35 @@
     <div tab="upload" class="gallery-tab gallery-uploads">
 
       <| uploads |>
-
+        <div class="post-footer post-footerx">
+          Sudah sampai akhir!
+        </div>
     </div>
 
 
     <div tab="pending" class="gallery-tab gallery-pendings gallery-hide">
 
       <| pendings |>
+        <div class="post-footer post-footerx">
+          Sudah sampai akhir!
+        </div>
     </div>
 
     <div tab="like" class="gallery-tab gallery-likes gallery-hide">
 
 
       <| likes |>
+        <div class="post-footer post-footerx">
+          Sudah sampai akhir!
+        </div>
     </div>
 
     <div tab="save" class="gallery-tab gallery-saves gallery-hide">
 
       <| saves |>
+        <div class="post-footer post-footerx">
+          Sudah sampai akhir!
+        </div>
     </div>
 
   </section>
@@ -289,26 +310,52 @@
     });
   </script>
   <style>
-    #iframe-settings{
+    .settings-iframe {
+      display: none;
+    }
+
+    #iframe-settings {
       width: 100%;
       height: 100%;
       position: fixed;
       top: 0;
       left: 0;
-      display: none;
-      z-index: 9999;
+      z-index: 999;
     }
 
+    #iframe-settings iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    .settings-iframe button {
+      z-index: 1001;
+      position: absolute;
+      top: 4rem;
+    }
   </style>
-  <iframe id="iframe-settings" src="/profile/me/settings"></iframe>
+  <div id="iframe-settings" class="settings-iframe">
+    <iframe src="/profile/me/settings">
+    </iframe>
+    <button class="iframe-close-btn" onclick="closeSettings()" title="Kembali">
+      <svg viewBox="0 0 24 24" class="icon-arrow">
+        <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+  </div>
+
   <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const settingsBtn = document.querySelector('#settings-btn');
-    settingsBtn.addEventListener('click', ()=>{ 
-      document.getElementById('iframe-settings').style.display = 'block'
-    })
-//alert('Dokumen HTML telah selesai di-load');
-});
+    document.addEventListener('DOMContentLoaded', function () {
+      const settingsBtn = document.querySelector('#settings-btn');
+      settingsBtn.addEventListener('click', () => {
+        location.href = 'me/settings'
+      })
+    });
+    function closeSettings() {
+
+      document.getElementById('iframe-settings').style.display = 'none'
+    }
   </script>
   <script src="js/profile-me.js"></script>
 </body>

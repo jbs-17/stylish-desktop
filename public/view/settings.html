@@ -246,6 +246,10 @@
 </head>
 
 <body>
+
+  <script>
+
+  </script>
   <textarea style="display: none; opacity: 0;" name="data" id="data">
     <| data |>
   </textarea>
@@ -254,6 +258,22 @@
   <header class="header">
     <h1 class="logo"><a href="/">Stylish Desktop</a></h1>
   </header>
+
+  <!-- Tombol Kembali -->
+  <div style="padding: 1rem; padding-top: 0.5rem;">
+    <a href="/profile/me" style="
+      display: inline-block;
+      background-color: #e0e0e0;
+      color: #333;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      margin: 0;
+      position: absolute;
+    ">Kembali</a>
+  </div>
+
 
   <!-- Konten Pengaturan -->
   <div class="settings-container">
@@ -309,34 +329,36 @@
     </div>
 
     <div class="setting-card">
-      <span class="setting-label-text">Sembunyikan Ikuti</span>
+      <span class="setting-label-text">Sembunyikan user kamu diikuti</span>
       <label class="switch">
-        <input type="checkbox" <| sembunyikanikuti |> >
-        <span class="slider"></span>
+        <input type="checkbox" name="sembunyikanikuti" <| sembunyikanikuti |> >
+        <span class="slider checkbox"></span>
       </label>
     </div>
 
     <div class="setting-card">
-      <span class="setting-label-text">Sembunyikan Diikuti</span>
+      <span class="setting-label-text">Sembunyikan folowers</span>
       <label class="switch">
-        <input type="checkbox" <| sembunyikandiikuti |>>
-        <span class="slider"></span>
+        <input type="checkbox" name="sembunyikandiikuti" <| sembunyikandiikuti |>>
+        <span class="slider checkbox"></span>
       </label>
     </div>
 
     <div class="setting-card">
       <span class="setting-label-text">Sembunyikan Suka</span>
       <label class="switch">
-        <input type="checkbox" <| sembunyikansuka |> >
-        <span class="slider"></span>
+        <input type="checkbox" name="sembunyikansuka" <| sembunyikansuka |> >
+        <span class="slider checkbox"></span>
       </label>
     </div>
+
+    
 
     <div class="setting-card">
       <span class="setting-label-text">Akun Privat</span>
       <label class="switch">
-        <input type="checkbox" <| profilprivat |> >
-        <span class="slider"></span>
+        <input type="checkbox" name="profilprivat" <| profilprivat |> >
+        <span class="slider checkbox"></span>
       </label>
     </div>
 
@@ -376,10 +398,11 @@
     </div>
   </template>
 
-  <template id="popup-fields-pp">
+  <template id="popup-fields-password">
     <div class="field-group">
-      <label for="telp">Photo profile baru</label>
-      <input type="text" id="telp" name="field-a" placeholder="Masukkan bio baru" />
+      <label for="password">Photo profile baru</label>
+      <input type="text" name="field-a" placeholder="Password lama" />
+      <input type="text" name="field-b" placeholder="Password baru" />
     </div>
   </template>
 
@@ -441,10 +464,18 @@
       });
       const data = await response.json();
       console.log({ data });
-      alert(data.message);
-      location.reload();
+      // alert(data.message);
+      setTimeout(() => {
+        location.reload();
+      }, 0)
     }
 
+    document.querySelectorAll('[type=checkbox]').forEach(c => c.addEventListener('change', (e) => {
+      const name = e.target.getAttribute('name');
+      const form = new FormData();
+      form.append('field-a', name);
+      submit(form, name)
+    }))
 
     function action(name, dom) {
       if (name === 'bio') {
@@ -456,6 +487,9 @@
       if (name === 'email') {
         showPopup('popup-fields-email');
       }
+      if (name === 'password') {
+        showPopup('popup-fields-password');
+      }
       if (name === 'gender') {
         const x = dom.value;
         const formData = new FormData();
@@ -465,16 +499,13 @@
     }
   </script>
 
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 Stylish Desktop | Semua hak dilindungi</p>
-    <nav>
-      <a href="/about.html">Tentang Kami</a>
-      <a href="/privacy.html">Kebijakan Privasi</a>
-      <a href="/contact.html">Hubungi Kami</a>
-    </nav>
-  </footer>
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="/home" class="nav-link">HOME</a>
+    <a href="/search" class="nav-link">SEARCH</a>
+    <a href="/upload" class="nav-link">UPLOAD</a>
+    <a href="/profile/me" class="nav-link nav-link-on button-on">PROFILE</a>
+  </nav>
 </body>
 
 </html>

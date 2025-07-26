@@ -165,16 +165,42 @@
       justify-items: center;
       text-align: center;
       justify-content: center;
-      margin: 1rem;
+      margin: .5rem;
       font-size: .75rem;
     }
   </style>
   <style>
-  #profile-section{
-      padding-bottom: 1rem;
+    #profile-section {
       box-sizing: unset;
     }
+
+    .post-footerx {
+      min-width: 40vmax;
+      margin-bottom: 1rem;
+    }
+    .profile-stats{
+      margin-top: 1rem;
+    }
+
+    .postx {
+      background-color: rgba(0, 0, 0, 0);
+      width: 100%;
+      margin-top: 0;
+      font-weight: 900;
+      cursor: default;
+    }
   </style>
+        <style>
+          .profile-info {
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            align-items: center;
+            height: 2rem;
+          }
+        
+
+        </style>
 </head>
 
 
@@ -190,8 +216,7 @@
   </header>
 
   <!-- === SECTION: PROFILE === -->
-  <section id="profile-section">
-
+  <section style="padding-bottom: 3rem;" id="profile-section">
     <div class="profile-avatar">
       <img style="object-fit: cover;" id="pp" src="<| pp |>" onerror="this.src = '../upload/pp/default.pngx'" />,
       <p id="username">
@@ -200,22 +225,27 @@
       <small><span>uuid: <| uuid |></span><span id="uuid"></span></small>
     </div>
     <| ikutiBtn |>
-    <div class="profile-info">
-      <p id="bio">
-        <| bio |>
-      </p>
-    </div>
-    <div class="profile-stats">
-      <p class="stat-data" title="total follow" onclick="viewFolow(this)" id="diikuti"><span>
-          <| totaldiikuti |>
-        </span><span>followers</span></p>
-      <p class="stat-data" title="total followed" onclick="viewFolow(this)" id="ikuti"><span>
-          <| totalikuti |>
-        </span><span> </span>followings</p>
-      <p class="stat-data" title="total like"><span id="suka">
-          <| totalsuka |>
-        </span><span> likes</span></p>
-    </div>
+      <div class="profile-info">
+        <p id="bio">
+          <| bio |>
+        </p>
+      </div>
+      <style>
+        .stat-data {
+          cursor: pointer;
+        }
+      </style>
+      <div class="profile-stats">
+        <p class="stat-data" title="total follow" onclick="viewFolow(this)" id="diikuti"><span>
+            <| totaldiikuti |>
+          </span><span>followers</span></p>
+        <p class="stat-data" title="total followed" onclick="viewFolow(this)" id="ikuti"><span>
+            <| totalikuti |>
+          </span><span> </span>followings</p>
+        <p style="cursor: default;" class="stat-data" title="total like"><span id="suka">
+            <| totalsuka |>
+          </span><span> likes</span></p>
+      </div>
   </section>
 
   <!-- Viewer Iframe Overlay -->
@@ -239,7 +269,10 @@
     <div id="gallery-menu">
       <button tab="upload" class="button-on">UPLOAD</button>
       <button tab="like" class="">LIKE</button>
+      <button tab="" class="dissable"></button>
+      <button tab="" class="dissable"></button>
     </div>
+
     <div tab="upload" class="gallery-tab gallery-uploads">
 
 
@@ -247,14 +280,21 @@
       <| uploads |>
 
 
+        <div class="post-footer post-footerx">
+          Sudah sampai akhir!
+        </div>
+
 
     </div>
 
 
     <div tab="like" class="gallery-tab gallery-likes gallery-hide">
-
-
       <| likes |>
+
+
+        <div class="post-footer post-footerx">
+          Sudah sampai akhir!
+        </div>
     </div>
 
   </section>
@@ -270,6 +310,11 @@
     <a href="/profile/me" class="nav-link nav-link-on button-on">PROFILE</a>
   </nav>
 
+  <script>document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('followbtn').addEventListener('click', () => {
+        location.reload()
+      })
+    })</script>
   <script>
     const tabsBtn = document.querySelectorAll("button[tab]");
     const tabs = document.querySelectorAll('.gallery-tab');

@@ -5,6 +5,7 @@ import {
   changeEmail,
   kelaminSetter,
   changePP,
+  profilprivatToogle,
   renameUserWithVerification,
   sembunyikandiikutiToogle,
   sembunyikanikutiToogle,
@@ -60,7 +61,7 @@ settings.put('/profile/me/settings/change/:option', async (req, res) => {
     res.statusCode = 500;
     data = { status: false, message: 'internal server error', data: null, error };
   }
-  console.log({ fields });
+  console.log({ fields, files });
   switch (option) {
     case 'bio':
       data = await changeBio(user.UUID, fields['field-a'][0]);
@@ -73,6 +74,21 @@ settings.put('/profile/me/settings/change/:option', async (req, res) => {
       break;
     case 'gender':
       data = await kelaminSetter(user.UUID, fields['field-a'][0]);
+      break;
+    case 'password':
+      data = await changePasswordWithVerification(user.username, fields['field-a'][0].trim(), fields['field-b'][0].trim(), { boolean: false });
+      break;
+    case 'sembunyikanikuti':
+      data = await sembunyikanikutiToogle(user.UUID);
+      break;
+    case 'sembunyikandiikuti':
+      data = await sembunyikandiikutiToogle(user.UUID);
+      break;
+    case 'sembunyikansuka':
+      data = await sembunyikansukaToogle(user.UUID);
+      break;
+    case 'profilprivat':
+      data = await profilprivatToogle(user.UUID);
       break;
     default:
       data = { status: false, message: 'unkown option', data: null };

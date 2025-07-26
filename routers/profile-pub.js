@@ -61,19 +61,62 @@ profilepub.get('/profile/pub/:userpubidentity', async (req, res) => {
   const { user, userpub } = req;
   const uploads = [...userpub.image, ...userpub.video];
   const ikutiBtn = await sudahIkuti(user.UUID, userpub.UUID);
-  const data = {
-    pp: userpub.pp || '../upload/pp/default.png',
-    username: userpub.username,
-    uuid: userpub.UUID,
-    totalsuka: await hitungTotalSuka(uploads),
-    totalikuti: userpub.ikuti.length,
-    totaldiikuti: userpub.diikuti.length,
-    uploads: await serveuploads(uploads, userpub.username, true),
-    likes: await servelikes(userpub.suka, true, user.username),
-    ikutiBtn: ikutiBtn.status ?
-      `<button uuid="${userpub.UUID}" id="followbtn" onclick="action(this)" action="ikuti" sudah="true">batal ikuti</button>` :
-      `<button uuid="${userpub.UUID}" id="followbtn" onclick="action(this)" action="ikuti" sudah="false">ikuti</button>`
+  const privat = userpub.profilprivat;
+  const sembunyikansuka = userpub.sembunyikansuka;
+  console.log({ sembunyikansuka });
+  let data = {};
+  if (privat && !ikutiBtn.status) {
+    data = {
+      bio: userpub.bio,
+      pp: userpub.pp || '../upload/pp/default.png',
+      username: userpub.username,
+      uuid: userpub.UUID,
+      totalsuka: '?',
+      totalikuti: '?',
+      totaldiikuti: '?',
+      uploads: `
+        <div class="post postx">
+          <div class="post-footer">
+          <h3 style="color: black;font-size: 1.5rem; padding: 1rem; display: flex; align-self: center; justify-self: center;">Ikuti ${userpub.username} untuk melihat!</h3>
+          </div>
+        </div>
+`,
+      likes: `
+        <div class="post postx">
+          <div class="post-footer">
+          <h3 style="color: black;font-size: 1.5rem; padding: 1rem; display: flex; align-self: center; justify-self: center;">Ikuti ${userpub.username} untuk melihat!</h3>
+          </div>
+        </div>`,
+      ikutiBtn: ikutiBtn.status ?
+        `<button uuid="${userpub.UUID}" id="followbtn" onclick="action(this)" action="ikuti" sudah="true">batal ikuti</button>` :
+        `<button uuid="${userpub.UUID}" id="followbtn" onclick="action(this)" action="ikuti" sudah="false">ikuti</button>`
+    }
+  } else {
+    data = {
+      bio: userpub.bio,
+      pp: userpub.pp || '../upload/pp/default.png',
+      username: userpub.username,
+      uuid: userpub.UUID,
+      totalsuka: await hitungTotalSuka(uploads),
+      totalikuti: userpub.ikuti.length,
+      totaldiikuti: userpub.diikuti.length,
+      uploads: await serveuploads(uploads, userpub.username, true),
+      likes: await servelikes(userpub.suka, true, user.username),
+      ikutiBtn: ikutiBtn.status ?
+        `<button uuid="${userpub.UUID}" id="followbtn" onclick="action(this)" action="ikuti" sudah="true">batal ikuti</button>` :
+        `<button uuid="${userpub.UUID}" id="followbtn" onclick="action(this)" action="ikuti" sudah="false">ikuti</button>`
+    }
+    if (sembunyikansuka) {
+      data.likes = `
+              <div class="post postx">
+          <div class="post-footer">
+          <h3 style="color: black;font-size: 1.5rem; padding: 1rem; display: flex; align-self: center; justify-self: center;">Post yang disukai ${userpub.username} Disembunyikan!</h3>
+          </div>
+        </div>`
+    }
   }
+
+
   res.render('profile-pub', data);
   return
 });

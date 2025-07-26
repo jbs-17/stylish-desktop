@@ -4,6 +4,7 @@ import { deleteUserWithVerification } from './user/delete-user.js'
 import { changeEmail } from './user/email.js';
 import { kelaminSetter } from './user/kelamin.js';
 import { changePP } from './user/pp.js';
+import { profilprivatToogle } from "./user/profile-privat.js";
 import { renameUserWithVerification } from './user/rename-user.js';
 import { sembunyikandiikutiToogle } from './user/sembunyikandiikuti.js';
 import { sembunyikanikutiToogle } from "./user/sembunyikanikuti.js";
@@ -18,6 +19,7 @@ const api_user = {
   changeEmail,
   kelaminSetter,
   changePP,
+  profilprivatToogle,
   renameUserWithVerification,
   sembunyikandiikutiToogle,
   sembunyikanikutiToogle,
@@ -35,6 +37,7 @@ export {
   changeEmail,
   kelaminSetter,
   changePP,
+  profilprivatToogle,
   renameUserWithVerification,
   sembunyikandiikutiToogle,
   sembunyikanikutiToogle,

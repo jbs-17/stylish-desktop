@@ -108,28 +108,96 @@ ikuti.get('/profile/pub/:userid/diikuti', async (req, res) => {
   const userview = req.user;
   const cariusertarget = isUUID(userid) ? await cariUserDariUUID(userid) : await cariUserDariUsername(userid);
   const usertarget = cariusertarget.user;
+  const privat = usertarget.profilprivat;
+  const ikutix = (await sudahIkuti(userview.UUID, usertarget.UUID)).status;
+  const sembunyikanikuti = usertarget.sembunyikanikuti;
+  const sembunyikandiikuti = usertarget.sembunyikandiikuti;
+
   if (!usertarget) {
     res.redirect('/404')
     return
   }
-  const x = await buatKotakIkutiPub(usertarget.diikuti, userview);
+  let x = '';
+  if (privat) {
+    if (ikutix) {
+      if (sembunyikandiikuti) {
+        x = `
+    <div class="follower-card" style="display: flex; justify-content:center;align-item:center;text-align:center;" >
+    <p  class="username"><a href="/profile/pub/${usertarget.username}">folowers ${usertarget.username} disembunyikan</a></p>
+    </div>
+        `
+      } else {
+        x = await buatKotakIkutiPub(usertarget.diikuti, userview);
+      }
+    } else {
+      x = `
+    <div class="follower-card" style="display: flex; justify-content:center;align-item:center;text-align:center;" >
+    <p  class="username"><a href="/profile/pub/${usertarget.username}">follow ${usertarget.username} untuk melihat!</a></p>
+    </div>
+        `
+    }
+  } else {
+    if (sembunyikandiikuti) {
+      x = `
+    <div class="follower-card" style="display: flex; justify-content:center;align-item:center;text-align:center;" >
+    <p  class="username"><a href="/profile/pub/${usertarget.username}">folowers ${usertarget.username} disembunyikan</a></p>
+    </div>
+        `
+    } else {
+      x = await buatKotakIkutiPub(usertarget.diikuti, userview);
+    }
+  }
   const data = {
     username: usertarget.username,
     data: x
   }
   res.render('diikuti-pub', data);
 });
+
+
 ikuti.get('/profile/pub/:userid/ikuti', async (req, res) => {
   const { userid } = req.params;
   const userview = req.user;
   const cariusertarget = isUUID(userid) ? await cariUserDariUUID(userid) : await cariUserDariUsername(userid);
   const usertarget = cariusertarget.user;
+  const privat = usertarget.profilprivat;
+  const ikutix = (await sudahIkuti(userview.UUID, usertarget.UUID)).status;
+  const sembunyikanikuti = usertarget.sembunyikanikuti;
   if (!usertarget) {
     res.redirect('/404')
     return
   }
-  const x = await buatKotakIkutiPub(usertarget.ikuti, userview);
-  const data = {
+  let x = '';
+  if (privat) {
+    if (ikutix) {
+      if (sembunyikanikuti) {
+        x = `
+    <div class="follower-card" style="display: flex; justify-content:center;align-item:center;text-align:center;" >
+    <p  class="username"><a href="/profile/pub/${usertarget.username}">user yang diikuti ${usertarget.username} disembunyikan</a></p>
+    </div>
+        `
+      } else {
+        x = await buatKotakIkutiPub(usertarget.ikuti, userview);
+      }
+    } else {
+      x = `
+    <div class="follower-card" style="display: flex; justify-content:center;align-item:center;text-align:center;" >
+    <p  class="username"><a href="/profile/pub/${usertarget.username}">follow ${usertarget.username} untuk melihat!</a></p>
+    </div>
+        `
+    }
+  } else {
+    if (sembunyikanikuti) {
+      x = `
+    <div class="follower-card" style="display: flex; justify-content:center;align-item:center;text-align:center;" >
+    <p  class="username"><a href="/profile/pub/${usertarget.username}">user yang diikuti ${usertarget.username} disembunyikan</a></p>
+    </div>
+        `
+    } else {
+      x = await buatKotakIkutiPub(usertarget.ikuti, userview);
+    }
+  }
+  let data = {
     username: usertarget.username,
     data: x
   }
@@ -155,7 +223,7 @@ async function buatKotakIkutiPub(ikuti, userview) {
   <div class="follower-card" uuid="${UUID}">
     <img src="${pp || '../public/upload/pp/default.png'}" alt="Foto Profil" class="profile-pic" />
     <div class="user-info">
-      <div class="username" username="${username}"><a href="/profile/pub/me">${username} (saya)</a></div>
+      <div class="username" username="${username}"><a href="/profile/me">${username} (saya)</a></div>
       <div class="button-group">
         <a href="/profile/me"><button class="follow-btn" username="${username}" uuid="${UUID}">profile</button></a>
       </div>
