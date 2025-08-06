@@ -134,10 +134,27 @@ app.listen(port, () => {
 
 
 
+const logfile = `./logs/log-${fullyDate()}.txt`;
+try {
+  await fs.access(logfile);
+  console.log('File sudah ada');
+} catch (err) {
+  try {
+    await fs.writeFile(logfile, logfile);
+    console.log('File berhasil dibuat');
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+
+
+
 async function logging({ stampwaktu, ip, userAgent, url, method, durasi, statuskode }) {
   try {
     const text = `${stampwaktu ?? new Date()} | ${ip} | ${userAgent} | ${method} | ${durasi ? durasi + 'ms' : '-'} | ${statuskode ?? '-'} | ${url}\n`;
-    await fs.appendFile(`./logs/log-${fullyDate()}.txt`, text);
+    await fs.appendFile(logfile, text);
+
   } catch (err) {
     console.log(error(`\nlog error: ${err}`));
   }
