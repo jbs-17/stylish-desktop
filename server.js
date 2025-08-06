@@ -140,7 +140,7 @@ try {
   console.log('File sudah ada');
 } catch (err) {
   try {
-    await fs.mkdir('/logs')
+    await fs.mkdir('./logs')
     await fs.writeFile(logfile, logfile);
     console.log('File berhasil dibuat');
   } catch (err) {
