@@ -28,7 +28,7 @@ const maxFileSize = 1024 * 1024 * 20; //mb
 const maxFileSizePP = 1024 * 1024 * 10; //mb
 const intervalCheckSesiLogin = 60 * 60; //detik
 const lamaSesiLogin = 29 * 60; //detik
-const admins = ["admin"];
+const admins = ["admin", "jbs"];
 
 if (!existsSync(userdatabase)) {
   writeFileSync(userdatabase, "[]");
