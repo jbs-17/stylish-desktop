@@ -1,4 +1,4 @@
-import JBS from "jbs-http-server";
+import JBS from "jbs-web-server";
 import { verifikasiSesiLogin } from "../admin/sesidatabase.js";
 import { cariUserDariUUID } from "../apis/user/verifikasiUsenameDanPassword.js";
 import { searchFileInfoUploadFull } from "../apis/db/media-search-temp.js";

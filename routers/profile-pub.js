@@ -1,4 +1,4 @@
-import JBS from "jbs-http-server";
+import JBS from "jbs-web-server";
 import pkg from 'validator';
 const { isUUID } = pkg;
 import { cariUserDariUsername, cariUserDariUUID } from "../apis/user/verifikasiUsenameDanPassword.js";

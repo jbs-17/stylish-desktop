@@ -1,4 +1,4 @@
-import JBS from "jbs-http-server";
+import JBS from "jbs-web-server";
 import util from "node:util";
 const MIMEType = util.MIMEType;
 import { parse, resolve, normalize, relative } from "node:path";

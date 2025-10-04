@@ -13,7 +13,7 @@ import {
     changeTelp,
     verifikasiUsernamePasswordData
 } from "../apis/api-user.js";
-import JBS from "jbs-http-server";
+import JBS from "jbs-web-server";
 import config from "../config.js";
 import formidable from "formidable";
 

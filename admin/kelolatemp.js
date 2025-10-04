@@ -21,7 +21,7 @@ import tanggalString from "../modules/date-string.mjs";
 import fsx from "fs-extra";
 
 import pkg from 'jsonfile';
-import searchFiles from "jbs-http-server/jbs-search-file-async.js";
+import searchFiles from "jbs-web-server/jbs-search-file-async.js";
 const { readFile, writeFile } = pkg;
 const readFileJSON = promisify(readFile);
 const writeFileJSON = promisify(writeFile);

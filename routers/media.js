@@ -1,4 +1,4 @@
-import JBS from "jbs-http-server";
+import JBS from "jbs-web-server";
 import { searchFileInfoTemp, searchFileInfoUpload } from "../apis/db/media-search-temp.js";
 
 const media = JBS.Router();

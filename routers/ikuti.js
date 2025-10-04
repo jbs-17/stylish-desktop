@@ -1,4 +1,4 @@
-import JBS from "jbs-http-server";
+import JBS from "jbs-web-server";
 import { cariUserDariUsername, cariUserDariUUID } from "../apis/user/verifikasiUsenameDanPassword.js";
 import { sudahIkuti } from '../apis/db/ikuti.js';
 import pkg from 'validator';

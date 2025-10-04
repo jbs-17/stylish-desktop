@@ -1,0 +1,12 @@
+{
+  "name": "jbs-web-server",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "mini framework web server yang terinpsirasi oleh express.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jbs",
+  "license": "ISC"
+}

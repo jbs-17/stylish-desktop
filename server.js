@@ -2,7 +2,7 @@
 import fs from 'node:fs/promises';
 
 //local
-import JBS from 'jbs-http-server';
+import JBS from 'jbs-web-server';
 import { rootpath, logpath, port, exceptPath, database, userdatabase } from "./config.js";
 
 import tanggalString from './modules/date-string.mjs'

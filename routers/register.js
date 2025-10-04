@@ -1,5 +1,5 @@
 import { randomUUID } from "node:crypto";
-import JBS from "jbs-http-server";
+import JBS from "jbs-web-server";
 import { lamaSesiLogin } from "../config.js";
 import { tambahSesiLoginBaru } from "../admin/sesidatabase.js";
 import newUser from "../apis/user/add-new-user.js";

@@ -1,4 +1,4 @@
-import JBS from 'jbs-http-server';
+import JBS from 'jbs-web-server';
 const root = JBS.Router();
 
 

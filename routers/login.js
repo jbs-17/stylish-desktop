@@ -1,5 +1,5 @@
 import { randomUUID } from "node:crypto";
-import JBS from "jbs-http-server";
+import JBS from "jbs-web-server";
 import { verifikasiUsernamePasswordData } from "../apis/user/verifikasiUsenameDanPassword.js";
 import { tambahSesiLoginBaru } from "../admin/sesidatabase.js";
 import { lamaSesiLogin } from "../config.js";

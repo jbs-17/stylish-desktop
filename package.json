@@ -23,7 +23,7 @@
     "dotenv": "^16.5.0",
     "formidable": "^3.5.4",
     "fs-extra": "^11.3.0",
-    "jbs-http-server": "file:modules/jbs-http-server",
+    "jbs-web-server": "file:modules/jbs-web-server",
     "jsonfile": "^6.1.0",
     "mime": "^4.0.7",
     "mime-types": "^3.0.1",
