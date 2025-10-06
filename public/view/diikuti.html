@@ -31,7 +31,7 @@
 
   <style>
     .followers-container {
-      min-height: 80vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       gap: 12px;
@@ -202,6 +202,26 @@
 
 
 
+    <style>
+      .bottom-nav {
+        position: sticky;
+        bottom: 0;
+        z-index: 9999999999;
+      }
+
+      .sticky-top {
+        position: sticky;
+        top: 0;
+        z-index: 9999999999;
+      }
+    </style>
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <a href="/home" class="nav-link">HOME</a>
+      <a href="/search" class="nav-link nav-link-on button-on">SEARCH</a>
+      <a href="/upload" class="nav-link">UPLOAD</a>
+      <a href="/profile/me" class="nav-link">PROFILE</a>
+    </nav>
 
   <!-- Footer -->
   <footer class="footer">
@@ -221,10 +241,12 @@
     {
       const header = document.querySelector('header');
       const footer = document.querySelector('footer');
+      const nav = document.querySelector('.bottom-nav');
       const iframe = { self: window.self, top: window.top };
       // console.log({ self: iframe.self.location.href , top: iframe.top.location.href}); //beda
       if (iframe.top !== iframe.self) {
         header.remove();
+        nav.remove();
         footer.remove();
         window.addEventListener('click', (e) => {
           const href = e.target.href;

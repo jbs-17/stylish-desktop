@@ -17,6 +17,15 @@ async function viewPost(fileuid) {
     const url = '/post/' + fileuid;
     console.log(url);
     showViewer(url);
+    document.querySelectorAll('video').forEach(v => 
+    {
+        setTimeout(() => {
+        v.pause()
+        
+        }, 500);
+      
+    }
+    )
   } catch (error) {
     console.log(error);
   }

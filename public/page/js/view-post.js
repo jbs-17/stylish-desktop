@@ -1,11 +1,14 @@
 {
   const header = document.querySelector('header');
   const footer = document.querySelector('footer');
+  const navbar = document.querySelector(".bottom-nav");
   const iframe = { self: window.self, top: window.top };
   // console.log({ self: iframe.self.location.href , top: iframe.top.location.href}); //beda
   if (iframe.top !== iframe.self) {
     header.remove();
     footer.remove();
+    navbar.remove();
+
     window.addEventListener('click', (e) => {
       const href = e.target.href;
       if (href) {

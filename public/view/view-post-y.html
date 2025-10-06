@@ -559,26 +559,36 @@
       <a href="/contact.html">Hubungi Kami</a>
     </nav>
   </footer>
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="/home" class="nav-link">HOME</a>
+    <a href="/search" class="nav-link nav-link-on button-on">SEARCH</a>
+    <a href="/upload" class="nav-link">UPLOAD</a>
+    <a href="/profile/me" class="nav-link">PROFILE</a>
+  </nav>
 
 
   <script>
-    {
-        const header = document.querySelector('header');
-        const footer = document.querySelector('footer');
-        const iframe = { self: window.self, top: window.top };
-        // console.log({ self: iframe.self.location.href , top: iframe.top.location.href}); //beda
-        if (iframe.top !== iframe.self) {
-          header.remove();
-          footer.remove();
-          window.addEventListener('click', (e) => {
-            const href = e.target.href;
-            if (href) {
-              e.preventDefault();
-              window.top.location = href;
-            }
-          })
-        }
+{
+  const header = document.querySelector('header');
+  const footer = document.querySelector('footer');
+  const navbar = document.querySelector(".bottom-nav");
+  const iframe = { self: window.self, top: window.top };
+  // console.log({ self: iframe.self.location.href , top: iframe.top.location.href}); //beda
+  if (iframe.top !== iframe.self) {
+    header.remove();
+    footer.remove();
+    navbar.remove();
+
+    window.addEventListener('click', (e) => {
+      const href = e.target.href;
+      if (href) {
+        e.preventDefault();
+        window.top.location = href;
       }
+    })
+  }
+}
   </script>
 </body>
 

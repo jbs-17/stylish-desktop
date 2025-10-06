@@ -14,9 +14,7 @@ root.get('/register', (req, res)=>{
 root.get('/login', (req, res)=>{
   res.html('./public/page/login.html');
 })
-root.get('/upload', (req, res)=>{
-  res.html('./public/page/upload.html');
-});
+
 
 
 

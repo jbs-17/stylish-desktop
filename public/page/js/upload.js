@@ -96,9 +96,10 @@ document.querySelector(".upload-form").addEventListener("submit", async (e) => {
     const result = await response.json();
     console.log(result)
     if (result.status) {
-      alert(result.message);
+      toast(`berhasil untuk upload! menunggu persetujuan!`);
+      location.href = '/profile/me'
     } else {
-      alert(result.message);
+      toast(`gagal mengupload file!`);
     }
 
     // Reset form dan preview
@@ -108,9 +109,25 @@ document.querySelector(".upload-form").addEventListener("submit", async (e) => {
     document.getElementById("preview-container-mobile").innerHTML = "";
   } catch (err) {
     console.error(err);
-    alert("Terjadi kesalahan saat mengunggah file.");
+    toast("Terjadi kesalahan saat mengunggah file.");
   }
 });
 
+
+function toast(message = 'some message...', time = 5000) {
+  const x = document.getElementById('toast');
+  if (x) { x.remove() }
+
+  if (message.length > 25) {
+    message = message.slice(0, 20) + '...';
+  }
+  const toast = document.createElement('div');
+  const toastmessage = document.createElement('p');
+  toastmessage.innerText = message;
+  toast.append(toastmessage);
+  toast.id = 'toast';
+  setTimeout(() => { toast.remove() }, time);
+  document.body.append(toast);
+}
 
 

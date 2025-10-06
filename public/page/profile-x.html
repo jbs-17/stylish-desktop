@@ -1,160 +1,136 @@
 <!DOCTYPE html>
 <html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil - Stylish Desktop</title>
+    <link rel="stylesheet" href="./css/global.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Profil - Stylish Desktop</title>
-  <link rel="stylesheet" href="./css/global.css" />
-</head>
-
-<body>
-  <!-- Header -->
-  <header class="header header-x">
-    <div class="container header-flex">
-      <h1 class="logo"><a href="/">Stylish Desktop</a></h1>
-      <div class="header-buttons">
+  <body>
+    <!-- Header -->
+    <!-- Header -->
+    <header class="header sticky-top">
+      <div class="container header-flex">
+        <h1 class="logo"><a href="/">Stylish Desktop</a></h1>
+        <div class="header-buttons">
+          <a href="/register" class="button">Daftar</a>
+          <a href="/login" class="button display-none">Login</a>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-
-    <!-- === SECTION: PROFILE === -->
-    <section id="profile-section">
-      <div id="settings-btn">⚙️</div>
-      <div class="profile-avatar">
-        <img id="pp" src="../upload/pp/default.png" />
-        <p id="username">username</p>
-        <small><span>uuid: </span><span id="uuid"></span></small>
-      </div>
-      <div class="profile-info">
-        <p id="bio"></p>
-      </div>
-      <div class="profile-stats">
-        <p class="stat-data" title="total like"><span id="suka">0</span><span> like</span></p>
-        <p class="stat-data" title="total follow"><span id="ikuti">0</span><span> follow</span></p>
-        <p class="stat-data" title="total followed"><span id="diikuti">0</span><span> following</span></p>
-      </div>
-    </section>
-
-    <!-- Viewer Iframe Overlay -->
-    <div id="iframe-overlay" class="iframe-overlay iframe-overlay-hidden">
-      <div class="iframe-wrapper">
-        <button class="iframe-close-btn" onclick="closeViewer()">×</button>
-        <iframe id="post-viewer" src="" frameborder="0"></iframe>
-      </div>
-    </div>
+    <main>
+      <!-- === SECTION: PROFILE === -->
+      <section id="profile-section">
+        <div id="settings-btn">⚙️</div>
+        <div class="profile-avatar">
+          <img id="pp" src="../upload/pp/default.png" />
+          <p id="username">username</p>
+          <small><span>uuid: </span><span id="uuid"></span></small>
+        </div>
+        <div class="profile-info">
+          <p id="bio"></p>
+        </div>
+        <div class="profile-stats">
+          <p class="stat-data" title="total like">
+            <span id="suka">0</span><span> like</span>
+          </p>
+          <p class="stat-data" title="total follow">
+            <span id="ikuti">0</span><span> follow</span>
+          </p>
+          <p class="stat-data" title="total followed">
+            <span id="diikuti">0</span><span> following</span>
+          </p>
+        </div>
+      </section>
 
 
 
-    <!-- === SECTION: GALLERY === -->
+      <!-- === SECTION: GALLERY === -->
 
-    <section class="gallery" id="gallery-section">
-      <div id="gallery-menu">
-        <button tab="upload" class="button-on">UPLOAD</button>
-        <button tab="pending" class="">PENDING</button>
-        <button tab="like" class="">LIKE</button>
-        <button tab="save" class="">SAVE</button>
-      </div>
+      <section class="" id="gallery-section" style="max-height: 200px;">
+        <div id="gallery-menu">
+          <button tab="upload" class="button-on">UPLOAD</button>
+          <button tab="pending" class="">PENDING</button>
+          <button tab="like" class="">LIKE</button>
+          <button tab="save" class="">SAVE</button>
+        </div>
+      </section>
+      <!-- === SECTION: GALLERY END === -->
 
-      <div tab="upload" class="gallery-tab gallery-uploads">
+      <div id="block"></div>
+      <h1 id="alert-login"><a href="/login">LOGIN</a></h1>
+    </main>
 
+    <style>
+      .sticky-top {
+        position: sticky;
+        top: 0;
+        z-index: 9999999999;
+      }
+      main {
+        position: relative;
+        filter: blur(0.1);
+      }
+      #alert-login {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        z-index: 999999999999;
+        color: white;
+        font-size: 3rem;
+        text-align: center;
+        font-weight: 700;
+        text-decoration: underline;
+        text-shadow: 0px 3px 3px white;
+      }
+      #block {
+        z-index: 999;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90vh;
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+      .sticky-bottom {
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        bottom: 0;
+        z-index: 9999999999;
+      }
+    </style>
+    <footer class="sticky-bottom">
+      <!-- Bottom Navigation -->
+      <nav class="bottom-nav">
+        <a href="/home" class="nav-link">HOME</a>
+        <a href="/search" class="nav-link">SEARCH</a>
+        <a href="/upload" class="nav-link">UPLOAD</a>
+        <a href="/profile/me" class="nav-link nav-link-on button-on">PROFILE</a>
+      </nav>
+    </footer>
 
-        <span role="loader-upload"></span>
-
-
-      </div>
-
-
-      <div tab="pending" class="gallery-tab gallery-pendings gallery-hide">
-
-        <span role="loader-pending"></span>
-
-      </div>
-
-      <div tab="like" class="gallery-tab gallery-likes gallery-hide">
-
-
-
-      </div>
-
-      <div tab="save" class="gallery-tab gallery-saves gallery-hide">
-
-      </div>
-
-    </section>
-    <!-- === SECTION: GALLERY END === -->
-
-    <div id="block"></div>
-    <h1 id="alert-login"><a href="/login">LOGIN</a></h1>
-  </main>
-
-  <style>
-    main{
-      position: relative;
-      filter: blur(.1);
-    }
-    #alert-login{
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      translate: -50% -50%;
-      z-index: 999999999999;
-      color: white;
-      font-size: 3rem;
-      text-align: center;
-      font-weight: 700;
-      text-decoration: underline;
-      text-shadow: 0px 3px 3px white;
-    }
-    #block{
-      z-index: 999;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, .9);
-
-    }
-    .sticky-bottom{
-      position: sticky;
-      bottom: 0;
-      z-index: 9999999999;
-    }
-  </style>
-  <footer class="sticky-bottom">
-    <!-- Bottom Navigation -->
-    <nav class="bottom-nav">
-      <a href="/home" class="nav-link">HOME</a>
-      <a href="/search" class="nav-link">SEARCH</a>
-      <a href="/upload" class="nav-link">UPLOAD</a>
-      <a href="/profile/me" class="nav-link nav-link-on button-on">PROFILE</a>
-    </nav>
-  </footer>
-
-  <script>
-    const tabsBtn = document.querySelectorAll("button[tab]");
-    const tabs = document.querySelectorAll('.gallery-tab');
-    tabsBtn.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        tabsBtn.forEach(btn => btn.classList.remove('button-on'));
-        e.target.classList.add('button-on')
-        const x = e.target.getAttribute('tab');
-        tabs.forEach(tab => {
-          if (tab.getAttribute('tab') === x) {
-            tab.classList.remove('gallery-hide');
-          } else {
-            tab.classList.add('gallery-hide')
-          }
-        })
-      })
-    });
-
-
-  </script>
-
-</body>
-
+    <script>
+      const tabsBtn = document.querySelectorAll("button[tab]");
+      const tabs = document.querySelectorAll(".gallery-tab");
+      tabsBtn.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          tabsBtn.forEach((btn) => btn.classList.remove("button-on"));
+          e.target.classList.add("button-on");
+          const x = e.target.getAttribute("tab");
+          tabs.forEach((tab) => {
+            if (tab.getAttribute("tab") === x) {
+              tab.classList.remove("gallery-hide");
+            } else {
+              tab.classList.add("gallery-hide");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
 </html>

@@ -1,60 +1,330 @@
 <!DOCTYPE html>
 <html lang="id">
+
+<!DOCTYPE html>
+<html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Stylish Desktop" />
-  <meta name="author" content="JBS" />
-  <title>Stylish Desktop</title>
-  <link rel="stylesheet" href="css/home.css" />
-  <link rel="stylesheet" href="css/reset.css" />
+  <title>Profil - Stylish Desktop</title>
+  <link rel="stylesheet" href="./css/global.css" />
+
+  <style>
+    .post {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      width: min(40rem, 90vw);
+      margin: 2.5rem auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    .post-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .76rem;
+    }
+
+    .post-user {
+      display: flex;
+      align-items: center;
+    }
+
+    .post-user img {
+      width: 3rem;
+      height: 3rem;
+      object-fit: cover;
+      margin-right: 1rem;
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+
+    .username-row {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .post-options-container {
+      display: none;
+    }
+
+    .post-media img,
+    .post-media video {
+      width: 100%;
+      object-fit: contain;
+      max-height: 20rem;
+      background-color: black;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+    }
+
+    .post-body {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      flex-grow: 1;
+    }
+
+    .post-body .judul {
+      font-weight: bold;
+      font-size: 1.15rem;
+      line-height: 1.4rem;
+      margin-bottom: 0.5rem;
+      word-break: break-word;
+    }
+
+    .post-body .deskripsi {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.4rem;
+      word-break: break-word;
+      margin-bottom: auto;
+      /* push berikutnya ke bawah jika pendek */
+    }
+
+    .post-actions {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+      justify-items: center;
+      height: 3rem;
+      border-top: 1px solid #eee;
+      background-color: white;
+      box-sizing: border-box;
+      padding: 0px 5px;
+
+    }
+
+    .post-actions span.post-interactions {
+      font-size: 0.85rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      color: #666;
+      box-shadow: inset 0px 1px 3px rgb(0, 0, 0, .5);
+
+      color: rgb(65, 65, 65);
+      font-weight: 900;
+    }
+
+    .post-footer {
+      margin-top: 10px;
+      padding: 0.75rem 1rem;
+      font-size: 0.75rem;
+      color: #999;
+      text-align: center;
+      border-top: 1px solid #ddd;
+    }
+
+    @media (max-width: 668px) {
+      .post {
+        width: 95vw;
+      }
+
+      .post-actions span.post-interactions {
+        font-size: 0.75rem;
+      }
+    }
+  </style>
+
+  <style>
+    #settings-btn {
+      position: absolute;
+      right: 0;
+      cursor: pointer;
+      padding: 0.5rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: end;
+      border-radius: 50%;
+      transition: background-color 0.2s;
+    }
+
+    #settings-btn:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  </style>
+
+  <style>
+    .stat-data {
+      cursor: pointer;
+    }
+  </style>
+
+  <style>
+        .post-footerx {
+      min-width: 55vmax;
+    }
+    @media (max-width: 668px) {
+
+      .post-footerx {
+        min-width: 44vmax;
+      }
+
+    }
+
+  </style>
 </head>
+
+
+
 <body>
   <!-- Header -->
-  <header class="header">
-    <div class="container">
+  <header class="header header-x">
+    <div class="container header-flex">
       <h1 class="logo"><a href="/">Stylish Desktop</a></h1>
-      <a href="/login" class="login-button">Login</a>
+      <div class="header-buttons">
+      </div>
     </div>
   </header>
 
-  <!-- Content Wrapper -->
-  <div class="content-wrapper">
-    <div class="card">
-      <img src="path-to-image.jpg" alt="Contoh Gambar" />
-      <div class="card-actions">
-        <button>Like</button>
-        <button>Share</button>
-        <button>Save</button>
-      </div>
-    </div>
 
-    <div class="card">
-      <img src="path-to-image.jpg" alt="Contoh Gambar" />
-      <div class="card-actions">
-        <button>Like</button>
-        <button>Share</button>
-        <button>Save</button>
-      </div>
-    </div>
 
-    <div class="card">
-      <img src="path-to-image.jpg" alt="Contoh Gambar" />
-      <div class="card-actions">
-        <button>Like</button>
-        <button>Share</button>
-        <button>Save</button>
-      </div>
+
+
+  <!-- Viewer Iframe Overlay -->
+  <div id="iframe-overlay" class="iframe-overlay iframe-overlay-hidden">
+    <div class="iframe-wrapper">
+      <button class="iframe-close-btn" onclick="closeViewer()" title="Kembali">
+        <svg viewBox="0 0 24 24" class="icon-arrow">
+          <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+      <iframe id="post-viewer" src="" frameborder="0"></iframe>
     </div>
-    <!-- More cards can go here -->
   </div>
+
+
+
+<!-- SECTION SEACRH BAR -->
+ <style>
+  #search-bar {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    align-items: end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  div[tab]{
+    box-sizing: border-box;
+    padding: 12px;
+  }
+  #search-bar input[type=submit] {
+    border: black 1px solid;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: slateblue;
+    color: white;
+    min-height: 28px;
+    width: 19%;
+  }
+  #search-bar input[type=search] {
+    border: black 1px solid;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    min-height: 28px;
+    width: 77%;
+    font-weight: 700;
+    text-indent: 10px;
+  }
+
+  .search-result-for{
+    min-height: 20px;
+    margin-bottom: 10px;
+    font-size: medium;
+    position: absolute;
+    left: 20px;
+  }
+  .search-result-for strong{
+    text-decoration: underline;
+  }
+ </style>
+ <section class="" id="search-bar">
+  <form style="width: 100%;" action="/search" method="get" role="search" title="search">
+    <input value="<| q |>" type="search" name="q" id="search" oninput="localStorage.setItem('search-input-state', this.value)">
+    <input type="submit" value="SEARCH">
+  </form>
+ </section>
+
+
+
+  <!-- === SECTION: GALLERY === -->
+
+  <section class="gallery" id="gallery-section">
+    <div id="gallery-menu" style="display:flex;flex-direction: row;  width: 100%;">
+      <button tab="upload" class="button-on" style="width: 50%;">UPLOAD</button>
+      <button tab="user" class="" style="width: 50%;">USER</button>
+    </div>
+    <div tab="upload" class="gallery-tab gallery-uploads">
+      <p class="search-result-for">Search result for <strong style="font-weight: 700;"><| q |></strong></p>
+      <| uploads |>
+        <div class="post-footer post-footerx">
+          Sudah sampai akhir!
+        </div>
+    </div>
+
+    <div tab="user" class="gallery-tab gallery-pendings gallery-hide">
+      <p  class="search-result-for">Search result for <strong style="font-weight: 700;"><| q |></strong></p>
+
+      <| users |>
+        <div class="post-footer post-footerx">
+          Sudah sampai akhir!
+        </div>
+    </div>
+
+    </div>
+
+  </section>
+  <!-- === SECTION: GALLERY END === -->
+  <script>
+    const tabsBtn = document.querySelectorAll("button[tab]");
+    const tabs = document.querySelectorAll('.gallery-tab');
+    tabsBtn.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        tabsBtn.forEach(btn => btn.classList.remove('button-on'));
+        e.target.classList.add('button-on')
+        const x = e.target.getAttribute('tab');
+        tabs.forEach(tab => {
+          if (tab.getAttribute('tab') === x) {
+            tab.classList.remove('gallery-hide');
+          } else {
+            tab.classList.add('gallery-hide')
+          }
+        })
+      })
+    });
+
+
+
+  </script>
+
 
   <!-- Bottom Navigation -->
   <nav class="bottom-nav">
-    <a href="/home" class="nav-link">Main</a>
-    <a href="/upload" class="nav-link">Upload</a>
-    <a href="/profile/me" class="nav-link">Profile</a>
+    <a href="/home" class="nav-link  nav-link-on button-on">HOME</a>
+    <a href="/search" class="nav-link">SEARCH</a>
+    <a href="/upload" class="nav-link">UPLOAD</a>
+    <a href="/profile/me" class="nav-link">PROFILE</a>
   </nav>
 
+
+
+
 </body>
+
 </html>

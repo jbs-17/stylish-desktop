@@ -136,29 +136,33 @@ function tanggalx(tanggal) {
 
 
 //lihat postingan me atua pub
-post.use('/:fileuid', async (req, res, next) => {
+async function postUse(req, res,){
   const cookies = req.cookies;
   const sessionId = cookies["session_id"];
   if (!sessionId) {
     res.render('view-post-x', {});
-    return;
+    return false;
   }
   res.set('session_id', sessionId);
   const checkSesiLogin = await verifikasiSesiLogin(sessionId);
   if (!checkSesiLogin.status) {
     res.render('view-post-x', {});
-    return;
+    return false;
   }
   const UUID = checkSesiLogin.sesi?.UUID;
   const user = await cariUserDariUUID(UUID, { info: false });
   if (!user.status) {
     res.render('view-post-x', {});
-    return;
+    return false;
   }
   req.user = user?.user;
-  next();
-});
+  req.apalah = 'bokep'
+  return true;
+};
 post.get('/:fileuid', async (req, res) => {
+  if(await postUse(req, res) === false){
+    return
+  }
   const { fileuid } = req.params;
   if (!fileuid) {
     res.redirect('/notfound');

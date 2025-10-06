@@ -10,8 +10,8 @@ import {
   database,
   maxFileSize,
 } from "../config.js";
-import mimeTypesofExt from "../modules/content-type.js";
-import readFilePage from "../modules/read-file-page.js";
+// import mimeTypesofExt from "../modules/content-type.js";
+// import readFilePage from "../modules/read-file-page.js";
 import {
   tambahImageTempListAndUser,
   tambahVideoTempListAndUser,
@@ -20,19 +20,29 @@ import tanggalString from "../modules/date-string.mjs";
 import { IncomingForm } from "formidable";
 import fsx from "fs-extra";
 
-
 const maxFieldsSize = 1 * 1024 * 1024;
 const maxFields = 5;
 const maxFiles = 1;
 // const maxFileSize = 20 * 1024 * 1024
 const minFileSize = 0.001 * 1024 * 1024;
 const upload = JBS.Router();
-upload.post('/upload', (req, res) => {
+
+upload.get("/upload", (req, res) => {
+  if (!req.user) {
+    return res.html("./public/page/upload-x.html");
+  }
+  res.html("./public/page/upload.html");
+});
+
+upload.post("/upload", (req, res) => {
   try {
     const user = req.user;
     //check apakah user login
     if (!req.user) {
-      res.json({ status: false, message: "gagal upload! mohon login untuk upload!", });
+      res.json({
+        status: false,
+        message: "gagal upload! mohon login untuk upload!",
+      });
       return;
     }
     //pengaturan file yang diupload
@@ -141,13 +151,10 @@ upload.post('/upload', (req, res) => {
     const pesan = { status: false, message: `gagal upload: ${e}` };
     res.json(pesan);
   }
-})
+});
 
 export { upload };
 export default upload;
-
-
-
 
 function buatInformasiFile({ originalFilename, filetype, ext, UUID, fileUID }) {
   try {

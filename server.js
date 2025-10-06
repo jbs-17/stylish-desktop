@@ -13,7 +13,7 @@ import chalk from "chalk";
 import routers from './routers/routers.js';
 import { verifikasiSesiLogin } from './admin/sesidatabase.js';
 import { cariUserDariUUID } from './apis/user/verifikasiUsenameDanPassword.js';
-
+import { fullyDate } from './utils/fully-date.js';
 
 
 const loggingEmit = new EventEmitter();
@@ -26,7 +26,7 @@ loggingEmit.on('selesai', async (infoRequest = {}) => {
 
 
 const app = JBS();
-app.setTemplates('./public/view')
+app.setTemplates('./public/view');
 
 app.use(function log(req, res, next) {
   next();
@@ -85,6 +85,7 @@ app.use('/', routers.root);
 app.use('/', routers.profileme);
 app.use('/', routers.profilepub);
 app.use('/', routers.settings);
+app.use('/', routers.search);
 
 app.use("/", routers.upload);
 app.use('/media', routers.media);
@@ -134,11 +135,12 @@ app.listen(port, () => {
 
 
 
+
 const logfile = `./logs/log-${fullyDate()}.txt`;
 try {
   await fs.access(logfile);
-  console.log('File sudah ada');
-} catch (err) {
+  console.log(`File ${logfile} sudah dibuat`);
+} catch  {
   try {
     fs.mkdir('./logs').catch(e => console.log(e))
     await fs.writeFile(logfile, logfile);
@@ -163,10 +165,3 @@ async function logging({ stampwaktu, ip, userAgent, url, method, durasi, statusk
 
 
 
-function fullyDate() {
-  const d = new Date();
-  const date = String(d.getDate());
-  const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
-  const months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
-  return `${days[d.getDay()]}-${date.length < 2 ? `0${date}` : date}-${months[d.getMonth()]}-${d.getFullYear()}`
-};
