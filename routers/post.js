@@ -177,6 +177,8 @@ post.get('/:fileuid', async (req, res) => {
   const file = infofile.file;
   const userfile = infofile.user;
   const userview = req.user;
+  userfile.username = userfile.username === userview.username ? userfile.username+" (saya)" : "";
+
 
   const { filebase, judul, deskripsi, suka, simpan, komentar, bagi, mimetype, laporkan } = file;
   const sudahsuka = isUserViewDoInFIle(suka, userview.UUID);

@@ -254,12 +254,6 @@
     text-decoration: underline;
   }
  </style>
- <section class="" id="search-bar">
-  <form style="width: 100%;" action="/search" method="get" role="search" title="search">
-    <input value="<| q |>" type="search" name="q" id="search" oninput="localStorage.setItem('search-input-state', this.value)">
-    <input type="submit" value="SEARCH">
-  </form>
- </section>
 
 
 
@@ -271,8 +265,6 @@
       <button tab="user" class="" style="width: 50%;">USER</button>
     </div>
     <div tab="upload" class="gallery-tab gallery-uploads">
-      <p class="search-result-for">Search result for <strong style="font-weight: 700;"><| q |></strong></p>
-      <| uploads |>
         <div class="post-footer post-footerx">
           Sudah sampai akhir!
         </div>
@@ -281,7 +273,6 @@
     <div tab="user" class="gallery-tab gallery-pendings gallery-hide">
       <p  class="search-result-for">Search result for <strong style="font-weight: 700;"><| q |></strong></p>
 
-      <| users |>
         <div class="post-footer post-footerx">
           Sudah sampai akhir!
         </div>
@@ -324,7 +315,7 @@
 
 
 
-
+ <script src="/js/home.js"></script>
 </body>
 
 </html>

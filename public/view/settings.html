@@ -366,9 +366,37 @@
       <span class="setting-label-text">Diarsipkan</span>
       <button class="view-btn">Lihat</button>
     </div>
+    
+    
+        <div class="setting-card">
+      <span class="setting-label-text">Log out from this account</span>
+      <button onclick="logOut()" class="view-btn">Logout</button>
+    </div>
+    
 
   </div>
 
+<script type="text/javascript" charset="utf-8">
+  async function logOut(){
+    try {
+      if(!confirm('logout dari akun sekarang?')){
+        return
+      }
+      const response = await fetch('/logout', {
+        method: 'DELETE'
+      });
+      const data = await response.json();
+      if(data.status  === true){
+        alert('sukses logout dari akun!');
+        return location.href = '/login';
+      };
+      throw data
+    } catch{
+
+      alert('gagal untuk logout!');
+    }
+  }
+</script>
 
 
 

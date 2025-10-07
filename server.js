@@ -1,5 +1,6 @@
 //core
 import fs from 'node:fs/promises';
+import process from 'node:process';
 
 //local
 import JBS from 'jbs-web-server';
@@ -86,13 +87,17 @@ app.use('/', routers.profileme);
 app.use('/', routers.profilepub);
 app.use('/', routers.settings);
 app.use('/', routers.search);
+app.use('/', routers.logout);
 
 app.use("/", routers.upload);
 app.use('/media', routers.media);
 app.use('/admin', routers.admin);
 app.use('/post', routers.post);
 
-
+app.use(async function (req, res, next) {
+  res.setHeader( 'Cache-Control','public, max-age=604800') //7 hari
+  next();
+})
 app.use(JBS.static('./public/page/'));
 app.use(JBS.static('./public/temp'));
 app.use(JBS.static('./public/upload'));
@@ -127,14 +132,15 @@ app.response404((req, res) => {
 
 
 
-
-app.listen(port, () => {
-  console.log(`app running on port ${port}...`);
-})
-
-
+//if(process.isPrimary){
+ app.listen(port, () => {
+   console.log(`app running on port ${port}...`);
+ })
 
 
+
+export default app;
+export {app}
 
 const logfile = `./logs/log-${fullyDate()}.txt`;
 try {

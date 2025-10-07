@@ -63,7 +63,11 @@ async function serveuploads(uploads = [], username, pub = false) {
   return d
 
 
-  async function template({ fileUID, mimetype, relativeFilePath, judul, deskripsi, suka, bagi, komentar, simpan, tanggal }, username, pp = "../public/upload/pp/default.png") {
+  async function template({ fileUID, mimetype, relativeFilePath, judul, deskripsi, suka, bagi, komentar, simpan, tanggal, UUID }, username) {
+
+  const user = await cariUserDariUUID(UUID)
+  let {pp = "../public/upload/pp/default.png"} = user.user;
+  
     return /*html*/`
   <div class="post"  data-fileuid="${fileUID}" fileuid="${fileUID}" id="${fileUID}" action="lihat-upload" onclick="action(this)">
   <div class="post-header">

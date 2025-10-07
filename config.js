@@ -67,7 +67,7 @@ if (!isiuserdatabase.startsWith("[") && !isiuserdatabase.endsWith("]")) {
 
 const port = Number(process.env.SERVER_PORT) || 3000;
 const useCache = process.env.CACHE === "0" ? false : true;
-// console.log({useCache});
+console.log({useCache});
 
 export {
   port,

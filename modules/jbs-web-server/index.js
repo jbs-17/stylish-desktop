@@ -980,17 +980,19 @@ function app() {
     }
   }
 
-
+  
   //. MEMULAI SERVER HTTP 
+  const server = http.createServer(appHandler);
   function listen(port = 3000, callback = function () { }) {
-    const server = http.createServer(appHandler);
+    //const server = http.createServer(appHandler);
     if (!Number.isInteger(port) || port === 0) {
       throw new TypeError('Port must be  Integer!');
     }
-    server.listen(port);
+    server.listen(port)
     callback(port);
-    return server;
+    return server
   }
+
 
   //. KONFIGURASI
   Object.defineProperty(appHandler, 'toString', {
@@ -1002,6 +1004,7 @@ function app() {
 
 
   //.BEBERAPA KONFIGURASIS HANDLER
+  appHandler.listen = listen
   appHandler.get = get;
   appHandler.post = post;
   appHandler.put = put;
@@ -1009,7 +1012,6 @@ function app() {
   appHandler.delete = delet;
   appHandler.all = all;
   appHandler.options = options;
-  appHandler.listen = listen;
   appHandler.route = route;
   appHandler.use = use;
   appHandler.middlewares = middlewares;

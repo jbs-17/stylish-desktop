@@ -205,7 +205,7 @@ ikuti.get('/profile/pub/:userid/ikuti', async (req, res) => {
 });
 
 
-async function buatKotakIkutiPub(ikuti, userview) {
+export async function buatKotakIkutiPub(ikuti, userview) {
   try {
     let a = ikuti.map(i => cariUserDariUUID(i.UUID));
     a = (await Promise.allSettled(a))
@@ -219,8 +219,9 @@ async function buatKotakIkutiPub(ikuti, userview) {
     return a
     async function template({ UUID, username, pp }) {
       if (UUID === userview.UUID) {
+        
         return /*html*/`
-  <div class="follower-card" uuid="${UUID}">
+  <div onclick="location.href = '/profile/me'" class="follower-card" uuid="${UUID}">
     <img src="${pp || '../public/upload/pp/default.png'}" alt="Foto Profil" class="profile-pic" />
     <div class="user-info">
       <div class="username" username="${username}"><a href="/profile/me">${username} (saya)</a></div>
@@ -233,7 +234,7 @@ async function buatKotakIkutiPub(ikuti, userview) {
       }
       const sudah = (await sudahIkuti(userview.UUID, UUID)).status;
       return /*html*/`
-  <div class="follower-card" uuid="${UUID}">
+  <div onclick="location.href = '/profile/pub/${username}'" class="follower-card" uuid="${UUID}">
     <img src="${pp || '../public/upload/pp/default.png'}" alt="Foto Profil" class="profile-pic" />
     <div class="user-info">
       <div class="username" username="${username}"><a href="/profile/pub/${username}">${username}</a></div>

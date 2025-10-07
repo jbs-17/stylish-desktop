@@ -1,11 +1,197 @@
 [
   {
-    "UUID": "301abb65-510e-44cb-9dd0-95383e8853c5",
-    "bergabung": "04-10-2025_21-57-04",
+    "UUID": "b3f28946-a8d6-4885-8056-f2e9b6df6004",
+    "bergabung": "06-10-2025_19-23-11",
+    "username": "user",
+    "password": "passworda",
+    "usernameHASH": "04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb",
+    "passwordHASH": "58afbe0ade06cd24cca00eaf4370b35f6d2450df18fd198945cb4420012cb395",
+    "name": "user",
+    "imageTemp": [],
+    "videoTemp": [],
+    "image": [
+      {
+        "filepath": "/data/data/com.termux/files/home/project/stylish-desktop/public/temp/tmp/hc7nje41pm7n89zr9nptiuh85",
+        "newFilename": "hc7nje41pm7n89zr9nptiuh85",
+        "originalFilename": "1000377773.jpg",
+        "mimetype": "image/jpeg",
+        "size": 3902747,
+        "filetype": "image",
+        "ext": ".jpg",
+        "UUID": "b3f28946-a8d6-4885-8056-f2e9b6df6004",
+        "fileUID": "fileUID-8d1ac583b656637a",
+        "newfilepath": "/data/data/com.termux/files/home/project/stylish-desktop/public/upload/images/image__fileUID-8d1ac583b656637a__b3f28946-a8d6-4885-8056-f2e9b6df6004__06-10-2025_19-37-48__.jpg",
+        "filebase": "image__fileUID-8d1ac583b656637a__b3f28946-a8d6-4885-8056-f2e9b6df6004__06-10-2025_19-37-48__.jpg",
+        "relativeFilePath": "../public/upload/images/image__fileUID-8d1ac583b656637a__b3f28946-a8d6-4885-8056-f2e9b6df6004__06-10-2025_19-37-48__.jpg",
+        "tanggal": "06-10-2025_19-37-48",
+        "diajukan": "06-10-2025_19-37-48",
+        "judul": [
+          "Cemplon enak"
+        ],
+        "deskripsi": [
+          "Mantap yg mau resepnya komen , neks video ku bikinin cara buat"
+        ],
+        "suka": [
+          {
+            "interaksiUID": "interaksiUID-e0dfb497b13a4555",
+            "fileUID": "fileUID-8d1ac583b656637a",
+            "filebase": "image__fileUID-8d1ac583b656637a__b3f28946-a8d6-4885-8056-f2e9b6df6004__06-10-2025_19-37-48__.jpg",
+            "UUID": "ef3711f6-413f-4637-8624-169f974e49ca",
+            "tanggal": "07-10-2025_00-48-53",
+            "userYangMenyukai": "ef3711f6-413f-4637-8624-169f974e49ca",
+            "datenow": 1759772933392
+          }
+        ],
+        "simpan": [
+          {
+            "interaksiUID": "interaksiUID-8362b47263e8965a",
+            "fileUID": "fileUID-8d1ac583b656637a",
+            "filebase": "image__fileUID-8d1ac583b656637a__b3f28946-a8d6-4885-8056-f2e9b6df6004__06-10-2025_19-37-48__.jpg",
+            "UUID": "d126913c-891b-4cc1-8433-5b553525fd88",
+            "tanggal": "06-10-2025_19-47-28",
+            "userYangMenyimpan": "d126913c-891b-4cc1-8433-5b553525fd88",
+            "datenow": 1759754848742
+          },
+          {
+            "interaksiUID": "interaksiUID-cbc8b01ada49be89",
+            "fileUID": "fileUID-8d1ac583b656637a",
+            "filebase": "image__fileUID-8d1ac583b656637a__b3f28946-a8d6-4885-8056-f2e9b6df6004__06-10-2025_19-37-48__.jpg",
+            "UUID": "ef3711f6-413f-4637-8624-169f974e49ca",
+            "tanggal": "07-10-2025_00-48-51",
+            "userYangMenyimpan": "ef3711f6-413f-4637-8624-169f974e49ca",
+            "datenow": 1759772931853
+          }
+        ],
+        "bagi": [
+          {
+            "interaksiUID": "interaksiUID-d1d2b979f21df37a",
+            "fileUID": "fileUID-8d1ac583b656637a",
+            "filebase": "image__fileUID-8d1ac583b656637a__b3f28946-a8d6-4885-8056-f2e9b6df6004__06-10-2025_19-37-48__.jpg",
+            "UUID": "d126913c-891b-4cc1-8433-5b553525fd88",
+            "tanggal": "06-10-2025_19-47-27",
+            "userYangMembagi": "d126913c-891b-4cc1-8433-5b553525fd88",
+            "datenow": 1759754847509
+          },
+          {
+            "interaksiUID": "interaksiUID-bf5333bddfd14788",
+            "fileUID": "fileUID-8d1ac583b656637a",
+            "filebase": "image__fileUID-8d1ac583b656637a__b3f28946-a8d6-4885-8056-f2e9b6df6004__06-10-2025_19-37-48__.jpg",
+            "UUID": "ef3711f6-413f-4637-8624-169f974e49ca",
+            "tanggal": "07-10-2025_00-48-54",
+            "userYangMembagi": "ef3711f6-413f-4637-8624-169f974e49ca",
+            "datenow": 1759772934163
+          }
+        ],
+        "laporkan": [],
+        "komentar": [
+          {
+            "interaksiUID": "interaksiUID-4b69515624dca1a2",
+            "fileUID": "fileUID-8d1ac583b656637a",
+            "filebase": "image__fileUID-8d1ac583b656637a__b3f28946-a8d6-4885-8056-f2e9b6df6004__06-10-2025_19-37-48__.jpg",
+            "UUID": "d126913c-891b-4cc1-8433-5b553525fd88",
+            "tanggal": "06-10-2025_19-47-36",
+            "userYangKomentar": "d126913c-891b-4cc1-8433-5b553525fd88",
+            "komentar": "Admin juga mw",
+            "datenow": 1759754856685
+          }
+        ],
+        "diarsipkan": false,
+        "metadata": [],
+        "datenow": 1759754268029,
+        "privat": false,
+        "izinkomentar": true,
+        "diterima": "06-10-2025_19-38-47",
+        "index": 0
+      }
+    ],
+    "video": [],
+    "komentar": [
+      {
+        "interaksiUID": "interaksiUID-8dbe57374a8aac64",
+        "fileUID": "fileUID-0ed9812875d3e3bf",
+        "filebase": "image__fileUID-0ed9812875d3e3bf__ef3711f6-413f-4637-8624-169f974e49ca__07-10-2025_00-50-50__.png",
+        "UUID": "ef3711f6-413f-4637-8624-169f974e49ca",
+        "relativeFilePath": "../public/upload/images/image__fileUID-0ed9812875d3e3bf__ef3711f6-413f-4637-8624-169f974e49ca__07-10-2025_00-50-50__.png",
+        "tanggal": "07-10-2025_00-54-41",
+        "userYangKomentar": "b3f28946-a8d6-4885-8056-f2e9b6df6004",
+        "komentar": "Stuju, bumi",
+        "datenow": 1759773281311
+      }
+    ],
+    "suka": [
+      {
+        "interaksiUID": "interaksiUID-096267d77edcb4ec",
+        "fileUID": "fileUID-0ed9812875d3e3bf",
+        "filebase": "image__fileUID-0ed9812875d3e3bf__ef3711f6-413f-4637-8624-169f974e49ca__07-10-2025_00-50-50__.png",
+        "UUID": "ef3711f6-413f-4637-8624-169f974e49ca",
+        "relativeFilePath": "../public/upload/images/image__fileUID-0ed9812875d3e3bf__ef3711f6-413f-4637-8624-169f974e49ca__07-10-2025_00-50-50__.png",
+        "tanggal": "07-10-2025_00-54-48",
+        "userYangMenyukai": "b3f28946-a8d6-4885-8056-f2e9b6df6004",
+        "datenow": 1759773288253
+      }
+    ],
+    "simpan": [
+      {
+        "interaksiUID": "interaksiUID-15e1c1054f8bfd61",
+        "fileUID": "fileUID-0ed9812875d3e3bf",
+        "filebase": "image__fileUID-0ed9812875d3e3bf__ef3711f6-413f-4637-8624-169f974e49ca__07-10-2025_00-50-50__.png",
+        "UUID": "ef3711f6-413f-4637-8624-169f974e49ca",
+        "relativeFilePath": "../public/upload/images/image__fileUID-0ed9812875d3e3bf__ef3711f6-413f-4637-8624-169f974e49ca__07-10-2025_00-50-50__.png",
+        "tanggal": "07-10-2025_00-54-46",
+        "userYangMenyimpan": "b3f28946-a8d6-4885-8056-f2e9b6df6004",
+        "datenow": 1759773286247
+      }
+    ],
+    "bagi": [
+      {
+        "interaksiUID": "interaksiUID-5dbced3f82b386b3",
+        "fileUID": "fileUID-0ed9812875d3e3bf",
+        "filebase": "image__fileUID-0ed9812875d3e3bf__ef3711f6-413f-4637-8624-169f974e49ca__07-10-2025_00-50-50__.png",
+        "UUID": "ef3711f6-413f-4637-8624-169f974e49ca",
+        "relativeFilePath": "../public/upload/images/image__fileUID-0ed9812875d3e3bf__ef3711f6-413f-4637-8624-169f974e49ca__07-10-2025_00-50-50__.png",
+        "tanggal": "07-10-2025_00-54-49",
+        "userYangMembagi": "b3f28946-a8d6-4885-8056-f2e9b6df6004",
+        "datenow": 1759773289441
+      }
+    ],
+    "ikuti": [
+      {
+        "UUID": "ef3711f6-413f-4637-8624-169f974e49ca",
+        "tanggal": "07-10-2025_00-53-29",
+        "datenow": 1759773209978
+      }
+    ],
+    "diikuti": [
+      {
+        "UUID": "ef3711f6-413f-4637-8624-169f974e49ca",
+        "tanggal": "07-10-2025_00-06-47",
+        "datenow": 1759770407514
+      }
+    ],
+    "settings": {},
+    "arsip": [],
+    "bio": "",
+    "laporkan": [],
+    "kelamin": "",
+    "tempattanggallahir": "",
+    "pp": "upload/pp/b3f28946-a8d6-4885-8056-f2e9b6df6004.jpg",
+    "log": [],
+    "email": "",
+    "telp": "",
+    "sembunyikansuka": false,
+    "sembunyikanikuti": false,
+    "sembunyikandiikuti": false,
+    "profilprivat": false,
+    "daftarblokir": [],
+    "index": 0
+  },
+  {
+    "UUID": "d126913c-891b-4cc1-8433-5b553525fd88",
+    "bergabung": "06-10-2025_19-35-36",
     "username": "admin",
-    "password": "jbsadmin17",
+    "password": "password",
     "usernameHASH": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
-    "passwordHASH": "fd7bc9fc3f6bf1b2f7b511bd82fd2b03cfe10bd4863ebaa5e978245fd9d76a16",
+    "passwordHASH": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
     "name": "admin",
     "imageTemp": [],
     "videoTemp": [],
@@ -13,355 +199,55 @@
     "video": [],
     "komentar": [
       {
-        "interaksiUID": "interaksiUID-26e76a925906a6f6",
-        "fileUID": "fileUID-7fba511b86148c55",
-        "filebase": "image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-        "UUID": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-        "tanggal": "05-10-2025_10-37-49",
-        "userYangKomentar": "301abb65-510e-44cb-9dd0-95383e8853c5",
-        "komentar": "saya suka belajar bahasa inggris",
-        "datenow": 1759635469168
-      }
-    ],
-    "suka": [
+        "interaksiUID": "interaksiUID-4b69515624dca1a2",
+        "fileUID": "fileUID-8d1ac583b656637a",
+        "filebase": "image__fileUID-8d1ac583b656637a__b3f28946-a8d6-4885-8056-f2e9b6df6004__06-10-2025_19-37-48__.jpg",
+        "UUID": "b3f28946-a8d6-4885-8056-f2e9b6df6004",
+        "relativeFilePath": "../public/upload/images/image__fileUID-8d1ac583b656637a__b3f28946-a8d6-4885-8056-f2e9b6df6004__06-10-2025_19-37-48__.jpg",
+        "tanggal": "06-10-2025_19-47-36",
+        "userYangKomentar": "d126913c-891b-4cc1-8433-5b553525fd88",
+        "komentar": "Admin juga mw",
+        "datenow": 1759754856685
+      },
       {
-        "interaksiUID": "interaksiUID-7f18645b89a63903",
-        "fileUID": "fileUID-7fba511b86148c55",
-        "filebase": "image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-        "UUID": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-        "tanggal": "05-10-2025_10-37-34",
-        "userYangMenyukai": "301abb65-510e-44cb-9dd0-95383e8853c5",
-        "datenow": 1759635454681
+        "interaksiUID": "interaksiUID-b81679a28dd0d8d2",
+        "fileUID": "fileUID-0ed9812875d3e3bf",
+        "filebase": "image__fileUID-0ed9812875d3e3bf__ef3711f6-413f-4637-8624-169f974e49ca__07-10-2025_00-50-50__.png",
+        "UUID": "ef3711f6-413f-4637-8624-169f974e49ca",
+        "relativeFilePath": "../public/upload/images/image__fileUID-0ed9812875d3e3bf__ef3711f6-413f-4637-8624-169f974e49ca__07-10-2025_00-50-50__.png",
+        "tanggal": "07-10-2025_00-53-10",
+        "userYangKomentar": "d126913c-891b-4cc1-8433-5b553525fd88",
+        "komentar": "Setuju",
+        "datenow": 1759773190802
       }
     ],
+    "suka": [],
     "simpan": [
       {
-        "interaksiUID": "interaksiUID-784ce765de31dcfe",
-        "fileUID": "fileUID-7fba511b86148c55",
-        "filebase": "image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-        "UUID": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-        "tanggal": "05-10-2025_10-37-27",
-        "userYangMenyimpan": "301abb65-510e-44cb-9dd0-95383e8853c5",
-        "datenow": 1759635447922
+        "interaksiUID": "interaksiUID-8362b47263e8965a",
+        "fileUID": "fileUID-8d1ac583b656637a",
+        "filebase": "image__fileUID-8d1ac583b656637a__b3f28946-a8d6-4885-8056-f2e9b6df6004__06-10-2025_19-37-48__.jpg",
+        "UUID": "b3f28946-a8d6-4885-8056-f2e9b6df6004",
+        "relativeFilePath": "../public/upload/images/image__fileUID-8d1ac583b656637a__b3f28946-a8d6-4885-8056-f2e9b6df6004__06-10-2025_19-37-48__.jpg",
+        "tanggal": "06-10-2025_19-47-28",
+        "userYangMenyimpan": "d126913c-891b-4cc1-8433-5b553525fd88",
+        "datenow": 1759754848742
       }
     ],
     "bagi": [
       {
-        "interaksiUID": "interaksiUID-b1aaf85d2707e2e1",
-        "fileUID": "fileUID-7fba511b86148c55",
-        "filebase": "image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-        "UUID": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-        "tanggal": "05-10-2025_10-37-30",
-        "userYangMembagi": "301abb65-510e-44cb-9dd0-95383e8853c5",
-        "datenow": 1759635450321
+        "interaksiUID": "interaksiUID-d1d2b979f21df37a",
+        "fileUID": "fileUID-8d1ac583b656637a",
+        "filebase": "image__fileUID-8d1ac583b656637a__b3f28946-a8d6-4885-8056-f2e9b6df6004__06-10-2025_19-37-48__.jpg",
+        "UUID": "b3f28946-a8d6-4885-8056-f2e9b6df6004",
+        "relativeFilePath": "../public/upload/images/image__fileUID-8d1ac583b656637a__b3f28946-a8d6-4885-8056-f2e9b6df6004__06-10-2025_19-37-48__.jpg",
+        "tanggal": "06-10-2025_19-47-27",
+        "userYangMembagi": "d126913c-891b-4cc1-8433-5b553525fd88",
+        "datenow": 1759754847508
       }
     ],
     "ikuti": [],
     "diikuti": [],
-    "settings": {},
-    "arsip": [],
-    "bio": "Aku admin",
-    "laporkan": [
-      {
-        "interaksiUID": "interaksiUID-631ad32f0942fbd3",
-        "fileUID": "fileUID-7fba511b86148c55",
-        "filebase": "image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-        "UUID": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-        "tanggal": "05-10-2025_10-39-09",
-        "userYangMelaporkan": "301abb65-510e-44cb-9dd0-95383e8853c5",
-        "laporan": "bahasa inggris jelas",
-        "datenow": 1759635549599
-      }
-    ],
-    "kelamin": "L",
-    "tempattanggallahir": "",
-    "pp": "upload/pp/301abb65-510e-44cb-9dd0-95383e8853c5.jpg",
-    "log": [],
-    "email": "",
-    "telp": "",
-    "sembunyikansuka": true,
-    "sembunyikanikuti": true,
-    "sembunyikandiikuti": true,
-    "profilprivat": true,
-    "daftarblokir": [],
-    "index": 0
-  },
-  {
-    "UUID": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-    "bergabung": "05-10-2025_09-37-58",
-    "username": "user",
-    "password": "password",
-    "usernameHASH": "04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb",
-    "passwordHASH": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
-    "name": "user",
-    "imageTemp": [
-      {
-        "filepath": "D:\\code\\projects\\stylish-desktop\\public\\temp\\tmp\\dow8gkqe3a7dkc661mbjylv75",
-        "newFilename": "dow8gkqe3a7dkc661mbjylv75",
-        "originalFilename": "Pertumbuhan penduduk.jpg",
-        "mimetype": "image/jpeg",
-        "size": 59976,
-        "filetype": "image",
-        "ext": ".jpg",
-        "UUID": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-        "fileUID": "fileUID-2a628a0dbe80c42a",
-        "newfilepath": "D:\\code\\projects\\stylish-desktop\\public\\temp\\images\\image__fileUID-2a628a0dbe80c42a__09131370-84cf-4aea-a1bb-c5403ad5e8e4__06-10-2025_18-14-04__.jpg",
-        "filebase": "image__fileUID-2a628a0dbe80c42a__09131370-84cf-4aea-a1bb-c5403ad5e8e4__06-10-2025_18-14-04__.jpg",
-        "relativeFilePath": "..\\public\\temp\\images\\image__fileUID-2a628a0dbe80c42a__09131370-84cf-4aea-a1bb-c5403ad5e8e4__06-10-2025_18-14-04__.jpg",
-        "tanggal": "06-10-2025_18-14-04",
-        "diajukan": "06-10-2025_18-14-04",
-        "judul": [
-          "pertumbuhan pendududk 10 tahun terakir"
-        ],
-        "deskripsi": [
-          "sanagt wow"
-        ],
-        "suka": [],
-        "simpan": [],
-        "bagi": [],
-        "laporkan": [],
-        "komentar": [],
-        "diarsipkan": false,
-        "metadata": [],
-        "datenow": 1759749244017,
-        "privat": false,
-        "izinkomentar": true
-      }
-    ],
-    "videoTemp": [],
-    "image": [
-      {
-        "filepath": "D:\\code\\projects\\stylish-desktop\\public\\temp\\tmp\\z644f8t0udr8ccvvdk17pm9om",
-        "newFilename": "z644f8t0udr8ccvvdk17pm9om",
-        "originalFilename": "Screenshot 2023-04-13 163556.png",
-        "mimetype": "image/png",
-        "size": 53381,
-        "filetype": "image",
-        "ext": ".png",
-        "UUID": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-        "fileUID": "fileUID-7fba511b86148c55",
-        "newfilepath": "D:\\code\\projects\\stylish-desktop\\public\\upload\\images\\image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-        "filebase": "image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-        "tanggal": "05-10-2025_10-32-01",
-        "diajukan": "05-10-2025_10-32-01",
-        "judul": [
-          "sehat kah"
-        ],
-        "deskripsi": [
-          ""
-        ],
-        "suka": [
-          {
-            "interaksiUID": "interaksiUID-7f18645b89a63903",
-            "fileUID": "fileUID-7fba511b86148c55",
-            "filebase": "image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-            "UUID": "301abb65-510e-44cb-9dd0-95383e8853c5",
-            "tanggal": "05-10-2025_10-37-34",
-            "userYangMenyukai": "301abb65-510e-44cb-9dd0-95383e8853c5",
-            "datenow": 1759635454681
-          },
-          {
-            "interaksiUID": "interaksiUID-4a65818365926576",
-            "fileUID": "fileUID-7fba511b86148c55",
-            "filebase": "image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-            "UUID": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-            "tanggal": "06-10-2025_14-59-38",
-            "userYangMenyukai": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-            "datenow": 1759737578755
-          }
-        ],
-        "simpan": [
-          {
-            "interaksiUID": "interaksiUID-784ce765de31dcfe",
-            "fileUID": "fileUID-7fba511b86148c55",
-            "filebase": "image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-            "UUID": "301abb65-510e-44cb-9dd0-95383e8853c5",
-            "tanggal": "05-10-2025_10-37-27",
-            "userYangMenyimpan": "301abb65-510e-44cb-9dd0-95383e8853c5",
-            "datenow": 1759635447922
-          }
-        ],
-        "bagi": [
-          {
-            "interaksiUID": "interaksiUID-b1aaf85d2707e2e1",
-            "fileUID": "fileUID-7fba511b86148c55",
-            "filebase": "image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-            "UUID": "301abb65-510e-44cb-9dd0-95383e8853c5",
-            "tanggal": "05-10-2025_10-37-30",
-            "userYangMembagi": "301abb65-510e-44cb-9dd0-95383e8853c5",
-            "datenow": 1759635450321
-          }
-        ],
-        "laporkan": [
-          {
-            "interaksiUID": "interaksiUID-631ad32f0942fbd3",
-            "fileUID": "fileUID-7fba511b86148c55",
-            "filebase": "image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-            "UUID": "301abb65-510e-44cb-9dd0-95383e8853c5",
-            "tanggal": "05-10-2025_10-39-09",
-            "userYangMelaporkan": "301abb65-510e-44cb-9dd0-95383e8853c5",
-            "laporan": "bahasa inggris jelas",
-            "datenow": 1759635549599
-          }
-        ],
-        "komentar": [
-          {
-            "interaksiUID": "interaksiUID-26e76a925906a6f6",
-            "fileUID": "fileUID-7fba511b86148c55",
-            "filebase": "image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-            "UUID": "301abb65-510e-44cb-9dd0-95383e8853c5",
-            "tanggal": "05-10-2025_10-37-49",
-            "userYangKomentar": "301abb65-510e-44cb-9dd0-95383e8853c5",
-            "komentar": "saya suka belajar bahasa inggris",
-            "datenow": 1759635469168
-          },
-          {
-            "interaksiUID": "interaksiUID-4bdfb6346743f940",
-            "fileUID": "fileUID-7fba511b86148c55",
-            "filebase": "image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-            "UUID": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-            "tanggal": "06-10-2025_14-59-46",
-            "userYangKomentar": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-            "komentar": "abcd",
-            "datenow": 1759737586347
-          }
-        ],
-        "diarsipkan": false,
-        "metadata": [],
-        "datenow": 1759635121801,
-        "privat": false,
-        "izinkomentar": true,
-        "diterima": "05-10-2025_10-32-36",
-        "index": 0
-      }
-    ],
-    "video": [
-      {
-        "filepath": "D:\\code\\projects\\stylish-desktop\\public\\temp\\tmp\\guz8196xgd0h92p7hk8ywf6re",
-        "newFilename": "guz8196xgd0h92p7hk8ywf6re",
-        "originalFilename": "2f41edbf61d9d7e525914499026e0879.mp4",
-        "mimetype": "video/mp4",
-        "size": 5950770,
-        "filetype": "video",
-        "ext": ".mp4",
-        "UUID": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-        "fileUID": "fileUID-78f008e80fe4e50f",
-        "newfilepath": "D:\\code\\projects\\stylish-desktop\\public\\upload\\videos\\video__fileUID-78f008e80fe4e50f__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-43-01__.mp4",
-        "filebase": "video__fileUID-78f008e80fe4e50f__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-43-01__.mp4",
-        "relativeFilePath": "..\\public\\upload\\videos\\video__fileUID-78f008e80fe4e50f__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-43-01__.mp4",
-        "tanggal": "05-10-2025_10-43-01",
-        "diajukan": "05-10-2025_10-43-01",
-        "judul": [
-          "resep apalah"
-        ],
-        "deskripsi": [
-          "resep enak simpel tidak sehat"
-        ],
-        "suka": [
-          {
-            "interaksiUID": "interaksiUID-e82c287e2fbe1982",
-            "fileUID": "fileUID-78f008e80fe4e50f",
-            "filebase": "video__fileUID-78f008e80fe4e50f__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-43-01__.mp4",
-            "UUID": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-            "tanggal": "06-10-2025_14-59-19",
-            "userYangMenyukai": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-            "datenow": 1759737559183
-          }
-        ],
-        "simpan": [],
-        "bagi": [
-          {
-            "interaksiUID": "interaksiUID-b13d5c8cee9e4207",
-            "fileUID": "fileUID-78f008e80fe4e50f",
-            "filebase": "video__fileUID-78f008e80fe4e50f__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-43-01__.mp4",
-            "UUID": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-            "tanggal": "06-10-2025_14-59-26",
-            "userYangMembagi": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-            "datenow": 1759737566210
-          }
-        ],
-        "laporkan": [],
-        "komentar": [
-          {
-            "interaksiUID": "interaksiUID-9d4f8da0b160db4c",
-            "fileUID": "fileUID-78f008e80fe4e50f",
-            "filebase": "video__fileUID-78f008e80fe4e50f__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-43-01__.mp4",
-            "UUID": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-            "tanggal": "06-10-2025_14-59-17",
-            "userYangKomentar": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-            "komentar": "enak tu",
-            "datenow": 1759737557040
-          }
-        ],
-        "diarsipkan": false,
-        "metadata": [],
-        "datenow": 1759635781788,
-        "privat": false,
-        "izinkomentar": true,
-        "diterima": "05-10-2025_10-43-16",
-        "index": 0
-      }
-    ],
-    "komentar": [],
-    "suka": [],
-    "simpan": [
-      {
-        "interaksiUID": "interaksiUID-c684f5c62bd42224",
-        "fileUID": "fileUID-73f95c774b713257",
-        "filebase": "video__fileUID-73f95c774b713257__699a9320-4403-4f39-b9f6-7c84259b19c8__06-10-2025_13-34-21__.mp4",
-        "UUID": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-        "relativeFilePath": "..\\public\\upload\\videos\\video__fileUID-73f95c774b713257__699a9320-4403-4f39-b9f6-7c84259b19c8__06-10-2025_13-34-21__.mp4",
-        "tanggal": "06-10-2025_18-22-18",
-        "userYangMenyimpan": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-        "datenow": 1759749738116
-      }
-    ],
-    "bagi": [
-      {
-        "interaksiUID": "interaksiUID-d135b42470bb5ad0",
-        "fileUID": "fileUID-73f95c774b713257",
-        "filebase": "video__fileUID-73f95c774b713257__699a9320-4403-4f39-b9f6-7c84259b19c8__06-10-2025_13-34-21__.mp4",
-        "UUID": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-        "relativeFilePath": "..\\public\\upload\\videos\\video__fileUID-73f95c774b713257__699a9320-4403-4f39-b9f6-7c84259b19c8__06-10-2025_13-34-21__.mp4",
-        "tanggal": "06-10-2025_15-07-00",
-        "userYangMembagi": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-        "datenow": 1759738020609
-      },
-      {
-        "interaksiUID": "interaksiUID-8fa24046118fcfaf",
-        "fileUID": "fileUID-d18e832b62dcd9f5",
-        "filebase": "image__fileUID-d18e832b62dcd9f5__699a9320-4403-4f39-b9f6-7c84259b19c8__06-10-2025_13-13-57__.jpg",
-        "UUID": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-d18e832b62dcd9f5__699a9320-4403-4f39-b9f6-7c84259b19c8__06-10-2025_13-13-57__.jpg",
-        "tanggal": "06-10-2025_18-04-43",
-        "userYangMembagi": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-        "datenow": 1759748683414
-      },
-      {
-        "interaksiUID": "interaksiUID-94f57993e4d84e53",
-        "fileUID": "fileUID-d6db304757707542",
-        "filebase": "image__fileUID-d6db304757707542__699a9320-4403-4f39-b9f6-7c84259b19c8__06-10-2025_13-21-18__.jpeg",
-        "UUID": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-d6db304757707542__699a9320-4403-4f39-b9f6-7c84259b19c8__06-10-2025_13-21-18__.jpeg",
-        "tanggal": "06-10-2025_18-26-06",
-        "userYangMembagi": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-        "datenow": 1759749966282
-      }
-    ],
-    "ikuti": [],
-    "diikuti": [
-      {
-        "UUID": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-        "tanggal": "06-10-2025_14-58-44",
-        "datenow": 1759737524991
-      }
-    ],
     "settings": {},
     "arsip": [],
     "bio": "",
@@ -372,243 +258,169 @@
     "log": [],
     "email": "",
     "telp": "",
-    "sembunyikansuka": true,
-    "sembunyikanikuti": true,
-    "sembunyikandiikuti": true,
-    "profilprivat": true,
+    "sembunyikansuka": false,
+    "sembunyikanikuti": false,
+    "sembunyikandiikuti": false,
+    "profilprivat": false,
     "daftarblokir": [],
     "index": 1
   },
   {
-    "UUID": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-    "bergabung": "06-10-2025_13-13-03",
-    "username": "jarjid singh",
-    "password": "passworda",
-    "usernameHASH": "29f5b74798752da36bbc5aa37ff93878655ea77359cc96ee23a545fd4803b827",
-    "passwordHASH": "58afbe0ade06cd24cca00eaf4370b35f6d2450df18fd198945cb4420012cb395",
-    "name": "jarjid singh",
+    "UUID": "ef3711f6-413f-4637-8624-169f974e49ca",
+    "bergabung": "07-10-2025_00-06-37",
+    "username": "username",
+    "password": "password",
+    "usernameHASH": "16f78a7d6317f102bbd95fc9a4f3ff2e3249287690b8bdad6b7810f82b34ace3",
+    "passwordHASH": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+    "name": "username",
     "imageTemp": [],
     "videoTemp": [],
     "image": [
       {
-        "filepath": "D:\\code\\projects\\stylish-desktop\\public\\temp\\tmp\\tgw67ec5ghrebybsl35uqot21",
-        "newFilename": "tgw67ec5ghrebybsl35uqot21",
-        "originalFilename": "f2e377cfa13d4870af1986bhj9cd540b91a.jpg",
-        "mimetype": "image/jpeg",
-        "size": 109430,
+        "filepath": "/data/data/com.termux/files/home/project/stylish-desktop/public/temp/tmp/anfdxas2oa4kz0qv0qistsf8u",
+        "newFilename": "anfdxas2oa4kz0qv0qistsf8u",
+        "originalFilename": "1000087980.png",
+        "mimetype": "image/png",
+        "size": 16567558,
         "filetype": "image",
-        "ext": ".jpg",
-        "UUID": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-        "fileUID": "fileUID-d18e832b62dcd9f5",
-        "newfilepath": "D:\\code\\projects\\stylish-desktop\\public\\upload\\images\\image__fileUID-d18e832b62dcd9f5__699a9320-4403-4f39-b9f6-7c84259b19c8__06-10-2025_13-13-57__.jpg",
-        "filebase": "image__fileUID-d18e832b62dcd9f5__699a9320-4403-4f39-b9f6-7c84259b19c8__06-10-2025_13-13-57__.jpg",
-        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-d18e832b62dcd9f5__699a9320-4403-4f39-b9f6-7c84259b19c8__06-10-2025_13-13-57__.jpg",
-        "tanggal": "06-10-2025_13-13-57",
-        "diajukan": "06-10-2025_13-13-57",
+        "ext": ".png",
+        "UUID": "ef3711f6-413f-4637-8624-169f974e49ca",
+        "fileUID": "fileUID-0ed9812875d3e3bf",
+        "newfilepath": "/data/data/com.termux/files/home/project/stylish-desktop/public/upload/images/image__fileUID-0ed9812875d3e3bf__ef3711f6-413f-4637-8624-169f974e49ca__07-10-2025_00-50-50__.png",
+        "filebase": "image__fileUID-0ed9812875d3e3bf__ef3711f6-413f-4637-8624-169f974e49ca__07-10-2025_00-50-50__.png",
+        "relativeFilePath": "../public/upload/images/image__fileUID-0ed9812875d3e3bf__ef3711f6-413f-4637-8624-169f974e49ca__07-10-2025_00-50-50__.png",
+        "tanggal": "07-10-2025_00-50-50",
+        "diajukan": "07-10-2025_00-50-50",
         "judul": [
-          "tiba di spanyol"
+          "Bumi tersenyum kita juga tersenyum "
         ],
         "deskripsi": [
-          "wkwkkw"
+          "Oke?"
         ],
-        "suka": [],
-        "simpan": [],
-        "bagi": [
+        "suka": [
           {
-            "interaksiUID": "interaksiUID-8fa24046118fcfaf",
-            "fileUID": "fileUID-d18e832b62dcd9f5",
-            "filebase": "image__fileUID-d18e832b62dcd9f5__699a9320-4403-4f39-b9f6-7c84259b19c8__06-10-2025_13-13-57__.jpg",
-            "UUID": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-            "tanggal": "06-10-2025_18-04-43",
-            "userYangMembagi": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-            "datenow": 1759748683414
+            "interaksiUID": "interaksiUID-096267d77edcb4ec",
+            "fileUID": "fileUID-0ed9812875d3e3bf",
+            "filebase": "image__fileUID-0ed9812875d3e3bf__ef3711f6-413f-4637-8624-169f974e49ca__07-10-2025_00-50-50__.png",
+            "UUID": "b3f28946-a8d6-4885-8056-f2e9b6df6004",
+            "tanggal": "07-10-2025_00-54-48",
+            "userYangMenyukai": "b3f28946-a8d6-4885-8056-f2e9b6df6004",
+            "datenow": 1759773288253
           }
         ],
-        "laporkan": [],
-        "komentar": [],
-        "diarsipkan": false,
-        "metadata": [],
-        "datenow": 1759731237755,
-        "privat": false,
-        "izinkomentar": true,
-        "diterima": "06-10-2025_13-15-31",
-        "index": 0
-      },
-      {
-        "filepath": "D:\\code\\projects\\stylish-desktop\\public\\temp\\tmp\\r9s2ka4x82byikibsos10nhs9",
-        "newFilename": "r9s2ka4x82byikibsos10nhs9",
-        "originalFilename": "images.jpeg",
-        "mimetype": "image/jpeg",
-        "size": 49852,
-        "filetype": "image",
-        "ext": ".jpeg",
-        "UUID": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-        "fileUID": "fileUID-d6db304757707542",
-        "newfilepath": "D:\\code\\projects\\stylish-desktop\\public\\upload\\images\\image__fileUID-d6db304757707542__699a9320-4403-4f39-b9f6-7c84259b19c8__06-10-2025_13-21-18__.jpeg",
-        "filebase": "image__fileUID-d6db304757707542__699a9320-4403-4f39-b9f6-7c84259b19c8__06-10-2025_13-21-18__.jpeg",
-        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-d6db304757707542__699a9320-4403-4f39-b9f6-7c84259b19c8__06-10-2025_13-21-18__.jpeg",
-        "tanggal": "06-10-2025_13-21-18",
-        "diajukan": "06-10-2025_13-21-18",
-        "judul": [
-          "dirgahayu"
-        ],
-        "deskripsi": [
-          "republik indonesia\r\n"
-        ],
-        "suka": [],
-        "simpan": [],
-        "bagi": [
-          {
-            "interaksiUID": "interaksiUID-94f57993e4d84e53",
-            "fileUID": "fileUID-d6db304757707542",
-            "filebase": "image__fileUID-d6db304757707542__699a9320-4403-4f39-b9f6-7c84259b19c8__06-10-2025_13-21-18__.jpeg",
-            "UUID": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-            "tanggal": "06-10-2025_18-26-06",
-            "userYangMembagi": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-            "datenow": 1759749966282
-          }
-        ],
-        "laporkan": [],
-        "komentar": [],
-        "diarsipkan": false,
-        "metadata": [],
-        "datenow": 1759731678269,
-        "privat": false,
-        "izinkomentar": true,
-        "diterima": "06-10-2025_15-03-39",
-        "index": 1
-      }
-    ],
-    "video": [
-      {
-        "filepath": "D:\\code\\projects\\stylish-desktop\\public\\temp\\tmp\\nwq6o2ey4zuxqppms9l2arv7f",
-        "newFilename": "nwq6o2ey4zuxqppms9l2arv7f",
-        "originalFilename": "1c45f3d2d54156816db3cec2abb4e3c5.mp4",
-        "mimetype": "video/mp4",
-        "size": 15771476,
-        "filetype": "video",
-        "ext": ".mp4",
-        "UUID": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-        "fileUID": "fileUID-73f95c774b713257",
-        "newfilepath": "D:\\code\\projects\\stylish-desktop\\public\\upload\\videos\\video__fileUID-73f95c774b713257__699a9320-4403-4f39-b9f6-7c84259b19c8__06-10-2025_13-34-21__.mp4",
-        "filebase": "video__fileUID-73f95c774b713257__699a9320-4403-4f39-b9f6-7c84259b19c8__06-10-2025_13-34-21__.mp4",
-        "relativeFilePath": "..\\public\\upload\\videos\\video__fileUID-73f95c774b713257__699a9320-4403-4f39-b9f6-7c84259b19c8__06-10-2025_13-34-21__.mp4",
-        "tanggal": "06-10-2025_13-34-21",
-        "diajukan": "06-10-2025_13-34-21",
-        "judul": [
-          "pancake"
-        ],
-        "deskripsi": [
-          "Bahan-bahan\r\n\r\n    150 gr tepung terigu protein sedang.\r\n    200 ml susu cair (bisa diganti dengan air putih).\r\n    1 butir telur ayam.\r\n    2 sdm gula pasir.\r\n    1 sdt baking powder.\r\n    2 sdm margarin atau mentega (lelehkan).\r\n    Sejumput garam.\r\n    1/2 sdt vanili bubuk (opsional). \r\n\r\nCara membuat\r\n\r\n    Siapkan wadah, lalu campurkan bahan-bahan kering seperti tepung terigu, gula pasir, baking powder, dan vanili bubuk. Aduk hingga merata.\r\n    Di wadah terpisah, kocok telur hingga lepas.\r\n    Masukkan kocokan telur dan susu cair ke dalam campuran bahan kering. Aduk perlahan dengan whisk hingga tercampur rata. Jangan terlalu lama mengaduk agar adonan tidak keras.\r\n    Tuangkan margarin atau mentega leleh, lalu aduk kembali hingga adonan menjadi licin dan tidak ada gumpalan.\r\n    Panaskan teflon dengan api kecil dan olesi dengan sedikit margarin jika perlu.\r\n    Tuang satu sendok sayur adonan ke atas teflon, lalu masak hingga muncul gelembung-gelembung kecil di permukaan pancake.\r\n    Setelah gelembung pecah dan bagian bawah pancake berwarna cokelat keemasan, balik pancake dan masak sebentar hingga matang.\r\n    Angkat pancake dan sajikan di piring. Ulangi proses ini sampai adonan habis. \r\n\r\nTips tambahan\r\n\r\n    Untuk hasil yang lebih mengembang dan lembut, diamkan adonan selama 10–15 menit sebelum dimasak.\r\n    Anda dapat menyajikan pancake dengan beragam topping, seperti sirup maple, madu, es krim, buah-buahan segar, atau cokelat.\r\n    Pastikan suhu teflon tidak terlalu panas agar pancake tidak cepat gosong dan matang merata. "
-        ],
-        "suka": [],
         "simpan": [
           {
-            "interaksiUID": "interaksiUID-c684f5c62bd42224",
-            "fileUID": "fileUID-73f95c774b713257",
-            "filebase": "video__fileUID-73f95c774b713257__699a9320-4403-4f39-b9f6-7c84259b19c8__06-10-2025_13-34-21__.mp4",
-            "UUID": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-            "tanggal": "06-10-2025_18-22-18",
-            "userYangMenyimpan": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-            "datenow": 1759749738116
+            "interaksiUID": "interaksiUID-15e1c1054f8bfd61",
+            "fileUID": "fileUID-0ed9812875d3e3bf",
+            "filebase": "image__fileUID-0ed9812875d3e3bf__ef3711f6-413f-4637-8624-169f974e49ca__07-10-2025_00-50-50__.png",
+            "UUID": "b3f28946-a8d6-4885-8056-f2e9b6df6004",
+            "tanggal": "07-10-2025_00-54-46",
+            "userYangMenyimpan": "b3f28946-a8d6-4885-8056-f2e9b6df6004",
+            "datenow": 1759773286247
           }
         ],
         "bagi": [
           {
-            "interaksiUID": "interaksiUID-d135b42470bb5ad0",
-            "fileUID": "fileUID-73f95c774b713257",
-            "filebase": "video__fileUID-73f95c774b713257__699a9320-4403-4f39-b9f6-7c84259b19c8__06-10-2025_13-34-21__.mp4",
-            "UUID": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-            "tanggal": "06-10-2025_15-07-00",
-            "userYangMembagi": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-            "datenow": 1759738020609
+            "interaksiUID": "interaksiUID-5dbced3f82b386b3",
+            "fileUID": "fileUID-0ed9812875d3e3bf",
+            "filebase": "image__fileUID-0ed9812875d3e3bf__ef3711f6-413f-4637-8624-169f974e49ca__07-10-2025_00-50-50__.png",
+            "UUID": "b3f28946-a8d6-4885-8056-f2e9b6df6004",
+            "tanggal": "07-10-2025_00-54-49",
+            "userYangMembagi": "b3f28946-a8d6-4885-8056-f2e9b6df6004",
+            "datenow": 1759773289441
           }
         ],
         "laporkan": [],
-        "komentar": [],
+        "komentar": [
+          {
+            "interaksiUID": "interaksiUID-b81679a28dd0d8d2",
+            "fileUID": "fileUID-0ed9812875d3e3bf",
+            "filebase": "image__fileUID-0ed9812875d3e3bf__ef3711f6-413f-4637-8624-169f974e49ca__07-10-2025_00-50-50__.png",
+            "UUID": "d126913c-891b-4cc1-8433-5b553525fd88",
+            "tanggal": "07-10-2025_00-53-10",
+            "userYangKomentar": "d126913c-891b-4cc1-8433-5b553525fd88",
+            "komentar": "Setuju",
+            "datenow": 1759773190802
+          },
+          {
+            "interaksiUID": "interaksiUID-8dbe57374a8aac64",
+            "fileUID": "fileUID-0ed9812875d3e3bf",
+            "filebase": "image__fileUID-0ed9812875d3e3bf__ef3711f6-413f-4637-8624-169f974e49ca__07-10-2025_00-50-50__.png",
+            "UUID": "b3f28946-a8d6-4885-8056-f2e9b6df6004",
+            "tanggal": "07-10-2025_00-54-41",
+            "userYangKomentar": "b3f28946-a8d6-4885-8056-f2e9b6df6004",
+            "komentar": "Stuju, bumi",
+            "datenow": 1759773281311
+          }
+        ],
         "diarsipkan": false,
         "metadata": [],
-        "datenow": 1759732461695,
+        "datenow": 1759773050828,
         "privat": false,
         "izinkomentar": true,
-        "diterima": "06-10-2025_15-03-42",
+        "diterima": "07-10-2025_00-51-31",
         "index": 0
       }
     ],
-    "komentar": [
-      {
-        "interaksiUID": "interaksiUID-9d4f8da0b160db4c",
-        "fileUID": "fileUID-78f008e80fe4e50f",
-        "filebase": "video__fileUID-78f008e80fe4e50f__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-43-01__.mp4",
-        "UUID": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-        "relativeFilePath": "..\\public\\upload\\videos\\video__fileUID-78f008e80fe4e50f__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-43-01__.mp4",
-        "tanggal": "06-10-2025_14-59-17",
-        "userYangKomentar": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-        "komentar": "enak tu",
-        "datenow": 1759737557040
-      },
-      {
-        "interaksiUID": "interaksiUID-4bdfb6346743f940",
-        "fileUID": "fileUID-7fba511b86148c55",
-        "filebase": "image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-        "UUID": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-        "tanggal": "06-10-2025_14-59-46",
-        "userYangKomentar": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-        "komentar": "abcd",
-        "datenow": 1759737586347
-      }
-    ],
+    "video": [],
+    "komentar": [],
     "suka": [
       {
-        "interaksiUID": "interaksiUID-e82c287e2fbe1982",
-        "fileUID": "fileUID-78f008e80fe4e50f",
-        "filebase": "video__fileUID-78f008e80fe4e50f__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-43-01__.mp4",
-        "UUID": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-        "relativeFilePath": "..\\public\\upload\\videos\\video__fileUID-78f008e80fe4e50f__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-43-01__.mp4",
-        "tanggal": "06-10-2025_14-59-19",
-        "userYangMenyukai": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-        "datenow": 1759737559183
-      },
-      {
-        "interaksiUID": "interaksiUID-4a65818365926576",
-        "fileUID": "fileUID-7fba511b86148c55",
-        "filebase": "image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-        "UUID": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-        "relativeFilePath": "..\\public\\upload\\images\\image__fileUID-7fba511b86148c55__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-32-01__.png",
-        "tanggal": "06-10-2025_14-59-38",
-        "userYangMenyukai": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-        "datenow": 1759737578755
+        "interaksiUID": "interaksiUID-e0dfb497b13a4555",
+        "fileUID": "fileUID-8d1ac583b656637a",
+        "filebase": "image__fileUID-8d1ac583b656637a__b3f28946-a8d6-4885-8056-f2e9b6df6004__06-10-2025_19-37-48__.jpg",
+        "UUID": "b3f28946-a8d6-4885-8056-f2e9b6df6004",
+        "relativeFilePath": "../public/upload/images/image__fileUID-8d1ac583b656637a__b3f28946-a8d6-4885-8056-f2e9b6df6004__06-10-2025_19-37-48__.jpg",
+        "tanggal": "07-10-2025_00-48-53",
+        "userYangMenyukai": "ef3711f6-413f-4637-8624-169f974e49ca",
+        "datenow": 1759772933392
       }
     ],
-    "simpan": [],
+    "simpan": [
+      {
+        "interaksiUID": "interaksiUID-cbc8b01ada49be89",
+        "fileUID": "fileUID-8d1ac583b656637a",
+        "filebase": "image__fileUID-8d1ac583b656637a__b3f28946-a8d6-4885-8056-f2e9b6df6004__06-10-2025_19-37-48__.jpg",
+        "UUID": "b3f28946-a8d6-4885-8056-f2e9b6df6004",
+        "relativeFilePath": "../public/upload/images/image__fileUID-8d1ac583b656637a__b3f28946-a8d6-4885-8056-f2e9b6df6004__06-10-2025_19-37-48__.jpg",
+        "tanggal": "07-10-2025_00-48-51",
+        "userYangMenyimpan": "ef3711f6-413f-4637-8624-169f974e49ca",
+        "datenow": 1759772931853
+      }
+    ],
     "bagi": [
       {
-        "interaksiUID": "interaksiUID-b13d5c8cee9e4207",
-        "fileUID": "fileUID-78f008e80fe4e50f",
-        "filebase": "video__fileUID-78f008e80fe4e50f__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-43-01__.mp4",
-        "UUID": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-        "relativeFilePath": "..\\public\\upload\\videos\\video__fileUID-78f008e80fe4e50f__09131370-84cf-4aea-a1bb-c5403ad5e8e4__05-10-2025_10-43-01__.mp4",
-        "tanggal": "06-10-2025_14-59-26",
-        "userYangMembagi": "699a9320-4403-4f39-b9f6-7c84259b19c8",
-        "datenow": 1759737566210
+        "interaksiUID": "interaksiUID-bf5333bddfd14788",
+        "fileUID": "fileUID-8d1ac583b656637a",
+        "filebase": "image__fileUID-8d1ac583b656637a__b3f28946-a8d6-4885-8056-f2e9b6df6004__06-10-2025_19-37-48__.jpg",
+        "UUID": "b3f28946-a8d6-4885-8056-f2e9b6df6004",
+        "relativeFilePath": "../public/upload/images/image__fileUID-8d1ac583b656637a__b3f28946-a8d6-4885-8056-f2e9b6df6004__06-10-2025_19-37-48__.jpg",
+        "tanggal": "07-10-2025_00-48-54",
+        "userYangMembagi": "ef3711f6-413f-4637-8624-169f974e49ca",
+        "datenow": 1759772934163
       }
     ],
     "ikuti": [
       {
-        "UUID": "09131370-84cf-4aea-a1bb-c5403ad5e8e4",
-        "tanggal": "06-10-2025_14-58-44",
-        "datenow": 1759737524991
+        "UUID": "b3f28946-a8d6-4885-8056-f2e9b6df6004",
+        "tanggal": "07-10-2025_00-06-47",
+        "datenow": 1759770407514
       }
     ],
-    "diikuti": [],
+    "diikuti": [
+      {
+        "UUID": "b3f28946-a8d6-4885-8056-f2e9b6df6004",
+        "tanggal": "07-10-2025_00-53-29",
+        "datenow": 1759773209978
+      }
+    ],
     "settings": {},
     "arsip": [],
     "bio": "",
     "laporkan": [],
-    "kelamin": "L",
+    "kelamin": "",
     "tempattanggallahir": "",
-    "pp": "/public/upload/pp/default.png",
+    "pp": "upload/pp/ef3711f6-413f-4637-8624-169f974e49ca.jpg",
     "log": [],
     "email": "",
     "telp": "",

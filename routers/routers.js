@@ -10,6 +10,7 @@ import profilepub from "./profile-pub.js";
 import ikuti from "./ikuti.js";
 import settings from "./settings.js";
 import search from "./search.js";
+import logout from './logout.js';
 const routers = {
   settings,
   admin,
@@ -22,7 +23,8 @@ const routers = {
   post,
   profilepub,
   ikuti,
-  search
+  search,
+  logout
 }
 
 export default routers;

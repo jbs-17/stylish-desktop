@@ -1,6 +1,8 @@
 import JBS from "jbs-web-server";
 import Cache from "jbs-web-server/jbs-simple-caching.js";
 import { searchUser, searchUserUpload } from "../apis/db/search.js";
+import {buatKotakIkutiPub} from './ikuti.js';
+import {cariUserDariUUID} from '../apis/user/verifikasiUsenameDanPassword.js'
 
 const search = JBS.Router();
 
@@ -63,8 +65,8 @@ search.route("/search").get(async function (req, res) {
 export default search;
 
 async function renderUsers(users, me) {
-  users.reduce(async (previous, current) => {}, "");
-  return "";
+  return await buatKotakIkutiPub(users, me)
+  
 }
 
 async function renderUploads(uploads, me) {
@@ -74,6 +76,7 @@ async function renderUploads(uploads, me) {
 
   async function template(
     {
+      UUID,
       fileUID,
       mimetype,
       relativeFilePath,
@@ -86,9 +89,11 @@ async function renderUploads(uploads, me) {
       tanggal,
       pub = true,
       user: { username },
-    },
-    pp = "../public/upload/pp/default.png"
+    }
   ) {
+    
+    const user = await cariUserDariUUID(UUID)
+  let {pp = "../public/upload/pp/default.png"} = user.user;
     return /*html*/ `
   <div class="post"  data-fileuid="${fileUID}" fileuid="${fileUID}" id="${fileUID}" action="lihat-upload" onclick="action(this)">
   <div class="post-header">

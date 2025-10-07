@@ -24,16 +24,16 @@
     <section id="profile-section">
       <div class="profile-avatar">
         <img id="pp" src="../upload/pp/default.png" />
-        <p id="username">not found</p>
-        <small><span>uuid: </span><span id="uuid"></span></small>
+        <p id="username">user not found</p>
+        <small><span></span><span id="uuid"></span></small>
       </div>
       <div class="profile-info">
-        <p id="bio">-</p>
+        <p id="bio"></p>
       </div>
       <div class="profile-stats">
-        <p class="stat-data" title="total like"><span id="suka">-</span><span> like</span></p>
-        <p class="stat-data" title="total follow"><span id="ikuti">-</span><span> follow</span></p>
-        <p class="stat-data" title="total followed"><span id="diikuti">-</span><span> following</span></p>
+        <p class="stat-data" title="total like"><span id="suka">0</span><span> like</span></p>
+        <p class="stat-data" title="total follow"><span id="ikuti">0</span><span> follow</span></p>
+        <p class="stat-data" title="total followed"><span id="diikuti">0</span><span> following</span></p>
       </div>
     </section>
 
@@ -42,11 +42,11 @@
 
     <!-- === SECTION: GALLERY === -->
 
-    <section class="gallery" id="gallery-section">
+    <section class="gallery" id="gallery-section" style="max-height: 80vh;min-height:10vh;height:80vh;">
 
 
-      <div tab="upload" class="gallery-tab gallery-uploads">
-        <h1 id="alert">USER TIDAK DITEMUKAN</h1>
+      <div tab="upload" class="gallery-tab gallery-uploads" style="max-height: 30px;">
+        <small id="">user not found!</small>
       </div>
     </section>
     <!-- === SECTION: GALLERY END === -->
@@ -55,12 +55,14 @@
   </main>
 
   <style>
+	div[tab] small {
+	   margin: 15px;
+	   color: rgba(88,88,88);
+	   font-size: small;
+	}
     #gallery-section{
-
     }
     div[tab]{
-      min-height: 30vh;
-      height: 30vh;
       display: flex;
       justify-content: center;
       align-content: center;
