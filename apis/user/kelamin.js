@@ -28,7 +28,6 @@ import {
 import { userdatabase } from "../../config.js";
 // eslint-disable-next-line no-unused-vars
 import { hash } from "../../modules/hash.js";
-import isEmail from 'validator/lib/isEmail.js';
 // import tanggalString from "../../modules/date-string.mjs";
 
 
@@ -43,13 +42,13 @@ export { kelaminSetter }
 // console.log(gantiNamaUserVerifikasi('admin', 'adminxxx', 'admin1234'))
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
+const kelaminArr = ['L', 'P', '?'];
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //gantiNamaUserPakaiUsername
 async function kelaminSetter(UUID = "", kelamin) {
   try {
-    if (kelamin !== 'L' && kelamin !== 'P') {
-      throw Error('Kelamin harus L atau P');
+    if (!kelaminArr.includes(kelamin)) {
+      throw Error('Kelamin harus L atau P atau ?');
     }
     const user = (await cariUserDariUUID(UUID)).user;
     const database = await readFileJSON(userdatabase);

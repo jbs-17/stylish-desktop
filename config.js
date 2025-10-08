@@ -1,4 +1,4 @@
-import { existsSync, writeFileSync, readFileSync } from "node:fs";
+import { writeFile, stat, readFile } from "node:fs/promises";
 import "dotenv/config.js";
 import process from "node:process";
 import fs from "node:fs";
@@ -21,17 +21,21 @@ const templistdatabase = path.resolve(
   `${rootpath}/database/templistdatabase.json`
 );
 
+
+//cache
+const lamaCacheUploadMedia = 60 * 60 * 24//detik
+
+
+
+
 // const exceptPath = ["route", "admin", "module", "routers"]
 const exceptPath = ["route"];
-
 const logpath = path.resolve(`${rootpath}/log.txt`);
 const maxFileSize = 1024 * 1024 * 20; //mb
 const maxFileSizePP = 1024 * 1024 * 10; //mb
 const intervalCheckSesiLogin = 60 * 60; //detik
 const lamaSesiLogin = 60 * 60; //detik
 const admins = ["admin", "jbs"];
-
-
 
 //dir
 for (const p of [
@@ -44,30 +48,37 @@ for (const p of [
   tempdatabase,
   tempimagesdatabase,
   tempvideosdatabase,
-  templistdatabase,
 ]) {
-  
-    fs.stat(p, (err) => {
-    if(err){
-      fs.mkdir(p, {recursive: true}, (err, path)=>{
+  fs.stat(p, (err) => {
+    if (err) {
+      fs.mkdir(p, { recursive: true }, (err, path) => {
         console.log(`dir ${path} di buat`);
-      })
-    };
+      });
+    }
   });
 }
 
-if (!existsSync(userdatabase)) {
-  writeFileSync(userdatabase, "[]");
-  console.log(`userdatabase dipulihkan`);
+
+
+for await (const file of [userdatabase, sesidatabase, templistdatabase]) {
+  try {
+    console.log({...await stat(file), file});
+  } catch {
+    console.error(`${file}, tidak ada`);
+    await writeFile(file, "[]");
+    console.info(`${file} dipulihkan`);
+    console.log(await stat(file));
+  }
 }
-const isiuserdatabase = readFileSync(userdatabase, "utf8");
+
+const isiuserdatabase = await readFile(userdatabase, "utf8");
 if (!isiuserdatabase.startsWith("[") && !isiuserdatabase.endsWith("]")) {
-  writeFileSync(userdatabase, "[]");
+  await writeFile(userdatabase, "[]");
 }
 
 const port = Number(process.env.SERVER_PORT) || 3000;
 const useCache = process.env.CACHE === "0" ? false : true;
-console.log({useCache});
+console.log({ useCache });
 
 export {
   port,
@@ -93,6 +104,8 @@ export {
   maxFileSizePP,
   uploadsppdatabase,
   publicdb,
+
+  lamaCacheUploadMedia
 };
 export default {
   port,
@@ -118,6 +131,8 @@ export default {
   maxFileSize,
   maxFileSizePP,
   uploadsppdatabase,
+
+  lamaCacheUploadMedia
 };
 // console.dir(config);
 // console.log(module.exports)
